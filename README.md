@@ -25,3 +25,5 @@ yt -f bestvideo+bestaudio --merge-output-format mkv --extractor-args youtube:pla
 2. Replace `1:28` with actual minute:second of the song preview
 3. Replace `Phoenix_Curiosity_Overdrive.png` with actual file name generated in the SQL file (look in the database after applying SQL patch)
 4. You end up with image exactly at the start of the desired second of the video.
+
+Example of changes for Phoenix 1.05 patch: [commit](https://github.com/aaaaaa2493/pumpout-db-updates/commit/345732013181cad314ff54afce22eb6a9c7c78c9)
