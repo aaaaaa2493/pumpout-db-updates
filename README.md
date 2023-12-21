@@ -1,6 +1,10 @@
 # Updates of Pumpout database
 
-How to perform an update (at the moment, I'm doing it regularly, so you don't have to):
+Downlaod Phoenix 1.05 database: https://github.com/aaaaaa2493/pumpout-db-updates/blob/main/db/pumpout-phoenix-1.05.db 
+
+### How to perform an update 
+At the moment, I'm doing it regularly, so you don't have to
+
 1. Copy patchnotes from [piugame.com](piugame.com) into `patchnote.txt` file. Remove unnecessary info (like `Exclusive song for premium only` text). Example of patchnote: https://piugame.com/phoenix_notice?wr_id=236
 2. Edit [patchnote_parser.py](patchnote_parser.py) `PATCH_VERSION` variable
 3. Run [patchnote_parser.py](patchnote_parser.py)
