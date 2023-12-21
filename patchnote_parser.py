@@ -8,12 +8,12 @@ STEP_CHARTS = 'stepcharts'
 
 MIX_ID = 17
 MIX_NAME = Phoenix
-PATCH_VERSION = '1.04'
+PATCH_VERSION = '1.05'
 
 
 def convert_coop_format(text):
     # Regular expression pattern to find CO-OP(#) and capture the number
-    pattern = r'CO-OP\((\d+)\)'
+    pattern = r'CO-OP\([xX]?(\d+)\)'
 
     # Replacement function
     def replacement(match):

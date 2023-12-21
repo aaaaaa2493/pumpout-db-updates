@@ -1,29 +1,29 @@
-1) Title : ELEVEN
-   Artist : IVE
-   BPM : 120
+1) Title : Spray
+   Artist : WEi
+   BPM : 92
    Category : K-POP
-   Step charts : S2, S4, S6, S12, S15, S17, D5, D13, D16, D18, CO-OP(2)
+   Step charts : S2, S4, S6, S12, S15, S17, D8, D14, D17, D19
 
-2) Title : Neo Catharsis
-   Artist : TAG underground overlay
-   BPM : 120~300
+2) Title : Yo! Say!! Fairy!!!
+   Artist : MYUKKE.
+   BPM : 150
    Category : Original
-   Step charts : S13, S17, S20, S22, S25, D21, D24, D27
+   Step charts : S3, S6, S11, S16, S20, D12, D18, D22, CO-OP(x3)
 
-3) Title : Barber's Madness
-   Artist : Klass E
-   BPM : 195
+3) Title : Curiosity Overdrive
+   Artist : t+pazolite
+   BPM : 192
    Category : Original
-   Step charts : S11, S16, S18, S22, D16, D19, D23, CO-OP(2)
+   Step charts : S10, S15, S18, S20, S22, D16, D22, D24
 
-4) Title : Aragami
-   Artist : xi
-   BPM : 48~196
+4) Title : iRELLiA
+   Artist : HyuN
+   BPM : 204
    Category : World music
-   Step charts : S15, S17, S19, S22, S24, D17, D21, D24, D26
+   Step charts : S8, S13, S18, S22, S24, D16, D19, D24, D26
 
-5) Title : Viyella's Nightmare
-   Artist : Laur
-   BPM : 220
+5) Title : PUPA
+   Artist : Morimori Atsushi
+   BPM : 202
    Category : World music
-   Step charts : S11, S16, S19, S23, D14, D21, D25
+   Step charts : S7, S11, S14, S17, S19, S21, S23, D16, D21, D23, D25

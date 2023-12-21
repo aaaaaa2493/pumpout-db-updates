@@ -102,6 +102,12 @@ STEPMAKERS = {
 	"Barber's Madness": "BME",
 	"Aragami": "FEFEMZ",
 	"Viyella's Nightmare": "DulKi",
+
+	"Spray": "SPHAM",
+	"Yo! Say!! Fairy!!!": "SUNNY",
+	"Curiosity Overdrive": "DulKi",
+	"iRELLiA": "CONRAD",
+	"PUPA": "DulKi",
 }
 
 KOREAN_TITLES = {
@@ -152,10 +158,76 @@ KOREAN_TITLES = {
     "Barber's Madness": "바버스 매드니스",
     "Aragami": "아라가미",
     "Viyella's Nightmare": "비옐라의 악몽",
+
+	"Spray": "스프레이",
+	"Yo! Say!! Fairy!!!": "요! 세이!! 페어리!!!",
+	"Curiosity Overdrive": "큐리아서티 오버드라이브",
+	"iRELLiA": "이렐리아",
+	"PUPA": "푸파",
 }
 
 
 data = {
+"17__Spray":
+{
+	title: "Spray", artist: "WEi", channel: KPOP, bpm: "92",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.05 S2 S4 S6 S12 S15 S17 D8 D14 D17 D19",
+},
+
+"17__Yo_Say_Fairy":
+{
+	title: "Yo! Say!! Fairy!!!", artist: "MYUKKE.", channel: ORIGINAL, bpm: "150",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.05 S3 S6 S11 S16 S20 D12 D18 D22 CoOp(x3)",
+},
+
+"17__Curiosity_Overdrive":
+{
+	title: "Curiosity Overdrive", artist: "t+pazolite", channel: ORIGINAL, bpm: "192",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.05 S10 S15 S18 S20 S22 D16 D22 D24",
+},
+
+"17__iRELLiA":
+{
+	title: "iRELLiA", artist: "HyuN", channel: WORLD, bpm: "204",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.05 S8 S13 S18 S22 S24 D16 D19 D24 D26",
+},
+
+"17__PUPA":
+{
+	title: "PUPA", artist: "Morimori Atsushi", channel: WORLD, bpm: "202",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.05 S7 S11 S14 S17 S19 S21 S23 D16 D21 D23 D25",
+},
+
 "17__ELEVEN":
 {
 	title: "ELEVEN", artist: "IVE", channel: KPOP, bpm: "120",
