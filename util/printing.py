@@ -7,7 +7,7 @@ old_print = print
 def get_writable_print(file):
     if os.path.exists(file):
         os.remove(file)
-    file = open(file, 'w', encoding='UTF8')
+    file = open(file, 'w', encoding='UTF8', newline='\n')
     def print(*a, **kw):
         old_print(*a, **kw)
         old_print(*a, **kw, file=file)

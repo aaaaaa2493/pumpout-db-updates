@@ -72,19 +72,12 @@ SELECT
     'MYUKKE.'
 WHERE NOT EXISTS (SELECT 1 FROM artist WHERE LOWER(internalTitle) = LOWER('MYUKKE.'));
 
--- Add pazolite
+-- Add t+pazolite
 INSERT INTO artist (artistId, internalTitle)
 SELECT 
     (SELECT MAX(artistId) + 1 FROM artist),
-    'pazolite'
-WHERE NOT EXISTS (SELECT 1 FROM artist WHERE LOWER(internalTitle) = LOWER('pazolite'));
-
--- Add t
-INSERT INTO artist (artistId, internalTitle)
-SELECT 
-    (SELECT MAX(artistId) + 1 FROM artist),
-    't'
-WHERE NOT EXISTS (SELECT 1 FROM artist WHERE LOWER(internalTitle) = LOWER('t'));
+    't+pazolite'
+WHERE NOT EXISTS (SELECT 1 FROM artist WHERE LOWER(internalTitle) = LOWER('t+pazolite'));
 
 -- Add WEi
 INSERT INTO artist (artistId, internalTitle)
@@ -1140,16 +1133,9 @@ SELECT
 INSERT INTO songArtist (songId, artistId, sortOrder, prefix)
 SELECT
     (SELECT MAX(songId) FROM song),
-    (SELECT artistId FROM artist WHERE LOWER(internalTitle) = LOWER('t')),
+    (SELECT artistId FROM artist WHERE LOWER(internalTitle) = LOWER('t+pazolite')),
     0,
     '';
-
-INSERT INTO songArtist (songId, artistId, sortOrder, prefix)
-SELECT
-    (SELECT MAX(songId) FROM song),
-    (SELECT artistId FROM artist WHERE LOWER(internalTitle) = LOWER('pazolite')),
-    1,
-    '+';
 
 INSERT INTO songCategory (songCategoryId, songId, categoryId)
 SELECT 

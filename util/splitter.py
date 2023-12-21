@@ -19,7 +19,7 @@ def split_string(input_string, additional_splitters_on_first_split=False):
 
     additional_splitters = [
         "/",
-        "+",
+        "+ ",
         "&",
     ]
 
@@ -89,30 +89,52 @@ def split_string(input_string, additional_splitters_on_first_split=False):
 
 
 if __name__ == '__main__':
-    test = "Pneu & Cocca ft. Kagamine Len/GUMI vs.Producer+ Artist &More"
-    print(split_string(test))
-    print(split_string(test, True))
+    tests = {
+        "Pneu & Cocca ft. Kagamine Len/GUMI vs.Producer+ Artist &More": (
+            [('', 'Pneu & Cocca'), ('ft.', 'Kagamine Len'), ('/', 'GUMI'), ('vs.', 'Producer'), ('+', 'Artist'), ('&', 'More')],
+            [('', 'Pneu'), ('&', 'Cocca'), ('ft.', 'Kagamine Len'), ('/', 'GUMI'), ('vs.', 'Producer'), ('+', 'Artist'), ('&', 'More')]
+        ),
 
-    test = "Pneumonoultramicroscopicsilicovolcanoconiosis ft. Kagamine Len/GUMI"
-    print(split_string(test))
+        "Pneumonoultramicroscopicsilicovolcanoconiosis ft. Kagamine Len/GUMI":
+            [('', 'Pneumonoultramicroscopicsilicovolcanoconiosis'), ('ft.', 'Kagamine Len'), ('/', 'GUMI')],
 
-    test = "Up & Up"
-    print(split_string(test))
+        "Up & Up": (
+            [('', 'Up & Up')],
+            [('', 'Up'), ('&', 'Up')]
+        ),
 
-    test = "Up & Up (Produced by AWAL)"
-    print(split_string(test))
+        "Up & Up (Produced by AWAL)": (
+            [('', 'Up & Up'), ('Produced by', 'AWAL')],
+            [('', 'Up'), ('&', 'Up'), ('Produced by', 'AWAL')]
+        ),
 
-    test = 'A:llha (ANE + 2riA)'
-    print(split_string(test, True))
+        'A:llha (ANE + 2riA)':
+            [('', 'A:llha'), ('', 'ANE'), ('+', '2riA')],
 
-    test = 'Produced by AWAL'
-    print(split_string(test, True))
+        'Produced by AWAL':
+            [('Produced by', 'AWAL')],
 
-    test = 'A:llha (ANE + 2riA) (rock & scissors)'
-    print(split_string(test, True))
+        'A:llha (ANE + 2riA) (rock & scissors)':
+            [('', 'A:llha'), ('', 'ANE'), ('+', '2riA'), ('', 'rock'), ('&', 'scissors')],
 
-    test = "Ignis Fatuus (DM Ashura Mix)"
-    print(split_string(test))
+        "Ignis Fatuus (DM Ashura Mix)":
+            [('', 'Ignis Fatuus'), ('', 'DM Ashura')],
 
-    test = "Boong Boong (Feat. Sik-K) (Prod. GroovyRoom)"
-    print(split_string(test))
+        "Boong Boong (Feat. Sik-K) (Prod. GroovyRoom)":
+            [('', 'Boong Boong'), ('Feat.', 'Sik-K'), ('Prod.', 'GroovyRoom')],
+
+        "t+pazolite":
+            [('', 't+pazolite')],
+    }
+
+    for key, expected in tests.items():
+        if type(expected) == list:
+            expected = (expected, expected)
+
+        result = split_string(key)
+        print(result)
+        assert result == expected[0]
+
+        result2 = split_string(key, True)
+        print(result2)
+        assert result2 == expected[1]
