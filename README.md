@@ -23,7 +23,7 @@ How to get images:
 - In case you can't remove stepmakers from corners, copy song previews from somewhere else.
 - Use the following command:
 ```bash
-yt -f bestvideo+bestaudio --merge-output-format mkv --extractor-args youtube:player_client=android -o 1.mkv https://www.youtube.com/watch?v=rcdPlWC_5mo && ffmpeg -ss 1:28 -i 1.mkv -vframes 1 Phoenix_Curiosity_Overdrive.png && rm 1.mkv
+yt-dlp -f bestvideo+bestaudio --merge-output-format mkv --extractor-args youtube:player_client=android -o 1.mkv https://www.youtube.com/watch?v=rcdPlWC_5mo && ffmpeg -ss 1:28 -i 1.mkv -vframes 1 Phoenix_Curiosity_Overdrive.png && rm 1.mkv
 ```
 1. Replace `https://www.youtube.com/watch?v=rcdPlWC_5mo` with actual video
 2. Replace `1:28` with actual minute:second of the song preview
