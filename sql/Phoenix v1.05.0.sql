@@ -2071,7 +2071,7 @@ INSERT INTO songBpm (songBpmId, songId, bpmMin, bpmMax)
 SELECT
     (SELECT MAX(songBpmId) + 1 FROM songBpm),
     (SELECT MAX(songId) FROM song),
-    202,
+    50,
     202;
 
 INSERT INTO songBpmVersion (songBpmId, songId, versionId)

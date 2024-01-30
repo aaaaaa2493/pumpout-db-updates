@@ -108,6 +108,12 @@ STEPMAKERS = {
 	"Curiosity Overdrive": "DulKi",
 	"iRELLiA": "CONRAD",
 	"PUPA": "DulKi",
+
+	"TOMBOY": "NIMGO",
+	"PANDORA": "SUNNY",
+	"Bluish Rose": "SUNNY",
+	"Flavor Step!": "SPHAM",
+	"TRICKL4SH 220": "CONRAD",
 }
 
 KOREAN_TITLES = {
@@ -164,10 +170,76 @@ KOREAN_TITLES = {
 	"Curiosity Overdrive": "큐리아서티 오버드라이브",
 	"iRELLiA": "이렐리아",
 	"PUPA": "푸파",
+
+	"TOMBOY": "톰보이",
+	"PANDORA": "판도라",
+	"Bluish Rose": "블루이쉬 로즈",
+	"Flavor Step!": "플레이버 스텝!",
+	"TRICKL4SH 220": "트릭크래쉬 220",
 }
 
 
 data = {
+"17__TOMBOY":
+{
+	title: "TOMBOY", artist: "(G)I-DLE", channel: KPOP, bpm: "124",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.06 S3 S5 S8 S17 S19 D12 D18 D20 D22",
+},
+
+"17__PANDORA":
+{
+	title: "PANDORA", artist: "MAVE:", channel: KPOP, bpm: "75",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.06 S2 S4 S7 S11 S17 D6 D13 D18",
+},
+
+"17__Bluish_Rose":
+{
+	title: "Bluish Rose", artist: "WyvernP", channel: ORIGINAL, bpm: "130",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.06 S3 S5 S8 S12 S16 S20 D6 D14 D18 D21",
+},
+
+"17__Flavor_Step":
+{
+	title: "Flavor Step!", artist: "EmoCosine", channel: ORIGINAL, bpm: "150",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.06 S11 S14 S18 S21 D15 D19 D22",
+},
+
+"17__TRICKL4SH_220":
+{
+	title: "TRICKL4SH 220", artist: "Lite Show Magic", channel: WORLD, bpm: "220",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.06 S15 S18 S21 S23 D16 D20 D23 D25",
+},
+
 "17__Spray":
 {
 	title: "Spray", artist: "WEi", channel: KPOP, bpm: "92",
@@ -218,7 +290,7 @@ data = {
 
 "17__PUPA":
 {
-	title: "PUPA", artist: "Morimori Atsushi", channel: WORLD, bpm: "202",
+	title: "PUPA", artist: "Morimori Atsushi", channel: WORLD, bpm: "50~202",
 
 	#sortingID: "",  # between  () and  ()
 	# arcadeID: "",
