@@ -1,5 +1,5 @@
 from data import data, Phoenix, XX, ARCADE, SHORT, FULL, REMIX, duration, title, pumpoutID, artist, arcadeName, bpm
-from data import STEPMAKERS, KPOP, ORIGINAL, WORLD, JMUSIC, XROSS, channel, arcadeID
+from data import STEPMAKERS, KPOP, ORIGINAL, WORLD, JMUSIC, XROSS, channel, arcadeID, artists as artists_key
 from data import KOREAN_TITLES, SHORT_MARKER, FULL_MARKER
 from util.splitter import split_string
 from util.get_bpm import bpm_min_max
@@ -22,6 +22,7 @@ patches = {
         'v1.04.0',
         'v1.05.0',
         'v1.06.0',
+        'v1.07.0',
     ],
     XX: [
         'v1.00.1',
@@ -208,15 +209,20 @@ artists = set()
 stepmakers = set()
 
 for song in new_songs:
-    song[artist] = split_string(song[artist], True)
     curr_title = song[title]
 
-    # print("ARTISTS ", song[artist])
+    if artists_key in song:
+        song[artist] = song[artists_key]
 
-    if arcadeName in song:
-        additional_artists = split_string(song[arcadeName])[1:]
-        # print("ADDITIONAL ARTISTS ", additional_artists)
-        song[artist] += additional_artists
+    else:
+        song[artist] = split_string(song[artist], True)
+
+        if arcadeName in song:
+            additional_artists = split_string(song[arcadeName])[1:]
+            # print("ADDITIONAL ARTISTS ", additional_artists)
+            song[artist] += additional_artists
+
+    # print("ARTISTS ", song[artist])
 
     for a in song[artist]:
         artists.add(a[1])

@@ -1,6 +1,7 @@
 
 title = 'title'
 artist = 'artist'
+artists = 'artists'
 channel = 'channel'
 bpm = 'bpm'
 pumpoutID = 'pumpoutID'
@@ -114,6 +115,12 @@ STEPMAKERS = {
 	"Bluish Rose": "SUNNY",
 	"Flavor Step!": "SPHAM",
 	"TRICKL4SH 220": "CONRAD",
+
+	"See": "DulKi",
+	"Sudden Appearance Image": "DulKi",
+	"Little Munchkin": "OSING",
+	"Simon Says, EURODANCE!!": "CONRAD",
+	"STAGER": "CONRAD",
 }
 
 KOREAN_TITLES = {
@@ -176,10 +183,79 @@ KOREAN_TITLES = {
 	"Bluish Rose": "블루이쉬 로즈",
 	"Flavor Step!": "플레이버 스텝!",
 	"TRICKL4SH 220": "트릭크래쉬 220",
+
+	"See": "시",
+	"Sudden Appearance Image": "서든 어페어런스 이미지",
+	"Little Munchkin": "리틀 먼치킨",
+	"Simon Says, EURODANCE!!": "사이먼 세이즈, 유로댄스!!",
+	"STAGER": "스테이저",
 }
 
 
 data = {
+"17__See":
+{
+	title: "See", artist: "Doin", channel: ORIGINAL, bpm: "293",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.07 S11 S16 S19 S22 D13 D18 D20 D23",
+},
+
+"17__Sudden_Appearance_Image":
+{
+	title: "Sudden Appearance Image", artist: "Blacklolita", channel: ORIGINAL, bpm: "170",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.07 S8 S13 S15 S17 S19 S21 D17 D21 D23",
+},
+
+"17__Little_Munchkin":
+{
+	title: "Little Munchkin", artist: "Castellia", channel: ORIGINAL, bpm: "180",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.07 S8 S13 S16 S19 S21 D11 D15 D17 D20 D23 CoOp(x2)",
+},
+
+"17__Simon_Says_EURODANCE":
+{
+	title: "Simon Says, EURODANCE!!", artist: "Jehezukiel☆KAZEMURA☆Hideky", channel: ORIGINAL, bpm: "157",
+	arcadeName: "Simon Says, EURODANCE!! (feat. Sara☆M)",
+
+	artists: [('', "Jehezukiel"), ('', "KAZEMURA"), ('', "Hideky"), ("feat.", "Sara☆M")],
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.07 S4 S7 S11 S16 S18 S20 D13 D19 D22",
+},
+
+"17__STAGER":
+{
+	title: "STAGER", artist: "Ras", channel: WORLD, bpm: "146",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.07 S8 S11 S15 S17 S19 D12 D16 D18 D20 CoOp(x2)",
+},
+
 "17__TOMBOY":
 {
 	title: "TOMBOY", artist: "(G)I-DLE", channel: KPOP, bpm: "124",

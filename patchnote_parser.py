@@ -8,7 +8,7 @@ STEP_CHARTS = 'stepcharts'
 
 MIX_ID = 17
 MIX_NAME = Phoenix
-PATCH_VERSION = '1.06'
+PATCH_VERSION = '1.07'
 
 
 def convert_coop_format(text):
@@ -36,7 +36,7 @@ def convert_string_to_key(input_string):
 
 
 def parse_song_data(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
     songs = []
