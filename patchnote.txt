@@ -1,37 +1,29 @@
-1) Title : See
-Artist : Doin
-BPM : 293
+1) Title : Lucid Dream
+Artist : Cosmograph
+BPM : 173
 Category : Original
-Step charts : S11, S16, S19, S22, D13, D18, D20, D23
+Step charts : S8, S13, S19, S21, D14, D20, D22
 
-
-
-2) Title : Sudden Appearance Image
-Artist : Blacklolita
-BPM : 170
-Category : Original
-Step charts : S8, S13, S15, S17, S19, S21, D17, D21, D23
-
-
-
-3) Title : Little Munchkin
-Artist : Castellia
-BPM : 180
-Category : Original
-Step charts : S8, S13, S16, S19, S21, D11, D15, D17, D20, D23, CO-OP(x2)
-
-
-
-4) Title : Simon Says, EURODANCE!! (feat. Sara☆M)
-Artist : Jehezukiel☆KAZEMURA☆Hideky
+2) Title : Solfeggietto
+Artist : Fiverwater
 BPM : 157
 Category : Original
-Step charts : S4, S7, S11, S16, S18, S20, D13, D19, D22
+Step charts : S9, S15, S19, S21, S22, D11, D16, D20, D23, D25
 
+3) Title : Le Nozze di Figaro ~Celebrazione Remix~
+Artist : Sr. Lan Belmont
+BPM : 172
+Category : Original
+Step charts : S9, S13, S17, S20, D14, D18, D21
 
+4) Title : PRiMA MATERiA
+Artist : xi
+BPM : 187
+Category : Original
+Step charts : S14, S18, S21, S24, D17, D24, D26
 
-5) Title : STAGER
-Artist : Ras
-BPM : 146
+5) Title : Destr0yer
+Artist : sakuzyo
+BPM : 90
 Category : World music
-Step charts : S8, S11, S15, S17, S19, D12, D16, D18, D20, CO-OP(x2)
+Step charts : S7, S13, S18, S22, D15, D20, D24

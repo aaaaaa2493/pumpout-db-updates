@@ -121,6 +121,12 @@ STEPMAKERS = {
 	"Little Munchkin": "OSING",
 	"Simon Says, EURODANCE!!": "CONRAD",
 	"STAGER": "CONRAD",
+
+	"Lucid Dream": "SPHAM",
+	"Solfeggietto": "WINDFORCE",
+	"Le Nozze di Figaro ~Celebrazione Remix~": "SPHAM",
+	"PRiMA MATERiA": "EXC",
+	"Destr0yer": "EXC",
 }
 
 KOREAN_TITLES = {
@@ -189,10 +195,76 @@ KOREAN_TITLES = {
 	"Little Munchkin": "리틀 먼치킨",
 	"Simon Says, EURODANCE!!": "사이먼 세이즈, 유로댄스!!",
 	"STAGER": "스테이저",
+
+	"Lucid Dream": "루시드 드림",
+	"Solfeggietto": "솔페지에토",
+	"Le Nozze di Figaro ~Celebrazione Remix~": "피가로의 결혼",
+	"PRiMA MATERiA": "프ㄹi마 마테ㄹi아",
+	"Destr0yer": "디스트로0l어",
 }
 
 
 data = {
+"17__Lucid_Dream":
+{
+	title: "Lucid Dream", artist: "Cosmograph", channel: ORIGINAL, bpm: "173",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.08 S8 S13 S19 S21 D14 D20 D22",
+},
+
+"17__Solfeggietto":
+{
+	title: "Solfeggietto", artist: "Fiverwater", channel: ORIGINAL, bpm: "157",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.08 S9 S15 S19 S21 S22 D11 D16 D20 D23 D25",
+},
+
+"17__Le_Nozze_di_Figaro_Celebrazione_Remix":
+{
+	title: "Le Nozze di Figaro ~Celebrazione Remix~", artist: "Sr. Lan Belmont", channel: ORIGINAL, bpm: "172",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.08 S9 S13 S17 S20 D14 D18 D21",
+},
+
+"17__PRiMA_MATERiA":
+{
+	title: "PRiMA MATERiA", artist: "xi", channel: ORIGINAL, bpm: "187",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.08 S14 S18 S21 S24 D17 D24 D26",
+},
+
+"17__Destr0yer":
+{
+	title: "Destr0yer", artist: "sakuzyo", channel: WORLD, bpm: "90",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@1.08 S7 S13 S18 S22 D15 D20 D24",
+},
+
 "17__See":
 {
 	title: "See", artist: "Doin", channel: ORIGINAL, bpm: "293",
