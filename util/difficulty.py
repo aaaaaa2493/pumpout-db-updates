@@ -13,6 +13,7 @@ def get_difficulty(curr_chart):
         return "C", int(curr_chart)
 
     else:
+        print(curr_chart)
         raise Exception()
 
 

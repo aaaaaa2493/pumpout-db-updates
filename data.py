@@ -56,6 +56,14 @@ PHILIPPINES = 'PHILIPPINES'
 CHINESE = 'CHINESE'
 
 STEPMAKERS = {
+	"Utopia": "SUNNY",
+	"Rolling Christmas": "JUNARE",
+	"Dr. M": "BPM",
+	"Vacuum": "DulKi",
+	"Unique": "DIESEL",
+	"Point Break": "CONRAD",
+	"HELIX": "refos",
+
 	"After LIKE": "CONRAD",
 	"Amor Fati": "EXC",
 	"Alone": "SUNNY",
@@ -63,34 +71,34 @@ STEPMAKERS = {
 	"Versailles": "CONRAD",
 	"Showdown": "CONRAD",
 	"Euphorianic": "CONRAD",
-	"Jupin": "Dulki",
-	"Etude Op 10-4": [("SUNNY", ('S4', 'S7', 'S11', 'S16', 'D13', 'D17')), ('EXC', ('S22', 'D25'))],
+	"Jupin": "DulKi",
+	"Etude Op 10-4": [("SUNNY", '*'), ('EXC', ('S22', 'D25'))],
 	"Altale": "FEFEMZ",
-	"Energy Synergy Matrix": "Dulki",
+	"Energy Synergy Matrix": "DulKi",
 	"Pneumonoultramicroscopicsilicovolcanoconiosis": "EXC",
 	"GOODTEK": "FEFEMZ",
 	"CO5M1C R4ILR0AD": "FEFEMZ",
 	"Halcyon": "NIMGO",
 	"Acquire": "CONRAD",
 	"MilK": "FEFEMZ",
-	"BOCA": "Dulki",
+	"BOCA": [("DulKi", '*'), ("SUNNY", 'CoOp(x2)'), ('NIMGO', 'D25')],
 	"Nxde": "SPHAM",
 	"Teddy Bear": "CONRAD",
 
 	"Beautiful Liar": "SPHAM",
 	"STORM": "CONRAD",
 	"GOODBOUNCE": "SUNNY",
-	"BOOOM!!": "Dulki",
+	"BOOOM!!": "DulKi",
 	"KUGUTSU": "CONRAD",
 	"Airplane": "NIMGO",
 
 	"MURDOCH": "NIMGO",
 	"Lohxia": "CONRAD",
-	"Ghroth": "Dulki",
-	"CHAOS AGAIN": "SPHAM",
+	"Ghroth": "DulKi",
+	"CHAOS AGAIN": [("SPHAM", '*'), ('FEFEMZ', 'S21')],
 	"R.I.P.": "EXC",
-	"BATTLE NO.1": "Dulki",
-	"Pirate": "SUNNY",
+	"BATTLE NO.1": "DulKi",
+	"Pirate": [("SUNNY", '*'), ('GGWANG', 'D21')],
 
 	"Lacrimosa": "SUNNY",
 	"Galaxy Collapse": "SUNNY",
@@ -110,7 +118,7 @@ STEPMAKERS = {
 	"iRELLiA": "CONRAD",
 	"PUPA": "DulKi",
 
-	"TOMBOY": "NIMGO",
+	"TOMBOY": [("NIMGO", '*'), ('SUNNY', 'CoOp(x2)')],
 	"PANDORA": "SUNNY",
 	"Bluish Rose": "SUNNY",
 	"Flavor Step!": "SPHAM",
@@ -127,6 +135,17 @@ STEPMAKERS = {
 	"Le Nozze di Figaro ~Celebrazione Remix~": "SPHAM",
 	"PRiMA MATERiA": "EXC",
 	"Destr0yer": "EXC",
+
+	"CRUSH": "CONRAD",
+	"Bubble": "SPHAM",
+	"Queencard": [("NIMGO", '*'), ('SUNNY', 'CoOp(x2)')],
+	"Imperium": "EXC",
+	"Hercules": "SPHAM",
+	"wither garden": "CONRAD",
+	"Poppin' Shower": "FEFEMZ",
+	"Giselle": "DulKi",
+	"Big Daddy": "FEFEMZ",
+	"Horang Pungryuga": "EXC",
 }
 
 KOREAN_TITLES = {
@@ -201,10 +220,141 @@ KOREAN_TITLES = {
 	"Le Nozze di Figaro ~Celebrazione Remix~": "피가로의 결혼",
 	"PRiMA MATERiA": "프ㄹi마 마테ㄹi아",
 	"Destr0yer": "디스트로0l어",
+
+	"CRUSH": "크러쉬",
+	"Bubble": "버블",
+	"Queencard": "퀸카",
+	"Imperium": "임페리움",
+	"Hercules": "헤라클레스",
+	"wither garden": "위더 가든",
+	"Poppin' Shower": "팝핀 샤워",
+	"Giselle": "지젤",
+	"Big Daddy": "빅 대디",
+	"Horang Pungryuga": "호랑풍류가",
 }
 
 
 data = {
+"17__CRUSH":
+{
+	title: "CRUSH", artist: "ZEROBASEONE", channel: KPOP, bpm: "154",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.00 S2 S4 S7 S10 S14 S17 S20 D12 D16 D19 D22",
+},
+
+"17__Bubble":
+{
+	title: "Bubble", artist: "STAYC", channel: KPOP, bpm: "132",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.00 S2 S4 S6 S9 S13 S16 S19 S21 D10 D14 D17 D20 D22",
+},
+
+"17__Queencard":
+{
+	title: "Queencard", artist: "(G)I-DLE", channel: KPOP, bpm: "130",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.00 S3 S5 S9 S15 S18 S20 D16 D18 D20 D22 CoOp(x2)",
+},
+
+"17__Imperium":
+{
+	title: "Imperium", artist: "sakuzyo", channel: ORIGINAL, bpm: "174",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.00 S10 S14 S18 S22 D16 D20 D23 D25",
+},
+
+"17__Hercules":
+{
+	title: "Hercules", artist: "Abel", channel: ORIGINAL, bpm: "195",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.00 S14 S19 S22 S24 D15 D20 D24 D26",
+},
+
+"17__wither_garden":
+{
+	title: "wither garden", artist: "uma feat. Kanon Tachibana", channel: ORIGINAL, bpm: "168",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.00 S4 S7 S11 S14 S17 S20 D13 D18 D22",
+},
+
+"17__Poppin_Shower":
+{
+	title: "Poppin' Shower", artist: "P*Light", channel: WORLD, bpm: "175",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.00 S12 S15 S18 S21 D15 D19 D22",
+},
+
+"17__Giselle":
+{
+	title: "Giselle", artist: "Sobrem a.k.a. Widowmaker", channel: WORLD, bpm: "128~152",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.00 S12 S16 S18 S20 S22 D14 D20 D22 D24",
+},
+
+"17__Big_Daddy":
+{
+	title: "Big Daddy", artist: "USAO", channel: WORLD, bpm: "190",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.00 S11 S14 S16 S19 S21 D17 D20 D23",
+},
+
+"17__Horang_Pungryuga":
+{
+	title: "Horang Pungryuga", artist: "Sangnoksu feat. HANANA", channel: WORLD, bpm: "160",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.00 S4 S7 S12 S16 S19 S21 D12 D16 D21 D24",
+},
+
 "17__Lucid_Dream":
 {
 	title: "Lucid Dream", artist: "Cosmograph", channel: ORIGINAL, bpm: "173",
@@ -337,7 +487,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@1.06 S3 S5 S8 S17 S19 D12 D18 D20 D22",
+	Phoenix: "@1.06 S3 S5 S8 S17 S19 D12 D18 D20 D22 @2.00 CoOp(x2)",
 },
 
 "17__PANDORA":
@@ -577,7 +727,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@1.02 S2 S4 S6 S9 S13 S17 D8 D15 D18",
+	Phoenix: "@1.02 S2 S4 S6 S9 S13 S17 D8 D15 D18 @2.00 D21",
 },
 
 "17__BATTLE_NO.1":
@@ -613,7 +763,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@1.02 S15 S18 S20 S22 S24 D17 D22 D24 D26",
+	Phoenix: "@1.02 S15 S18 S20 S22 S24 D17 D22 D24 D26 @2.00 S21",
 },
 
 "17__Ghroth":
@@ -733,7 +883,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "S3 S5 S9 S14 S17 S19 S21 D15 D19 D21 D23",
+	Phoenix: "S3 S5 S9 S14 S17 S19 S21 D15 D19 D21 D23 @2.00 D25 CoOp(x2)",
 },
 
 
@@ -1857,6 +2007,7 @@ data = {
 	arcadeID: "1676",
 	pumpoutID: 784,
 
+	Phoenix: "@2.00 = -Dp4 D25`24 D12`13",
 	XX: "@1.03 S6 S11 S17 S19 D13 D21 S22.lock D24.lock  @1.04 S15 CoOp(x2)  @2.02 Dp4",
 },
 
@@ -3350,14 +3501,14 @@ data = {
 },
 
 
-"15__Helix":
+"15__HELIX":
 {
-	title: "Helix", artist: "ESTi", channel: XROSS, bpm: "175",
-	altID: "15_Helix",
+	title: "HELIX", artist: "ESTi", channel: XROSS, bpm: "175",
+	altID: "15_HELIX",
 	arcadeID: "1597",
 	pumpoutID: 627,
 
-	Phoenix: "= D12`11 D16`15 -Dp5",
+	Phoenix: "= D12`11 D16`15 -Dp5 @2.00 D23",
 	XX: "=",
 	Prime2: "@1.03 S5 S7 S11 S16 S18 D11 D15 S19.ampass D19.ampass  @2.01 Dp5",
 },
@@ -5507,7 +5658,7 @@ data = {
 	arcadeID: "1310",
 	pumpoutID: 219,
 
-	Phoenix: "=",
+	Phoenix: "= @2.00 D22",
 	XX: "= S14`15 S16`17 D18`19",
 	Prime2: "=",
 	Prime: "= -S16",
@@ -6348,8 +6499,7 @@ data = {
 	arcadeID: "1235",
 	pumpoutID: 277,
 
-	Phoenix: "= S10`9 D13`9",
-		# TODO.Phoenix: D13`9
+	Phoenix: "= S10`9 D13`9 @2.00 S20 D22",
 	XX: "=",
 	Prime2: "=",
 	Prime: "=",
@@ -7369,7 +7519,7 @@ data = {
 	arcadeID: "1017",
 	pumpoutID: 133,
 
-	Phoenix: "= -Dp3",
+	Phoenix: "= -Dp3 @2.00 S16 D16",
 	XX: "= D21`22",
 	Prime2: "=",
 	Prime: "=",
@@ -12403,7 +12553,7 @@ data = {
 	arcadeID: "701",
 	pumpoutID: 28,
 
-	Phoenix: "= S10`8 S14`12 D14`11",
+	Phoenix: "= S10`8 S14`12 D14`11 @2.00 D20",
 		# TODO.Phoenix: D14`11
 	XX: "= S6 S8`7 D18`16",
 		# TODO: S6.???
@@ -12532,7 +12682,7 @@ data = {
 	arcadeID: "708",
 	pumpoutID: 33,
 
-	Phoenix: "= S8`9 D7`9 -Sp3 -Dp6",
+	Phoenix: "= S8`9 D7`9 -Sp3 -Dp6 @2.00 D23",
 	XX: "=  @2.02 S3 S9 S13 D9",
 	Prime2: "=",
 	Prime: "=",
@@ -12885,7 +13035,7 @@ data = {
 	arcadeID: "503",
 	pumpoutID: 2,
 
-	Phoenix: "=",
+	Phoenix: "= @2.00 S20",
 	XX: "= S12`13 D16`17  @2.05 D22.lock  @2.06 S17",
 	Prime2: "=",
 	Prime: "=  @1.11 CoOp(x2)  @1.12 D17.ucs",

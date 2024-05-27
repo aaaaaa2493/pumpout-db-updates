@@ -24,6 +24,7 @@ patches = {
         'v1.06.0',
         'v1.07.0',
         'v1.08.0',
+        'v2.00.0',
     ],
     XX: [
         'v1.00.1',
@@ -53,11 +54,12 @@ class Language:
 
 
 MIX = Phoenix
+PATCHES = patches[MIX]
 PATCH = patches[MIX][-1]
 
 MIX_ID = mix_ids[MIX]
 PREV_MIX = mixes[mixes.index(MIX)-1]
-INITIAL_PATCH = patches[MIX][0] == PATCH
+INITIAL_PATCH = PATCHES[0] == PATCH
 IGNORED_MIXES = (2, 8)  # Infinity and Prime JE
 
 DEBUG = False
@@ -86,20 +88,58 @@ category = {
 new_songs = [
     i for i in data.values()
     if MIX in i and PREV_MIX not in i and get_info_for_patch(PATCH, i[MIX], INITIAL_PATCH)
+       and all(len(get_info_for_patch(p, i[MIX], PATCHES[0] == p)) == 0 for p in PATCHES if PATCHES.index(p) < PATCHES.index(PATCH))
 ]
 
 deleted_songs = [
     i for i in data.values()
-    if MIX not in i and PREV_MIX in i and INITIAL_PATCH
+    if (MIX not in i or MIX in i and not get_info_for_patch(PATCH, i[MIX], INITIAL_PATCH)) and PREV_MIX in i and INITIAL_PATCH
 ]
 
 changed_charts = [
     i for i in data.values()
-    if MIX in i and PREV_MIX in i and i[MIX] != '='
+    if MIX in i and get_info_for_patch(PATCH, i[MIX], INITIAL_PATCH) and PREV_MIX in i and i[MIX] != '='
 ]
+
+new_charts = [
+    i for i in data.values()
+    if (
+        MIX in i and PREV_MIX in i and get_info_for_patch(PATCH, i[MIX], INITIAL_PATCH)
+       )
+       or
+       (
+        MIX in i and PREV_MIX not in i and get_info_for_patch(PATCH, i[MIX], INITIAL_PATCH)
+            and any(len(get_info_for_patch(p, i[MIX], PATCHES[0] == p)) != 0 for p in PATCHES if PATCHES.index(p) < PATCHES.index(PATCH))
+       )
+]
+
+
+def is_revived(i):
+    if INITIAL_PATCH:
+        return False
+
+    if not (MIX in i and PREV_MIX in i):
+        return False
+
+    curr_patch = get_info_for_patch(PATCH, i[MIX], INITIAL_PATCH)
+    prev_patches = [
+        get_info_for_patch(p, i[MIX], PATCHES[0] == p)
+        for p in PATCHES if PATCHES.index(p) < PATCHES.index(PATCH)
+    ]
+
+    return len(curr_patch) > 0 and all(len(j) == 0 for j in prev_patches)
+
+revived_songs = [
+    i for i in data.values()
+    if is_revived(i)
+]
+
+if INITIAL_PATCH:
+    new_charts = []
 
 added_charts = []
 deleted_charts = []
+not_revived_charts = []
 rerated_charts = []
 
 for song in changed_charts:
@@ -109,11 +149,7 @@ for song in changed_charts:
     else:
         curr_title = song[title]
 
-    if not song[MIX].startswith('= '):
-        raise Exception()
-    charts = song[MIX][2:]
-
-    charts = get_info_for_patch(PATCH, charts, INITIAL_PATCH)
+    charts = get_info_for_patch(PATCH, song[MIX], INITIAL_PATCH)
 
     for change in charts:
         if '`' in change:
@@ -122,7 +158,11 @@ for song in changed_charts:
             rerated_charts += [(pumpout, curr_title, before, after)]
             # print(song_title, before, '->', after)
         elif change[0] == '-':
-            deleted_charts += [(pumpout, curr_title, change.upper()[1:])]
+            elem = [(pumpout, curr_title, change.upper()[1:])]
+            if song not in revived_songs:
+                deleted_charts += elem
+            else:
+                not_revived_charts += elem
             # print(song_title, change.upper())
         elif change[0] == '+':
             added_charts += [(pumpout, curr_title, change.upper()[1:])]
@@ -237,6 +277,21 @@ for song in new_songs:
 
         for s in curr_stepmakers:
             stepmakers.add(s)
+
+
+for song in new_charts:
+    curr_title = song[title]
+
+    if curr_title in STEPMAKERS:
+        curr_stepmakers = []
+        if type(STEPMAKERS[curr_title]) == str:
+            curr_stepmakers = [STEPMAKERS[curr_title]]
+        else:
+            curr_stepmakers = [i[0] for i in STEPMAKERS[curr_title]]
+
+        for s in curr_stepmakers:
+            stepmakers.add(s)
+
 
 if artists:
     print("""
@@ -510,6 +565,7 @@ SELECT
     if charts.startswith(at_version):
         charts = charts[len(at_version):].strip()
 
+    charts = charts.split('@')[0]
     charts = charts.split()
 
     for chart_index, curr_chart in enumerate(charts):
@@ -562,6 +618,8 @@ SELECT
             found_stepmakers = [curr_stepmakers]
         else:
             found_stepmakers = [i[0] for i in curr_stepmakers if curr_chart in i[1]]
+            if len(found_stepmakers) == 0:
+                found_stepmakers = [i[0] for i in curr_stepmakers if i[1] == '*']
 
         if len(found_stepmakers) != 1:
             raise Exception()
@@ -586,6 +644,120 @@ SELECT
         break
 
 
+
+if new_charts:
+    print("""
+-- Add new charts for existing songs
+
+
+""", end='')
+
+    if NOSQL:
+        p(f"\nAdd new charts for existing songs")
+
+
+for song_index, song in enumerate(new_charts):
+    if duration not in song:
+        song[duration] = ARCADE
+    song[duration] = cut[song[duration]]
+
+    original_title = song[title]
+    song_card_append = ''
+    if song[title].endswith(SHORT_MARKER):
+        song[title] = song[title].replace(SHORT_MARKER, "").strip()
+        song_card_append = '_Short'
+
+    if song[title].endswith(FULL_MARKER):
+        song[title] = song[title].replace(FULL_MARKER, "").strip()
+        song_card_append = '_Full'
+
+    curr_title = song[title]
+    curr_cut = song[duration]
+
+    charts = get_info_for_patch(PATCH, song[MIX], INITIAL_PATCH)
+
+    for chart_index, curr_chart in enumerate(charts):
+        if '`' in curr_chart or '-' in curr_chart or '=' == curr_chart:
+            continue
+
+        chart_mode, chart_difficulty = get_difficulty(curr_chart)
+
+        if NOSQL:
+            p(f"{curr_title} {curr_chart}")
+
+        print(f"""
+-- Add {original_title} {curr_chart}
+
+INSERT INTO chart (chartId, songId)
+SELECT 
+    (SELECT MAX(chartId) + 1 FROM chart),
+    (SELECT songId FROM song 
+     WHERE cutId = (SELECT cutId FROM cut WHERE internalTitle = '{e(curr_cut)}')
+     AND LOWER(internalTitle) = LOWER('{e(original_title)}'));
+""", end='')
+
+        print(f"""
+INSERT INTO chartRating (chartRatingId, chartId, modeId, difficultyId)
+SELECT 
+    (SELECT MAX(chartRatingId) + 1 FROM chartRating),
+    (SELECT MAX(chartId) FROM chart),
+    (SELECT modeId FROM mode WHERE internalAbbreviation = '{e(chart_mode)}'),
+    (SELECT difficultyId FROM difficulty WHERE value = {chart_difficulty});
+""", end='')
+
+        print(f"""
+INSERT INTO chartRatingVersion (chartRatingId, chartId, versionId)
+SELECT 
+    (SELECT MAX(chartRatingId) FROM chartRating),
+    (SELECT MAX(chartId) FROM chart),
+    (SELECT versionId FROM version 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     AND internalTitle = '{e(PATCH)}');
+""", end='')
+
+        print(f"""
+INSERT INTO chartVersion (chartId, versionId, operationId, internalDescription)
+SELECT 
+    (SELECT MAX(chartId) FROM chart),
+    (SELECT versionId FROM version 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     AND internalTitle = '{e(PATCH)}'),
+    (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.INSERT)}'),
+    NULL;
+""", end='')
+
+        curr_stepmakers = STEPMAKERS[original_title]
+        if type(curr_stepmakers) == str:
+            found_stepmakers = [curr_stepmakers]
+        else:
+            found_stepmakers = [i[0] for i in curr_stepmakers if curr_chart in i[1]]
+            if len(found_stepmakers) == 0:
+                found_stepmakers = [i[0] for i in curr_stepmakers if i[1] == '*']
+
+        if len(found_stepmakers) != 1:
+            raise Exception()
+
+        for index, stepmaker in enumerate(found_stepmakers):
+            print(f"""
+INSERT INTO chartStepmaker (chartId, stepmakerId, sortOrder, prefix)
+SELECT
+    (SELECT MAX(chartId) FROM chart),
+    (SELECT stepmakerId FROM stepmaker WHERE LOWER(internalTitle) = LOWER('{e(stepmaker)}')),
+    {index},
+    '';
+""", end='')
+
+        print()
+        print()
+
+        if DEBUG and chart_index == 1:
+            break
+
+    if DEBUG and song_index == 1:
+        break
+
+
+
 if deleted_songs:
     print("""
 -- Remove deleted songs
@@ -594,7 +766,7 @@ if deleted_songs:
 """, end='')
 
     if NOSQL:
-        p(f"\nRemove deleted songs add charts that exist in XX 2.08")
+        p(f"\nRemove deleted songs add charts that exist in {MIX_PREV_PATCH} {PREV_PATCH}")
 
 
 for index, song in enumerate(deleted_songs):
@@ -732,6 +904,96 @@ AND sub.difficultyId = (SELECT difficultyId FROM difficulty WHERE value = {diff}
 
     if DEBUG and index == 1:
         break
+
+
+if revived_songs:
+    print("""
+-- Revive songs
+
+
+""", end='')
+
+    if NOSQL:
+        p(f"\nRevive songs")
+
+
+for index, song in enumerate(revived_songs):
+
+    if arcadeName in song:
+        curr_title = song[arcadeName]
+    else:
+        curr_title = song[title]
+
+    pumpout_id = song[pumpoutID]
+
+    if NOSQL:
+        p(f"{curr_title}")
+
+    not_revived = [i[2] for i in not_revived_charts if i[0] == pumpout_id]
+
+    print(f"""
+-- Revive {curr_title}
+
+INSERT INTO songVersion (songId, versionId, operationId, internalDescription)
+SELECT 
+    {pumpout_id},
+    (SELECT versionId FROM version 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     AND internalTitle = '{e(PATCH)}'),
+    (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.REVIVE)}'),
+    NULL;
+""", end='')
+
+    print()
+    print()
+
+    print(f"""
+-- Revive all charts of {curr_title}{' except ' + ', '.join(not_revived) if not_revived else ''}
+
+INSERT INTO chartVersion (chartId, versionId, operationId, internalDescription)
+SELECT
+  sub.chartId,
+  (SELECT versionId FROM version
+   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+   AND internalTitle = '{e(PATCH)}'),
+  (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.REVIVE)}'),
+  NULL
+FROM (
+  SELECT
+    crv.chartId,
+    cv.operationId,
+    cr.modeId,
+    cr.difficultyId,
+    ROW_NUMBER() OVER(PARTITION BY crv.chartId ORDER BY v.sortOrder DESC, v2.sortOrder DESC) as rn
+  FROM chartRatingVersion crv
+  JOIN chart c ON crv.chartId = c.chartId
+  JOIN chartVersion cv ON cv.chartId = c.chartId
+  JOIN chartRating cr on crv.chartRatingId = cr.chartRatingId
+  JOIN version v ON cv.versionId = v.versionId
+  JOIN version v2 ON crv.versionId = v2.versionId
+  WHERE v.mixId NOT IN {IGNORED_MIXES}
+  AND v2.mixId NOT IN {IGNORED_MIXES}
+  AND c.songId = {pumpout_id}
+  AND v.versionId != (SELECT versionId FROM version
+   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+   AND internalTitle = '{e(PATCH)}')
+) AS sub
+WHERE rn = 1 
+AND operationId == (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.DELETE)}'){
+f"""
+AND NOT (
+    {'\n    OR\n    '.join([
+    f"""modeId=(SELECT modeId FROM mode WHERE internalAbbreviation = '{e(mode)}')
+    AND difficultyId=(SELECT difficultyId FROM difficulty WHERE value = {diff})"""
+    for mode, diff in [get_difficulty(i) for i in not_revived]
+])}
+)""" if not_revived else ''
+};
+""", end='')
+
+    print()
+    print()
+
 
 
 if rerated_charts:
