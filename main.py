@@ -25,6 +25,7 @@ patches = {
         'v1.07.0',
         'v1.08.0',
         'v2.00.0',
+        'v2.01.0',
     ],
     XX: [
         'v1.00.1',
@@ -691,9 +692,28 @@ for song_index, song in enumerate(new_charts):
 INSERT INTO chart (chartId, songId)
 SELECT 
     (SELECT MAX(chartId) + 1 FROM chart),
-    (SELECT songId FROM song 
-     WHERE cutId = (SELECT cutId FROM cut WHERE internalTitle = '{e(curr_cut)}')
-     AND LOWER(internalTitle) = LOWER('{e(original_title)}'));
+    (
+        SELECT songId FROM (
+            SELECT
+               s.songId,
+               ROW_NUMBER() OVER (PARTITION BY s.songId ORDER BY v.sortOrder DESC) AS rn,
+               COUNT(*) OVER () AS total_count
+            FROM song s
+            JOIN songVersion sV on s.songId = sV.songId
+            JOIN version v on sV.versionId = v.versionId
+            JOIN operation o on sV.operationId = o.operationId
+            WHERE s.cutId = (SELECT cut.cutId FROM cut WHERE cut.internalTitle = '{e(curr_cut)}')
+            AND LOWER(s.internalTitle) = LOWER('{e(original_title)}')
+            AND v.sortOrder = (
+                SELECT MAX(v2.sortOrder)
+                FROM songVersion sV2
+                JOIN version v2 ON sV2.versionId = v2.versionId
+                WHERE sV2.songId = s.songId
+            )
+            AND o.internalTitle != '{e(Operations.DELETE)}'
+        )
+        WHERE rn = 1 AND total_count = 1
+    );
 """, end='')
 
         print(f"""

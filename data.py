@@ -63,6 +63,10 @@ STEPMAKERS = {
 	"Unique": "DIESEL",
 	"Point Break": "CONRAD",
 	"HELIX": "refos",
+	"Cosmical Rhythm": "SUNNY",
+	"Awakening": "refos",
+	"Iolite Sky": "DulKi",
+	"Pump Me Amadeus": "SUNNY",
 
 	"After LIKE": "CONRAD",
 	"Amor Fati": "EXC",
@@ -86,11 +90,11 @@ STEPMAKERS = {
 	"Teddy Bear": "CONRAD",
 
 	"Beautiful Liar": "SPHAM",
-	"STORM": "CONRAD",
+	"STORM": [("CONRAD", '*'), ('SUNNY', 'CoOp(x3)')],
 	"GOODBOUNCE": "SUNNY",
 	"BOOOM!!": "DulKi",
 	"KUGUTSU": "CONRAD",
-	"Airplane": "NIMGO",
+	"Airplane": [("NIMGO", '*'), ('SUNNY', 'CoOp(x3)')],
 
 	"MURDOCH": "NIMGO",
 	"Lohxia": "CONRAD",
@@ -119,7 +123,7 @@ STEPMAKERS = {
 	"PUPA": "DulKi",
 
 	"TOMBOY": [("NIMGO", '*'), ('SUNNY', 'CoOp(x2)')],
-	"PANDORA": "SUNNY",
+	"PANDORA": [("SUNNY", '*'), ('GGWANG', 'D20')],
 	"Bluish Rose": "SUNNY",
 	"Flavor Step!": "SPHAM",
 	"TRICKL4SH 220": "CONRAD",
@@ -146,6 +150,16 @@ STEPMAKERS = {
 	"Giselle": "DulKi",
 	"Big Daddy": "FEFEMZ",
 	"Horang Pungryuga": "EXC",
+
+	"Discord": "DulKi",
+	"Uh-Heung": "CONRAD",
+	"MEGAHEARTZ": "DulKi",
+	"Highway Chaser": "SUNNY",
+	"Earendel": "SUNNY",
+	"Athena's Shield": "SUNNY",
+	"Fracture Temporelle": [("BME", '*'), ('SUNNY', 'D18'), ('SUNNY', 'D23'), ('SUNNY', 'D26')],
+	"Rush-More": "SPHAM",
+	"Chobit Flavor": "CONRAD",
 }
 
 KOREAN_TITLES = {
@@ -231,10 +245,128 @@ KOREAN_TITLES = {
 	"Giselle": "지젤",
 	"Big Daddy": "빅 대디",
 	"Horang Pungryuga": "호랑풍류가",
+
+	"Discord": "디스코드",
+	"Uh-Heung": "호랑이가 쫓아온다",
+	"MEGAHEARTZ": "메가하츠",
+	"Highway Chaser": "하이웨이 체이서",
+	"Earendel": "에렌델",
+	"Athena's Shield": "아테나의 방패",
+	"Fracture Temporelle": "프렉쳐 텀퍼렐르",
+	"Rush-More": "러쉬-모어",
+	"Chobit Flavor": "쵸빗 플레이버",
 }
 
 
 data = {
+"17__Discord":
+{
+	title: "Discord", artist: "QWER", channel: KPOP, bpm: "132",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.01 S3 S6 S9 S11 S13 S16 S19 D8 D14 D17 D20",
+},
+
+"17__UhHeung":
+{
+	title: "Uh-Heung", artist: "DKZ", channel: KPOP, bpm: "128",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.01 S2 S4 S7 S9 S14 S17 S20 S22 D11 D16 D18 D21 D24",
+},
+
+"17__MEGAHEARTZ":
+{
+	title: "MEGAHEARTZ", artist: "DJ Noriken", channel: ORIGINAL, bpm: "200",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.01 S12 S17 S21 S23 D14 D18 D23 D25",
+},
+
+"17__Highway_Chaser":
+{
+	title: "Highway Chaser", artist: "Cosmograph", channel: ORIGINAL, bpm: "155",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.01 S4 S7 S11 S16 S21 D13 D18 D22",
+},
+
+"17__Earendel":
+{
+	title: "Earendel", artist: "Palami feat.neur6sia", channel: ORIGINAL, bpm: "180",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.01 S4 S7 S12 S17 S20 S22 D15 D21 D24",
+},
+
+"17__Athenas_Shield":
+{
+	title: "Athena's Shield", artist: "Jehezukiel", channel: ORIGINAL, bpm: "176",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.01 S4 S7 S11 S16 S20 S22 D14 D20 D23",
+},
+
+"17__Fracture_Temporelle":
+{
+	title: "Fracture Temporelle", artist: "Kurokotei", channel: WORLD, bpm: "232",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.01 S9 S12 S15 S18 S21 S24 D18 D23 D26",
+},
+
+"17__RushMore":
+{
+	title: "Rush-More", artist: "litmus*", channel: WORLD, bpm: "160",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.01 S13 S16 S18 S22 D14 D17 D19 D23",
+},
+
+"17__Chobit_Flavor":
+{
+	title: "Chobit Flavor", artist: "aran & t+pazolite", channel: WORLD, bpm: "180",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.01 S12 S16 S19 S22 D17 D21 D24",
+},
+
 "17__CRUSH":
 {
 	title: "CRUSH", artist: "ZEROBASEONE", channel: KPOP, bpm: "154",
@@ -499,7 +631,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@1.06 S2 S4 S7 S11 S17 D6 D13 D18",
+	Phoenix: "@1.06 S2 S4 S7 S11 S17 D6 D13 D18 @2.01 D20",
 },
 
 "17__Bluish_Rose":
@@ -823,7 +955,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@1.01 S2 S4 S6 S9 S14 S17 D8 D16 D19",
+	Phoenix: "@1.01 S2 S4 S6 S9 S14 S17 D8 D16 D19 @2.01 CoOp(x3)",
 },
 
 "17__GOODBOUNCE":
@@ -871,7 +1003,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@1.01 S1 S3 S5 S13 S15 S17 D8 D16 D18",
+	Phoenix: "@1.01 S1 S3 S5 S13 S15 S17 D8 D16 D18 @2.01 CoOp(x3)",
 },
 
 "17__Boca":
@@ -1338,7 +1470,7 @@ data = {
 	arcadeID: "1619",
 	pumpoutID: 837,
 
-	Phoenix: "= D18`17 -Dp3",
+	Phoenix: "= D18`17 -Dp3 @2.01 D20",
 	XX: "@2.03 S7 S10 S16 D11 D17 S20.lock S22.lock D24.lock  @2.04 Dp3  @2.05 D21",
 },
 
@@ -3159,7 +3291,7 @@ data = {
 	arcadeID: "1541",
 	pumpoutID: 678,
 
-	Phoenix: "= -Dp2",
+	Phoenix: "= -Dp2 @2.01 S22 D24",
 	XX: "=  @1.04 Dp2  @2.01 CoOp(x2)",
 	Prime2: "@2.03 S7 S10 S14 S16 D9 D13 D17 S19 D20",
 },
@@ -4708,7 +4840,7 @@ data = {
 	arcadeID: "1457",
 	pumpoutID: 306,
 
-	Phoenix: "= S4`3 D11`10 D19`18 -Dp2",
+	Phoenix: "= S4`3 D11`10 D19`18 -Dp2 @2.01 S17",
 	XX: "= S14`15 D15`16",
 	Prime2: "= -S16",
 	Prime: "S3 S6 S8 S15 D10 D16  @1.12 S16.ucs D18.ucs  @1.15 Dp2",
@@ -11700,8 +11832,7 @@ data = {
 	arcadeID: "A05",
 	pumpoutID: 67,
 
-	Phoenix: "= S13`11 D15`12 D24`23",
-		# TODO.Phoenix: D15`12
+	Phoenix: "= S13`11 D15`12 D24`23 @2.01 S16",
 	XX: "= S6`5 S11`9 S18`17 D12`10 D19`18 D21`19  @2.08 D23",
 	Prime2: "=",
 	Prime: "=",
