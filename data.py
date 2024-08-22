@@ -160,6 +160,12 @@ STEPMAKERS = {
 	"Fracture Temporelle": [("BME", '*'), ('SUNNY', 'D18'), ('SUNNY', 'D23'), ('SUNNY', 'D26')],
 	"Rush-More": "SPHAM",
 	"Chobit Flavor": "CONRAD",
+
+	"DO or DIE": "FEFEMZ",
+	"Appassionata": "EXC",
+	"Murdoch vs Otada": [("FEFEMZ", '*'), ("GGWANG", "D24")],
+	"Dancing": [("NIMGO", 'S7'), ("NIMGO", 'S13'), ("NIMGO", 'S16'), ("NIMGO", 'S20'), ("DulKi", 'D13'), ("DulKi", 'D17'), ("DulKi", 'D21'), ("DulKi", 'D24')],
+	"Mahika": "CONRAD",
 }
 
 KOREAN_TITLES = {
@@ -255,10 +261,76 @@ KOREAN_TITLES = {
 	"Fracture Temporelle": "프렉쳐 텀퍼렐르",
 	"Rush-More": "러쉬-모어",
 	"Chobit Flavor": "쵸빗 플레이버",
+
+	"DO or DIE": "두 올 다이",
+	"Appassionata": "열정",
+	"Murdoch vs Otada": "머독 vs 오타다",
+	"Dancing": "댄싱",
+	"Mahika": "마히카",
 }
 
 
 data = {
+"17__DO_or_DIE":
+{
+	title: "DO or DIE", artist: "xikers", channel: KPOP, bpm: "170",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.02 S2 S5 S8 S12 S17 S20 D14 D19 D22",
+},
+
+"17__Appassionata":
+{
+	title: "Appassionata", artist: "Cashew x D_AAN x Jehezukiel", channel: ORIGINAL, bpm: "160~210",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.02 S13 S16 S19 S22 S25 D21 D25 D27 CoOp(x4)",
+},
+
+"17__Murdoch_vs_Otada":
+{
+	title: "Murdoch vs Otada", artist: "ESPITZ vs WONDERTRAVELER Project", channel: ORIGINAL, bpm: "180",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.02 S9 S13 S16 S19 S22 D17 D21 D24 D25",
+},
+
+"17__Dancing":
+{
+	title: "Dancing", artist: "Said", channel: WORLD, bpm: "151",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.02 S7 S13 S16 S20 D13 D17 D21 D24",
+},
+
+"17__Mahika":
+{
+	title: "Mahika", artist: "The Musical Ghost", channel: WORLD, bpm: "188",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.02 S13 S16 S19 S22 D15 D18 D22 D24",
+},
+
 "17__Discord":
 {
 	title: "Discord", artist: "QWER", channel: KPOP, bpm: "132",

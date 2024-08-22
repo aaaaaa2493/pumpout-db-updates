@@ -21,6 +21,7 @@ def split_string(input_string, additional_splitters_on_first_split=False):
         "/",
         "+ ",
         "&",
+        " x ",
     ]
 
     splitters += additional_splitters
