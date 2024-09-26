@@ -166,6 +166,12 @@ STEPMAKERS = {
 	"Murdoch vs Otada": [("FEFEMZ", '*'), ("GGWANG", "D24")],
 	"Dancing": [("NIMGO", 'S7'), ("NIMGO", 'S13'), ("NIMGO", 'S16'), ("NIMGO", 'S20'), ("DulKi", 'D13'), ("DulKi", 'D17'), ("DulKi", 'D21'), ("DulKi", 'D24')],
 	"Mahika": "CONRAD",
+
+	"Nostalgia": "CONRAD",
+	"Stardream -Eurobeat Remix-": "CONRAD",
+	"Hymn of Golden Glory": "NIMGO",
+	"Perpetual": [("WINDFORCE", 'S4'), ("WINDFORCE", "S7"), ("WINDFORCE", 'S12'), ("WINDFORCE", 'S16'), ("WINDFORCE", 'S19'), ("CONRAD", 'S21'), ("CONRAD", 'D14'), ("CONRAD", 'D18'), ("CONRAD", 'D21'), ("CONRAD", 'D24'), ],
+	"* this game does not exist *": "DulKi",
 }
 
 KOREAN_TITLES = {
@@ -267,10 +273,76 @@ KOREAN_TITLES = {
 	"Murdoch vs Otada": "머독 vs 오타다",
 	"Dancing": "댄싱",
 	"Mahika": "마히카",
+
+	"Nostalgia": "노스텔지어",
+	"Stardream -Eurobeat Remix-": "스타드림",
+	"Hymn of Golden Glory": "힘 오브 골든 글로리",
+	"Perpetual": "퍼페츄얼",
+	"* this game does not exist *": "이 게임은 존재하지 않습니다",
 }
 
 
 data = {
+"17__Nostalgia":
+{
+	title: "Nostalgia", artist: "Woody", channel: KPOP, bpm: "100",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.03 S3 S5 S8 S14 S17 S20 D10 D15 D18 D21",
+},
+
+"17__Stardream_Eurobeat_Remix":
+{
+	title: "Stardream -Eurobeat Remix-", artist: "MAX x Cashew x Dave Rodgers", channel: ORIGINAL, bpm: "160",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.03 S7 S12 S17 S19 S21 D13 D18 D20 D23",
+},
+
+"17__Hymn_of_Golden_Glory_Exclusive_song_for_premium_mode":
+{
+	title: "Hymn of Golden Glory", artist: "Essbee", channel: ORIGINAL, bpm: "244",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.03 S15 S19 S22 S25 D21 D23 D25",
+},
+
+"17__Perpetual":
+{
+	title: "Perpetual", artist: "Qu-ail", channel: WORLD, bpm: "180",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.03 S4 S7 S12 S16 S19 S21 D14 D18 D21 D24",
+},
+
+"17___this_game_does_not_exist_":
+{
+	title: "* this game does not exist *", artist: "litmus* x Ester", channel: WORLD, bpm: "40~240",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.03 S13 S16 S20 S22 S24 D18 D22 D24 D26",
+},
+
 "17__DO_or_DIE":
 {
 	title: "DO or DIE", artist: "xikers", channel: KPOP, bpm: "170",
