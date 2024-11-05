@@ -172,6 +172,12 @@ STEPMAKERS = {
 	"Hymn of Golden Glory": "NIMGO",
 	"Perpetual": [("WINDFORCE", 'S4'), ("WINDFORCE", "S7"), ("WINDFORCE", 'S12'), ("WINDFORCE", 'S16'), ("WINDFORCE", 'S19'), ("CONRAD", 'S21'), ("CONRAD", 'D14'), ("CONRAD", 'D18'), ("CONRAD", 'D21'), ("CONRAD", 'D24'), ],
 	"* this game does not exist *": "DulKi",
+
+	"DUEL": [("FEFEMZ", '*'), ('EXC', 'S21')],
+	"INVASION": "SPHAM",
+	"Underworld ft. Skizzo (PIU Edit.)": [("BME", 'S8'), ("BME", 'S11'), ("BME", 'S16'), ("BME", 'S19'), ("BME", 'S22'), ("CONRAD", 'S23'), ("CONRAD", 'D18'), ("CONRAD", 'D23'), ("CONRAD", 'D25'), ],
+	"Odin": "SPHAM",
+	"Soldiers": "SUNNY",
 }
 
 KOREAN_TITLES = {
@@ -279,10 +285,79 @@ KOREAN_TITLES = {
 	"Hymn of Golden Glory": "힘 오브 골든 글로리",
 	"Perpetual": "퍼페츄얼",
 	"* this game does not exist *": "이 게임은 존재하지 않습니다",
+
+	"DUEL": "결투",
+	"INVASION": "인베이젼",
+	"Underworld ft. Skizzo (PIU Edit.)": "언더월드",
+	"Odin": "오딘",
+	"Soldiers": "솔저스",
 }
 
 
 data = {
+"17__DUEL":
+{
+	title: "DUEL", artist: "Cashew & D_AAN", channel: ORIGINAL, bpm: "155",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.04 S10 S13 S16 S18 S21 S22 D14 D18 D21 D24",
+},
+
+"17__INVASION":
+{
+	title: "INVASION", artist: "D_AAN", channel: ORIGINAL, bpm: "220",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.04 S13 S17 S21 S23 D15 D18 D23 D25",
+},
+
+"17__Underworld_ft_Skizzo_PIU_Edit":
+{
+	title: "Underworld ft. Skizzo (PIU Edit.)", artist: "MonstDeath vs Neutral Moon", channel: WORLD, bpm: "190",
+	artists: [('', "MonstDeath"), ('vs', "Neutral Moon"), ('ft.', "Skizzo")],
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.04 S8 S11 S16 S19 S22 S23 D18 D23 D25",
+},
+
+"17__Odin":
+{
+	title: "Odin", artist: "Gram", channel: WORLD, bpm: "200",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.04 S8 S12 S17 S21 S23 D14 D18 D23 D25",
+},
+
+"17__Soldiers_TANOC_W_TEAM_RED_ANTHEM":
+{
+	title: "Soldiers", artist: "DJ Noriken", channel: WORLD, bpm: "170",
+	arcadeName: "Soldiers (TANO*C W TEAM RED ANTHEM)",
+	artists: [('', "DJ Noriken"), ('', "TANO*C"), ('W', "TEAM RED ANTHEM")],
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.04 S4 S6 S11 S15 S18 S20 D13 D19 D22",
+},
+
 "17__Nostalgia":
 {
 	title: "Nostalgia", artist: "Woody", channel: KPOP, bpm: "100",

@@ -8,7 +8,7 @@ STEP_CHARTS = 'stepcharts'
 
 MIX_ID = 17
 MIX_NAME = Phoenix
-PATCH_VERSION = '2.03'
+PATCH_VERSION = '2.04'
 
 
 def convert_coop_format(text):
