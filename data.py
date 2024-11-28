@@ -178,6 +178,12 @@ STEPMAKERS = {
 	"Underworld ft. Skizzo (PIU Edit.)": [("BME", 'S8'), ("BME", 'S11'), ("BME", 'S16'), ("BME", 'S19'), ("BME", 'S22'), ("CONRAD", 'S23'), ("CONRAD", 'D18'), ("CONRAD", 'D23'), ("CONRAD", 'D25'), ],
 	"Odin": "SPHAM",
 	"Soldiers": "SUNNY",
+
+	"Nyan-turne (feat. KuTiNA)": "SUNNY",
+	"Doppelganger": "CONRAD",
+	"SONIC BOOM": "SUNNY",
+	"Extreme Music School 1st period feat. Nanahira": "NIMGO",
+	"Extreme Music School 2nd period feat. Nanahira": "NIMGO",
 }
 
 KOREAN_TITLES = {
@@ -291,10 +297,76 @@ KOREAN_TITLES = {
 	"Underworld ft. Skizzo (PIU Edit.)": "언더월드",
 	"Odin": "오딘",
 	"Soldiers": "솔저스",
+
+	"Nyan-turne (feat. KuTiNA)": "냥-턴",
+	"Doppelganger": "도플갱어",
+	"SONIC BOOM": "소닉 붐",
+	"Extreme Music School 1st period feat. Nanahira": "익스트림 음악학원 1교시",
+	"Extreme Music School 2nd period feat. Nanahira": "익스트림 음악학원 2교시",
 }
 
 
 data = {
+"17__Nyanturne_feat_KuTiNA":
+{
+	title: "Nyan-turne (feat. KuTiNA)", artist: "Cashew & Castellia", channel: ORIGINAL, bpm: "202.1",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.05 S4 S7 S11 S16 S19 D12 D17 D21 CoOp(x2)",
+},
+
+"17__Doppelganger":
+{
+	title: "Doppelganger", artist: "MonstDeath", channel: ORIGINAL, bpm: "210",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.05 S9 S13 S16 S20 S22 S24 D15 D18 D24 D26",
+},
+
+"17__SONIC_BOOM":
+{
+	title: "SONIC BOOM", artist: "USAO", channel: ORIGINAL, bpm: "205",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.05 S4 S7 S10 S16 S19 S21 S23 D14 D18 D23 D25",
+},
+
+"17__Extreme_Music_School_1st_period_feat_Nanahira":
+{
+	title: "Extreme Music School 1st period feat. Nanahira", artist: "Massive New Krew & RoughSketch", channel: WORLD, bpm: "210",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.05 S15 S18 S20 S23 D20 D23 D25",
+},
+
+"17__Extreme_Music_School_2nd_period_feat_Nanahira":
+{
+	title: "Extreme Music School 2nd period feat. Nanahira", artist: "Massive New Krew & RoughSketch", channel: WORLD, bpm: "210",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.05 S16 S18 S22 S24 D19 D24 D26",
+},
+
 "17__DUEL":
 {
 	title: "DUEL", artist: "Cashew & D_AAN", channel: ORIGINAL, bpm: "155",
