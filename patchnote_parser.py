@@ -1,14 +1,15 @@
 import re
 
-from data import title, duration, artist, bpm, channel
+from data import FULL, FULL_MARKER, REMIX, title, duration, artist, bpm, channel
 from data import SHORT, SHORT_MARKER, KPOP, ORIGINAL, WORLD, Phoenix
 
 SHORT_CUT_PATCHNOTE_MARK = ' - SHORT CUT -'
+FULL_SONG_PATCHNOTE_MARK = ' - FULL SONG -'
 STEP_CHARTS = 'stepcharts'
 
 MIX_ID = 17
 MIX_NAME = Phoenix
-PATCH_VERSION = '2.05'
+PATCH_VERSION = '2.06'
 
 
 def convert_coop_format(text):
@@ -53,6 +54,10 @@ def parse_song_data(file_path):
                 song_title = song_title[0:len(song_title) - len(SHORT_CUT_PATCHNOTE_MARK)] + SHORT_MARKER
                 song[duration] = SHORT
 
+            elif song_title.endswith(FULL_SONG_PATCHNOTE_MARK):
+                song_title = song_title[0:len(song_title) - len(FULL_SONG_PATCHNOTE_MARK)] + FULL_MARKER
+                song[duration] = FULL
+
             song[title] = song_title
 
         elif "Artist" in line:
@@ -66,10 +71,25 @@ def parse_song_data(file_path):
 
             if song_category.upper() == 'K-POP':
                 song[channel] = KPOP
+
             elif song_category.upper() == 'ORIGINAL':
                 song[channel] = ORIGINAL
+
             elif song_category.upper() == 'WORLD MUSIC':
                 song[channel] = WORLD
+
+            elif song_category.upper() == 'FULL SONG':
+                song[channel] = ORIGINAL
+                song[duration] = FULL
+
+            elif song_category.upper() == 'SHORT CUT':
+                song[channel] = ORIGINAL
+                song[duration] = SHORT
+
+            elif song_category.upper() == 'REMIX':
+                song[channel] = ORIGINAL
+                song[duration] = REMIX
+
             else:
                 raise Exception("Unsupported song category: " + song_category)
 
@@ -97,7 +117,7 @@ for song in song_data:
     print(f'''
 "{song_key}":
 {{
-	title: "{song[title]}", artist: "{song[artist]}", channel: {song[channel]}, bpm: "{song[bpm]}",
+	title: "{song[title]}", artist: "{song[artist]}", channel: {song[channel]}, bpm: "{song[bpm]}", {f'duration: {song[duration]},' if duration in song else ''}
 
 	#sortingID: "",  # between  () and  ()
 	# arcadeID: "",

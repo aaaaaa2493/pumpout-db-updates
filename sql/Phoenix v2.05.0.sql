@@ -65,6 +65,13 @@ SELECT
     'Castellia'
 WHERE NOT EXISTS (SELECT 1 FROM artist WHERE LOWER(internalTitle) = LOWER('Castellia'));
 
+-- Add KuTiNA
+INSERT INTO artist (artistId, internalTitle)
+SELECT 
+    (SELECT MAX(artistId) + 1 FROM artist),
+    'KuTiNA'
+WHERE NOT EXISTS (SELECT 1 FROM artist WHERE LOWER(internalTitle) = LOWER('KuTiNA'));
+
 -- Add Massive New Krew
 INSERT INTO artist (artistId, internalTitle)
 SELECT 
@@ -78,6 +85,13 @@ SELECT
     (SELECT MAX(artistId) + 1 FROM artist),
     'MonstDeath'
 WHERE NOT EXISTS (SELECT 1 FROM artist WHERE LOWER(internalTitle) = LOWER('MonstDeath'));
+
+-- Add Nanahira
+INSERT INTO artist (artistId, internalTitle)
+SELECT 
+    (SELECT MAX(artistId) + 1 FROM artist),
+    'Nanahira'
+WHERE NOT EXISTS (SELECT 1 FROM artist WHERE LOWER(internalTitle) = LOWER('Nanahira'));
 
 -- Add RoughSketch
 INSERT INTO artist (artistId, internalTitle)
@@ -126,13 +140,13 @@ WHERE NOT EXISTS (SELECT 1 FROM stepmaker WHERE LOWER(internalTitle) = LOWER('SU
 
 
 
--- Add Nyan-turne (feat. KuTiNA)
+-- Add Nyan-turne
 
 INSERT INTO song (songId, cutId, internalTitle)
 SELECT
     (SELECT MAX(songId) + 1 FROM song),
     (SELECT cutId FROM cut WHERE internalTitle = 'Arcade'),
-    'Nyan-turne (feat. KuTiNA)';
+    'Nyan-turne';
 
 INSERT INTO songArtist (songId, artistId, sortOrder, prefix)
 SELECT
@@ -147,6 +161,13 @@ SELECT
     (SELECT artistId FROM artist WHERE LOWER(internalTitle) = LOWER('Castellia')),
     1,
     '&';
+
+INSERT INTO songArtist (songId, artistId, sortOrder, prefix)
+SELECT
+    (SELECT MAX(songId) FROM song),
+    (SELECT artistId FROM artist WHERE LOWER(internalTitle) = LOWER('KuTiNA')),
+    2,
+    'feat.';
 
 INSERT INTO songCategory (songCategoryId, songId, categoryId)
 SELECT 
@@ -237,7 +258,7 @@ INSERT INTO songCard (songCardId, songId, path, sortOrder)
 SELECT 
     (SELECT MAX(songCardId) + 1 FROM songCard),
     (SELECT MAX(songId) FROM song),
-    '/img/card/Phoenix_Nyan_turne_feat_KuTiNA.png',
+    '/img/card/Phoenix_Nyan_turne.png',
     0;
 
 INSERT INTO songCardVersion (songCardId, versionId, operationId, internalDescription)
@@ -251,7 +272,7 @@ SELECT
 
 
 
--- Add Nyan-turne (feat. KuTiNA) S4
+-- Add Nyan-turne S4
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -291,7 +312,7 @@ SELECT
 
 
 
--- Add Nyan-turne (feat. KuTiNA) S7
+-- Add Nyan-turne S7
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -331,7 +352,7 @@ SELECT
 
 
 
--- Add Nyan-turne (feat. KuTiNA) S11
+-- Add Nyan-turne S11
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -371,7 +392,7 @@ SELECT
 
 
 
--- Add Nyan-turne (feat. KuTiNA) S16
+-- Add Nyan-turne S16
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -411,7 +432,7 @@ SELECT
 
 
 
--- Add Nyan-turne (feat. KuTiNA) S19
+-- Add Nyan-turne S19
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -451,7 +472,7 @@ SELECT
 
 
 
--- Add Nyan-turne (feat. KuTiNA) D12
+-- Add Nyan-turne D12
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -491,7 +512,7 @@ SELECT
 
 
 
--- Add Nyan-turne (feat. KuTiNA) D17
+-- Add Nyan-turne D17
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -531,7 +552,7 @@ SELECT
 
 
 
--- Add Nyan-turne (feat. KuTiNA) D21
+-- Add Nyan-turne D21
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -571,7 +592,7 @@ SELECT
 
 
 
--- Add Nyan-turne (feat. KuTiNA) CoOp(x2)
+-- Add Nyan-turne CoOp(x2)
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -1687,13 +1708,13 @@ SELECT
 
 
 
--- Add Extreme Music School 1st period feat. Nanahira
+-- Add Extreme Music School 1st period
 
 INSERT INTO song (songId, cutId, internalTitle)
 SELECT
     (SELECT MAX(songId) + 1 FROM song),
     (SELECT cutId FROM cut WHERE internalTitle = 'Arcade'),
-    'Extreme Music School 1st period feat. Nanahira';
+    'Extreme Music School 1st period';
 
 INSERT INTO songArtist (songId, artistId, sortOrder, prefix)
 SELECT
@@ -1708,6 +1729,13 @@ SELECT
     (SELECT artistId FROM artist WHERE LOWER(internalTitle) = LOWER('RoughSketch')),
     1,
     '&';
+
+INSERT INTO songArtist (songId, artistId, sortOrder, prefix)
+SELECT
+    (SELECT MAX(songId) FROM song),
+    (SELECT artistId FROM artist WHERE LOWER(internalTitle) = LOWER('Nanahira')),
+    2,
+    'feat.';
 
 INSERT INTO songCategory (songCategoryId, songId, categoryId)
 SELECT 
@@ -1798,7 +1826,7 @@ INSERT INTO songCard (songCardId, songId, path, sortOrder)
 SELECT 
     (SELECT MAX(songCardId) + 1 FROM songCard),
     (SELECT MAX(songId) FROM song),
-    '/img/card/Phoenix_Extreme_Music_School_1st_period_feat_Nanahira.png',
+    '/img/card/Phoenix_Extreme_Music_School_1st_period.png',
     0;
 
 INSERT INTO songCardVersion (songCardId, versionId, operationId, internalDescription)
@@ -1812,7 +1840,7 @@ SELECT
 
 
 
--- Add Extreme Music School 1st period feat. Nanahira S15
+-- Add Extreme Music School 1st period S15
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -1852,7 +1880,7 @@ SELECT
 
 
 
--- Add Extreme Music School 1st period feat. Nanahira S18
+-- Add Extreme Music School 1st period S18
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -1892,7 +1920,7 @@ SELECT
 
 
 
--- Add Extreme Music School 1st period feat. Nanahira S20
+-- Add Extreme Music School 1st period S20
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -1932,7 +1960,7 @@ SELECT
 
 
 
--- Add Extreme Music School 1st period feat. Nanahira S23
+-- Add Extreme Music School 1st period S23
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -1972,7 +2000,7 @@ SELECT
 
 
 
--- Add Extreme Music School 1st period feat. Nanahira D20
+-- Add Extreme Music School 1st period D20
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -2012,7 +2040,7 @@ SELECT
 
 
 
--- Add Extreme Music School 1st period feat. Nanahira D23
+-- Add Extreme Music School 1st period D23
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -2052,7 +2080,7 @@ SELECT
 
 
 
--- Add Extreme Music School 1st period feat. Nanahira D25
+-- Add Extreme Music School 1st period D25
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -2092,13 +2120,13 @@ SELECT
 
 
 
--- Add Extreme Music School 2nd period feat. Nanahira
+-- Add Extreme Music School 2nd period
 
 INSERT INTO song (songId, cutId, internalTitle)
 SELECT
     (SELECT MAX(songId) + 1 FROM song),
     (SELECT cutId FROM cut WHERE internalTitle = 'Arcade'),
-    'Extreme Music School 2nd period feat. Nanahira';
+    'Extreme Music School 2nd period';
 
 INSERT INTO songArtist (songId, artistId, sortOrder, prefix)
 SELECT
@@ -2113,6 +2141,13 @@ SELECT
     (SELECT artistId FROM artist WHERE LOWER(internalTitle) = LOWER('RoughSketch')),
     1,
     '&';
+
+INSERT INTO songArtist (songId, artistId, sortOrder, prefix)
+SELECT
+    (SELECT MAX(songId) FROM song),
+    (SELECT artistId FROM artist WHERE LOWER(internalTitle) = LOWER('Nanahira')),
+    2,
+    'feat.';
 
 INSERT INTO songCategory (songCategoryId, songId, categoryId)
 SELECT 
@@ -2203,7 +2238,7 @@ INSERT INTO songCard (songCardId, songId, path, sortOrder)
 SELECT 
     (SELECT MAX(songCardId) + 1 FROM songCard),
     (SELECT MAX(songId) FROM song),
-    '/img/card/Phoenix_Extreme_Music_School_2nd_period_feat_Nanahira.png',
+    '/img/card/Phoenix_Extreme_Music_School_2nd_period.png',
     0;
 
 INSERT INTO songCardVersion (songCardId, versionId, operationId, internalDescription)
@@ -2217,7 +2252,7 @@ SELECT
 
 
 
--- Add Extreme Music School 2nd period feat. Nanahira S16
+-- Add Extreme Music School 2nd period S16
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -2257,7 +2292,7 @@ SELECT
 
 
 
--- Add Extreme Music School 2nd period feat. Nanahira S18
+-- Add Extreme Music School 2nd period S18
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -2297,7 +2332,7 @@ SELECT
 
 
 
--- Add Extreme Music School 2nd period feat. Nanahira S22
+-- Add Extreme Music School 2nd period S22
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -2337,7 +2372,7 @@ SELECT
 
 
 
--- Add Extreme Music School 2nd period feat. Nanahira S24
+-- Add Extreme Music School 2nd period S24
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -2377,7 +2412,7 @@ SELECT
 
 
 
--- Add Extreme Music School 2nd period feat. Nanahira D19
+-- Add Extreme Music School 2nd period D19
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -2417,7 +2452,7 @@ SELECT
 
 
 
--- Add Extreme Music School 2nd period feat. Nanahira D24
+-- Add Extreme Music School 2nd period D24
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -2457,7 +2492,7 @@ SELECT
 
 
 
--- Add Extreme Music School 2nd period feat. Nanahira D26
+-- Add Extreme Music School 2nd period D26
 
 INSERT INTO chart (chartId, songId)
 SELECT 

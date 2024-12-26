@@ -67,6 +67,7 @@ STEPMAKERS = {
 	"Awakening": "refos",
 	"Iolite Sky": "DulKi",
 	"Pump Me Amadeus": "SUNNY",
+	"Moonlight":  [("EXC", 'D24')],
 
 	"After LIKE": "CONRAD",
 	"Amor Fati": "EXC",
@@ -78,7 +79,7 @@ STEPMAKERS = {
 	"Jupin": "DulKi",
 	"Etude Op 10-4": [("SUNNY", '*'), ('EXC', ('S22', 'D25'))],
 	"Altale": "FEFEMZ",
-	"Energy Synergy Matrix": "DulKi",
+	"Energy Synergy Matrix": [("DulKi", '*'), ("SUNNY", 'CoOp(x3)')],
 	"Pneumonoultramicroscopicsilicovolcanoconiosis": "EXC",
 	"GOODTEK": "FEFEMZ",
 	"CO5M1C R4ILR0AD": "FEFEMZ",
@@ -149,9 +150,9 @@ STEPMAKERS = {
 	"Poppin' Shower": "FEFEMZ",
 	"Giselle": "DulKi",
 	"Big Daddy": "FEFEMZ",
-	"Horang Pungryuga": "EXC",
+	"Horang Pungryuga": [("EXC", '*'), ("SUNNY", 'CoOp(x2)')],
 
-	"Discord": "DulKi",
+	"Discord": [("DulKi", '*'), ("SUNNY", 'CoOp(x2)')],
 	"Uh-Heung": "CONRAD",
 	"MEGAHEARTZ": "DulKi",
 	"Highway Chaser": "SUNNY",
@@ -175,15 +176,24 @@ STEPMAKERS = {
 
 	"DUEL": [("FEFEMZ", '*'), ('EXC', 'S21')],
 	"INVASION": "SPHAM",
-	"Underworld ft. Skizzo (PIU Edit.)": [("BME", 'S8'), ("BME", 'S11'), ("BME", 'S16'), ("BME", 'S19'), ("BME", 'S22'), ("CONRAD", 'S23'), ("CONRAD", 'D18'), ("CONRAD", 'D23'), ("CONRAD", 'D25'), ],
+	"Underworld (PIU Edit.)": [("BME", 'S8'), ("BME", 'S11'), ("BME", 'S16'), ("BME", 'S19'), ("BME", 'S22'), ("CONRAD", 'S23'), ("CONRAD", 'D18'), ("CONRAD", 'D23'), ("CONRAD", 'D25'), ],
 	"Odin": "SPHAM",
 	"Soldiers": "SUNNY",
 
-	"Nyan-turne (feat. KuTiNA)": "SUNNY",
+	"Nyan-turne": "SUNNY",
 	"Doppelganger": "CONRAD",
 	"SONIC BOOM": "SUNNY",
-	"Extreme Music School 1st period feat. Nanahira": "NIMGO",
-	"Extreme Music School 2nd period feat. Nanahira": "NIMGO",
+	"Extreme Music School 1st period": "NIMGO",
+	"Extreme Music School 2nd period": "NIMGO",
+
+	"E.O.N": "CONRAD",
+	"Festival of Death Moon": [("AEVILUX", 'S3'), ('AEVILUX', 'S5'), ('AEVILUX', 'S11'), ('AEVILUX', 'S14'), ('AEVILUX', 'S18'), ('SPHAM', 'S21'), ('SPHAM', 'D11'), ('SPHAM', 'D15'), ('SPHAM', 'D19'), ('SPHAM', 'D23')],
+	"Imaginarized City": "GGWANG",
+	"Break Through Myself": "CONRAD",
+	"EMOMOMO": "SUNNY",
+	"Teddy Bear  [FULL]": "SUNNY",
+	"DISTRICT V": "SUNNY",
+	"Jupin  [SHORT]": "SPHAM",
 }
 
 KOREAN_TITLES = {
@@ -294,27 +304,132 @@ KOREAN_TITLES = {
 
 	"DUEL": "결투",
 	"INVASION": "인베이젼",
-	"Underworld ft. Skizzo (PIU Edit.)": "언더월드",
+	"Underworld (PIU Edit.)": "언더월드",
 	"Odin": "오딘",
 	"Soldiers": "솔저스",
 
-	"Nyan-turne (feat. KuTiNA)": "냥-턴",
+	"Nyan-turne": "냥-턴",
 	"Doppelganger": "도플갱어",
 	"SONIC BOOM": "소닉 붐",
-	"Extreme Music School 1st period feat. Nanahira": "익스트림 음악학원 1교시",
-	"Extreme Music School 2nd period feat. Nanahira": "익스트림 음악학원 2교시",
+	"Extreme Music School 1st period": "익스트림 음악학원 1교시",
+	"Extreme Music School 2nd period": "익스트림 음악학원 2교시",
+
+	"E.O.N": "E.O.N",
+	"Festival of Death Moon": "사월의 축제",
+	"Imaginarized City": "이매저너라이즈드 시티",
+	"Break Through Myself": "브레이크 스루 마이셀프",
+	"EMOMOMO": "에모모모",
+	"Teddy Bear  [FULL]": "테디베어",
+	"DISTRICT V": "디스트릭트 V",
+	"Jupin  [SHORT]": "쥬핀",
 }
 
 
 data = {
-"17__Nyanturne_feat_KuTiNA":
+"17__EON":
 {
-	title: "Nyan-turne (feat. KuTiNA)", artist: "Cashew & Castellia", channel: ORIGINAL, bpm: "202.1",
+	title: "E.O.N", artist: "HiTECH NINJA", channel: ORIGINAL, bpm: "165",
 
 	#sortingID: "",  # between  () and  ()
 	# arcadeID: "",
 	pumpoutID: "",
 	# arcadeName: "",
+
+	Phoenix: "@2.06 S7 S12 S15 S17 S19 S22 D13 D18 D21 D24",
+},
+
+"17__Festival_of_Death_Moon":
+{
+	title: "Festival of Death Moon", artist: "SHK", channel: ORIGINAL, bpm: "204",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.06 S3 S5 S11 S14 S18 S21 D11 D15 D19 D23",
+},
+
+"17__Imaginarized_City":
+{
+	title: "Imaginarized City", artist: "Reku Mochizuki", channel: ORIGINAL, bpm: "156",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.06 S7 S12 S16 S19 S21 D14 D18 D20 D23",
+},
+
+"17__Break_Through_Myself_feat_Risa_Yuzuki":
+{
+	title: "Break Through Myself", artist: "DJ Myosuke & Laur", channel: WORLD, bpm: "200",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	arcadeName: "Break Through Myself feat. Risa Yuzuki",
+
+	Phoenix: "@2.06 S12 S15 S18 S21 S23 D17 D20 D23 D25",
+},
+
+"17__EMOMOMO":
+{
+	title: "EMOMOMO", artist: "Ras", channel: WORLD, bpm: "145",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.06 S3 S7 S10 S14 S16 S19 D12 D18 D21",
+},
+
+"17__Teddy_Bear__FULL":
+{
+	title: "Teddy Bear  [FULL]", artist: "STAYC", channel: KPOP, bpm: "119", duration: FULL,
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.06 S12 S20 D22",
+},
+
+"17__DISTRICT_V":
+{
+	title: "DISTRICT V", artist: "Zekk vs MAX", channel: ORIGINAL, bpm: "178", duration: REMIX,
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.06 S13 S18 S22 D20 D24",
+},
+
+"17__Jupin__SHORT":
+{
+	title: "Jupin  [SHORT]", artist: "Sobrem", channel: ORIGINAL, bpm: "173", duration: SHORT,
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.06 S12 S13 S14 S21 S22 S23 D16 D19 D20 D23 D24",
+},
+
+"17__Nyanturne_feat_KuTiNA":
+{
+	title: "Nyan-turne", artist: "Cashew & Castellia", channel: ORIGINAL, bpm: "202.1",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	arcadeName: "Nyan-turne (feat. KuTiNA)",
 
 	Phoenix: "@2.05 S4 S7 S11 S16 S19 D12 D17 D21 CoOp(x2)",
 },
@@ -345,24 +460,24 @@ data = {
 
 "17__Extreme_Music_School_1st_period_feat_Nanahira":
 {
-	title: "Extreme Music School 1st period feat. Nanahira", artist: "Massive New Krew & RoughSketch", channel: WORLD, bpm: "210",
+	title: "Extreme Music School 1st period", artist: "Massive New Krew & RoughSketch", channel: WORLD, bpm: "210",
 
 	#sortingID: "",  # between  () and  ()
 	# arcadeID: "",
 	pumpoutID: "",
-	# arcadeName: "",
+	arcadeName: "Extreme Music School 1st period feat. Nanahira",
 
 	Phoenix: "@2.05 S15 S18 S20 S23 D20 D23 D25",
 },
 
 "17__Extreme_Music_School_2nd_period_feat_Nanahira":
 {
-	title: "Extreme Music School 2nd period feat. Nanahira", artist: "Massive New Krew & RoughSketch", channel: WORLD, bpm: "210",
+	title: "Extreme Music School 2nd period", artist: "Massive New Krew & RoughSketch", channel: WORLD, bpm: "210",
 
 	#sortingID: "",  # between  () and  ()
 	# arcadeID: "",
 	pumpoutID: "",
-	# arcadeName: "",
+	arcadeName: "Extreme Music School 2nd period feat. Nanahira",
 
 	Phoenix: "@2.05 S16 S18 S22 S24 D19 D24 D26",
 },
@@ -393,13 +508,13 @@ data = {
 
 "17__Underworld_ft_Skizzo_PIU_Edit":
 {
-	title: "Underworld ft. Skizzo (PIU Edit.)", artist: "MonstDeath vs Neutral Moon", channel: WORLD, bpm: "190",
+	title: "Underworld (PIU Edit.)", artist: "MonstDeath vs Neutral Moon", channel: WORLD, bpm: "190",
 	artists: [('', "MonstDeath"), ('vs', "Neutral Moon"), ('ft.', "Skizzo")],
 
 	#sortingID: "",  # between  () and  ()
 	# arcadeID: "",
 	pumpoutID: "",
-	# arcadeName: "",
+	arcadeName: "Underworld ft. Skizzo (PIU Edit.)",
 
 	Phoenix: "@2.04 S8 S11 S16 S19 S22 S23 D18 D23 D25",
 },
@@ -419,13 +534,13 @@ data = {
 "17__Soldiers_TANOC_W_TEAM_RED_ANTHEM":
 {
 	title: "Soldiers", artist: "DJ Noriken", channel: WORLD, bpm: "170",
-	arcadeName: "Soldiers (TANO*C W TEAM RED ANTHEM)",
+
 	artists: [('', "DJ Noriken"), ('', "TANO*C"), ('W', "TEAM RED ANTHEM")],
 
 	#sortingID: "",  # between  () and  ()
 	# arcadeID: "",
 	pumpoutID: "",
-	# arcadeName: "",
+	arcadeName: "Soldiers (TANO*C W TEAM RED ANTHEM)",
 
 	Phoenix: "@2.04 S4 S6 S11 S15 S18 S20 D13 D19 D22",
 },
@@ -559,7 +674,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@2.01 S3 S6 S9 S11 S13 S16 S19 D8 D14 D17 D20",
+	Phoenix: "@2.01 S3 S6 S9 S11 S13 S16 S19 D8 D14 D17 D20 @2.06 CoOp(x2)",
 },
 
 "17__UhHeung":
@@ -775,7 +890,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@2.00 S4 S7 S12 S16 S19 S21 D12 D16 D21 D24",
+	Phoenix: "@2.00 S4 S7 S12 S16 S19 S21 D12 D16 D21 D24 @2.06 CoOp(x2)",
 },
 
 "17__Lucid_Dream":
@@ -877,14 +992,13 @@ data = {
 "17__Simon_Says_EURODANCE":
 {
 	title: "Simon Says, EURODANCE!!", artist: "Jehezukiel☆KAZEMURA☆Hideky", channel: ORIGINAL, bpm: "157",
-	arcadeName: "Simon Says, EURODANCE!! (feat. Sara☆M)",
 
 	artists: [('', "Jehezukiel"), ('', "KAZEMURA"), ('', "Hideky"), ("feat.", "Sara☆M")],
 
 	#sortingID: "",  # between  () and  ()
 	# arcadeID: "",
 	pumpoutID: "",
-	# arcadeName: "",
+	arcadeName: "Simon Says, EURODANCE!! (feat. Sara☆M)",
 
 	Phoenix: "@1.07 S4 S7 S11 S16 S18 S20 D13 D19 D22",
 },
@@ -1474,7 +1588,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "S7 S11 S16 S18 S20 D13 D19 D22",
+	Phoenix: "S7 S11 S16 S18 S20 D13 D19 D22 @2.06 CoOp(x3)",
 },
 
 
@@ -11106,7 +11220,7 @@ data = {
 	arcadeID: "C02",
 	pumpoutID: 48,
 
-	Phoenix: "= S11`10 D12`11",
+	Phoenix: "= S11`10 D12`11 @2.06 D24",
 	XX: "= S8`7",
 	Prime2: "=",
 	Prime: "=",

@@ -1,6 +1,6 @@
 # Updates of Pumpout database
 
-Download Phoenix 2.05 database: https://github.com/aaaaaa2493/pumpout-db-updates/releases/download/Phoenix-2.05/pumpout-phoenix-2.05.db
+Download Phoenix 2.06 database: https://github.com/aaaaaa2493/pumpout-db-updates/releases/download/Phoenix-2.06/pumpout-phoenix-2.06.db
 
 ### How to perform an update 
 At the moment, I'm doing it regularly, so you don't have to

@@ -1131,13 +1131,13 @@ SELECT
 
 
 
--- Add Underworld ft. Skizzo (PIU Edit.)
+-- Add Underworld (PIU Edit.)
 
 INSERT INTO song (songId, cutId, internalTitle)
 SELECT
     (SELECT MAX(songId) + 1 FROM song),
     (SELECT cutId FROM cut WHERE internalTitle = 'Arcade'),
-    'Underworld ft. Skizzo (PIU Edit.)';
+    'Underworld (PIU Edit.)';
 
 INSERT INTO songArtist (songId, artistId, sortOrder, prefix)
 SELECT
@@ -1249,7 +1249,7 @@ INSERT INTO songCard (songCardId, songId, path, sortOrder)
 SELECT 
     (SELECT MAX(songCardId) + 1 FROM songCard),
     (SELECT MAX(songId) FROM song),
-    '/img/card/Phoenix_Underworld_ft_Skizzo_PIU_Edit.png',
+    '/img/card/Phoenix_Underworld_PIU_Edit.png',
     0;
 
 INSERT INTO songCardVersion (songCardId, versionId, operationId, internalDescription)
@@ -1263,7 +1263,7 @@ SELECT
 
 
 
--- Add Underworld ft. Skizzo (PIU Edit.) S8
+-- Add Underworld (PIU Edit.) S8
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -1303,7 +1303,7 @@ SELECT
 
 
 
--- Add Underworld ft. Skizzo (PIU Edit.) S11
+-- Add Underworld (PIU Edit.) S11
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -1343,7 +1343,7 @@ SELECT
 
 
 
--- Add Underworld ft. Skizzo (PIU Edit.) S16
+-- Add Underworld (PIU Edit.) S16
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -1383,7 +1383,7 @@ SELECT
 
 
 
--- Add Underworld ft. Skizzo (PIU Edit.) S19
+-- Add Underworld (PIU Edit.) S19
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -1423,7 +1423,7 @@ SELECT
 
 
 
--- Add Underworld ft. Skizzo (PIU Edit.) S22
+-- Add Underworld (PIU Edit.) S22
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -1463,7 +1463,7 @@ SELECT
 
 
 
--- Add Underworld ft. Skizzo (PIU Edit.) S23
+-- Add Underworld (PIU Edit.) S23
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -1503,7 +1503,7 @@ SELECT
 
 
 
--- Add Underworld ft. Skizzo (PIU Edit.) D18
+-- Add Underworld (PIU Edit.) D18
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -1543,7 +1543,7 @@ SELECT
 
 
 
--- Add Underworld ft. Skizzo (PIU Edit.) D23
+-- Add Underworld (PIU Edit.) D23
 
 INSERT INTO chart (chartId, songId)
 SELECT 
@@ -1583,7 +1583,7 @@ SELECT
 
 
 
--- Add Underworld ft. Skizzo (PIU Edit.) D25
+-- Add Underworld (PIU Edit.) D25
 
 INSERT INTO chart (chartId, songId)
 SELECT 
