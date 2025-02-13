@@ -68,6 +68,10 @@ STEPMAKERS = {
 	"Iolite Sky": "DulKi",
 	"Pump Me Amadeus": "SUNNY",
 	"Moonlight":  [("EXC", 'D24')],
+	"Tropicanic":  [("SUNNY", 'CoOp(x3)')],
+	"Slam":  [("SUNNY", 'CoOp(x2)')],
+	"Dance With Me":  [("SUNNY", 'CoOp(x2)')],
+	"Winter":  [("SUNNY", 'CoOp(x2)')],
 
 	"After LIKE": "CONRAD",
 	"Amor Fati": "EXC",
@@ -194,6 +198,16 @@ STEPMAKERS = {
 	"Teddy Bear  [FULL]": "SUNNY",
 	"DISTRICT V": "SUNNY",
 	"Jupin  [SHORT]": "SPHAM",
+
+	"Darkside Of The Mind": "refos",
+	"ESP": "CONRAD",
+	"New Rose": "CONRAD",
+	"Crimson hood": "NIMGO",
+	"Nade Nade": "NIMGO",
+	"Catastrophe": "CONRAD",
+	"FLVSH OUT": "SUNNY",
+	"Phoenix Opening  [SHORT]": "JUNARE",
+	"Ghroth  [SHORT]": "JUNARE",
 }
 
 KOREAN_TITLES = {
@@ -322,10 +336,128 @@ KOREAN_TITLES = {
 	"Teddy Bear  [FULL]": "테디베어",
 	"DISTRICT V": "디스트릭트 V",
 	"Jupin  [SHORT]": "쥬핀",
+
+	"Darkside Of The Mind": "다크사이드 오브 더 마인드",
+	"ESP": "ESP",
+	"New Rose": "뉴 로즈",
+	"Crimson hood": "크림슨 후드",
+	"Nade Nade": "네이드 네이드",
+	"Catastrophe": "카타스트로피",
+	"FLVSH OUT": "플래시 아웃",
+	"Phoenix Opening  [SHORT]": "피닉스 오프닝",
+	"Ghroth  [SHORT]": "그로스",
 }
 
 
 data = {
+"17__Darkside_Of_The_Mind":
+{
+	title: "Darkside Of The Mind", artist: "DJ Myosuke", channel: ORIGINAL, bpm: "220",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.07 S14 S17 S19 S23 D18 D21 D25",
+},
+
+"17__ESP":
+{
+	title: "ESP", artist: "nato", channel: ORIGINAL, bpm: "175",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.07 S7 S13 S18 S20 S22 D15 D19 D22 D24",
+},
+
+"17__New_Rose":
+{
+	title: "New Rose", artist: "Hommarju", channel: ORIGINAL, bpm: "190",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.07 S11 S16 S19 S21 D17 D20 D23",
+},
+
+"17__Crimson_hood":
+{
+	title: "Crimson hood", artist: "Springhead", channel: ORIGINAL, bpm: "190",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.07 S12 S16 S18 S20 S22 S24 D18 D22 D24 D26",
+},
+
+"17__Nade_Nade":
+{
+	title: "Nade Nade", artist: "Doin", channel: WORLD, bpm: "100",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.07 S10 S15 S20 S23 D16 D24",
+},
+
+"17__Catastrophe":
+{
+	title: "Catastrophe", artist: "rareguy & MonstDeath", channel: WORLD, bpm: "202",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.07 S12 S15 S18 S21 S23 D20 D23 D26",
+},
+
+"17__FLVSH_OUT":
+{
+	title: "FLVSH OUT", artist: "Getty", channel: WORLD, bpm: "160",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.07 S4 S7 S11 S16 S18 S21 D13 D19 D23",
+},
+
+"17__Phoenix_Opening__SHORT":
+{
+	title: "Phoenix Opening  [SHORT]", artist: "MAX", channel: ORIGINAL, bpm: "174", duration: SHORT,
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.07 S12 S16 S18 D16 D20 CoOp(x2)",
+},
+
+"17__Ghroth__SHORT":
+{
+	title: "Ghroth  [SHORT]", artist: "nato", channel: ORIGINAL, bpm: "212", duration: SHORT,
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.07 S14 S18 S22 D20 D24",
+},
+
 "17__EON":
 {
 	title: "E.O.N", artist: "HiTECH NINJA", channel: ORIGINAL, bpm: "165",
@@ -2982,7 +3114,7 @@ data = {
 	arcadeID: "16B5",
 	pumpoutID: 898,
 
-	Phoenix: "=",
+	Phoenix: "= @2.07 CoOp(x3)",
 	XX: "@2.08 S2 S4 S7 S11 S16 S19 D6 D13 D18 D21",
 },
 
@@ -13272,7 +13404,7 @@ data = {
 	arcadeID: "711",
 	pumpoutID: 34,
 
-	Phoenix: "= S12`10 S20`19 D14`12 D21`20",
+	Phoenix: "= S12`10 S20`19 D14`12 D21`20 @2.07 CoOp(x2)",
 	XX: "= S7`6 S10`8 S16`15 D12`11 D20`19",
 	Prime2: "=  @1.07 S19",
 	Prime: "=",
@@ -13399,7 +13531,7 @@ data = {
 	arcadeID: "718",
 	pumpoutID: 39,
 
-	Phoenix: "= S15`14 -Sp4 -S12 -Dp4 -Dp6",
+	Phoenix: "= S15`14 -Sp4 -S12 -Dp4 -Dp6 @2.07 CoOp(x2)",
 	XX: "=  @2.06 D18",
 	Prime2: "=",
 	Prime: "=",
@@ -13667,8 +13799,7 @@ data = {
 	arcadeID: "516",
 	pumpoutID: 17,
 
-	Phoenix: "= S5`3 S7`6 S20`19 D9`6 D22`21 D24`23",
-		# TODO.Phoenix: D9`6
+	Phoenix: "= S5`3 S7`6 S20`19 D9`6 D22`21 D24`23 @2.07 CoOp(x2)",
 	XX: "= S18`17 S19`18 D21`20",
 	Prime2: "=  @1.04 D23",
 	Prime: "=",

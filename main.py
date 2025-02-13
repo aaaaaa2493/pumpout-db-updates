@@ -31,6 +31,7 @@ patches = {
         'v2.04.0',
         'v2.05.0',
         'v2.06.0',
+        'v2.07.0',
     ],
     XX: [
         'v1.00.1',
@@ -760,7 +761,7 @@ SELECT
                 found_stepmakers = [i[0] for i in curr_stepmakers if i[1] == '*']
 
         if len(found_stepmakers) != 1:
-            raise Exception()
+            raise Exception(f"${song} {curr_chart}")
 
         for index, stepmaker in enumerate(found_stepmakers):
             print(f"""
