@@ -2,11 +2,11 @@
 
 def get_difficulty(curr_chart):
     curr_chart = curr_chart.upper()
-    if (curr_chart.startswith("S") or curr_chart.startswith("D")) and curr_chart[1:].isdigit():
-        return curr_chart[:1], int(curr_chart[1:])
+    if (curr_chart.startswith("S") or curr_chart.startswith("D")) and (curr_chart[1:].isdigit() or curr_chart[1:] == '??'):
+        return curr_chart[:1], (int(curr_chart[1:]) if curr_chart[1:].isdigit() else curr_chart[1:])
 
-    elif (curr_chart.startswith("SP") or curr_chart.startswith("DP")) and curr_chart[2:].isdigit():
-        return curr_chart[:2], int(curr_chart[2:])
+    elif (curr_chart.startswith("SP") or curr_chart.startswith("DP")) and (curr_chart[2:].isdigit() or curr_chart[2:] == '??'):
+        return curr_chart[:2], (int(curr_chart[2:]) if curr_chart[2:].isdigit() else curr_chart[2:])
 
     elif curr_chart.startswith("COOP(X") and curr_chart.endswith(")"):
         curr_chart = curr_chart[len("COOP(X"):-len(")")]

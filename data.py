@@ -72,8 +72,13 @@ STEPMAKERS = {
 	"Slam":  [("SUNNY", 'CoOp(x2)')],
 	"Dance With Me":  [("SUNNY", 'CoOp(x2)')],
 	"Winter":  [("SUNNY", 'CoOp(x2)')],
+	"Danger & Danger":  [("GGWANG", 'S21')],
+	"Silver Beat feat. ChisaUezono":  [("refos", 'D22')],
+	"Slapstick Parfait":  [("refos", 'D23')],
+	"Timing":  [("SUNNY", 'CoOp(x2)')],
+	"Feel My Happiness":  [("SUNNY", 'CoOp(x4)')],
 
-	"After LIKE": "CONRAD",
+	"After LIKE": [("CONRAD", 'S1 S4 S6 S9 S13 S15 S18 D7 D15 D17 D20 CoOp(x2)'), ('EXC', 'D23')],
 	"Amor Fati": "EXC",
 	"Alone": "SUNNY",
 	"VECTOR": "SPHAM",
@@ -113,7 +118,7 @@ STEPMAKERS = {
 	"Galaxy Collapse": "SUNNY",
 	"WHISPER": "FEFEMZ",
 	"Euphorianic  [SHORT]": "SUNNY",
-	"Halloween Party ~Multiverse~": "SPHAM",
+	"Halloween Party ~Multiverse~": [("SPHAM", 'S8 S12 S16 S18 S20 D13 D17 D21 CoOp(x2)'), ('GGWANG', 'D23') ],
 
 	"ELEVEN": "SUNNY",
 	"Neo Catharsis": "EXC",
@@ -208,6 +213,16 @@ STEPMAKERS = {
 	"FLVSH OUT": "SUNNY",
 	"Phoenix Opening  [SHORT]": "JUNARE",
 	"Ghroth  [SHORT]": "JUNARE",
+
+	"1948": "EXC",
+	"Super Akuma Emperor": "DIESEL",
+	"Deca Dance": "FEFEMZ",
+	"Burn Out": [("BME", ('S11', 'S15', 'S17', 'S20')), ("SUNNY", ('D13', 'D20', 'D23'))],
+	"Ultimate Eyes": "SUNNY",
+	"Rush-Hour": "FEFEMZ",
+	"Human Extinction (PIU Edit.)": [("OSING", ('S12', 'S18', 'S20', 'S22', 'S24')), ("NIMGO", ('D20', 'D23', 'D25'))],
+	"Neo Catharsis  [SHORT]": "DIESEL",
+	"Hymn of Golden Glory  [SHORT]": "GGWANG",
 }
 
 KOREAN_TITLES = {
@@ -346,10 +361,128 @@ KOREAN_TITLES = {
 	"FLVSH OUT": "플래시 아웃",
 	"Phoenix Opening  [SHORT]": "피닉스 오프닝",
 	"Ghroth  [SHORT]": "그로스",
+
+	"1948": "1948",
+	"Super Akuma Emperor": "초악마황제",
+	"Deca Dance": "데카 댄스",
+	"Burn Out": "번 아웃",
+	"Ultimate Eyes": "얼티밋 아이즈",
+	"Rush-Hour": "러쉬-아워",
+	"Human Extinction (PIU Edit.)": "휴먼 익스팅션",
+	"Neo Catharsis  [SHORT]": "네오 카타르시스",
+	"Hymn of Golden Glory  [SHORT]": "힘 오브 골든 글로리",
 }
 
 
 data = {
+"17__1948":
+{
+	title: "1948", artist: "SLAM", channel: ORIGINAL, bpm: "240",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.08 S18 S21 S24 S26 D24 D27 D??",
+},
+
+"17__Super_Akuma_Emperor":
+{
+	title: "Super Akuma Emperor", artist: "REDALiCE", channel: ORIGINAL, bpm: "240",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.08 S15 S18 S20 S22 S24 D18 D24 D26",
+},
+
+"17__Deca_Dance":
+{
+	title: "Deca Dance", artist: "Yooh", channel: ORIGINAL, bpm: "160",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.08 S9 S13 S16 S18 S21 D17 D20 D23",
+},
+
+"17__Burn_Out":
+{
+	title: "Burn Out", artist: "WyvernP", channel: ORIGINAL, bpm: "190",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.08 S11 S15 S17 S20 D13 D20 D23",
+},
+
+"17__Ultimate_Eyes":
+{
+	title: "Ultimate Eyes", artist: "HyuN", channel: ORIGINAL, bpm: "185",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.08 S4 S7 S11 S14 S16 S19 S22 D13 D21 D24",
+},
+
+"17__RushHour":
+{
+	title: "Rush-Hour", artist: "litmus*", channel: WORLD, bpm: "112",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.08 S13 S16 S20 S22 D17 D22 D24",
+},
+
+"17__Human_Extinction_PIU_Edit":
+{
+	title: "Human Extinction (PIU Edit.)", artist: "MonstDeath", channel: WORLD, bpm: "199",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.08 S12 S18 S20 S22 S24 D20 D23 D25",
+},
+
+"17__Neo_Catharsis__SHORT":
+{
+	title: "Neo Catharsis  [SHORT]", artist: "TAG underground overlay", channel: ORIGINAL, bpm: "120~300", duration: SHORT,
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.08 S19 S21 S23 D23 D25",
+},
+
+"17__Hymn_of_Golden_Glory__SHORT":
+{
+	title: "Hymn of Golden Glory  [SHORT]", artist: "Essbee", channel: ORIGINAL, bpm: "244", duration: SHORT,
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.08 S15 S18 S20 S23 D17 D20 D22 D24",
+},
+
 "17__Darkside_Of_The_Mind":
 {
 	title: "Darkside Of The Mind", artist: "DJ Myosuke", channel: ORIGINAL, bpm: "220",
@@ -1336,7 +1469,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@1.03 S8 S12 S16 S18 S20 D13 D17 D21 CoOp(x2)",
+	Phoenix: "@1.03 S8 S12 S16 S18 S20 D13 D17 D21 CoOp(x2) @2.08 D23",
 },
 
 "17__Euphorianic__SHORT":
@@ -1408,7 +1541,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@1.02 S9 S14 S17 S20 S22 D16 D22 D24",
+	Phoenix: "@1.02 S9 S14 S17 S20 S22 D16 D22 D24 @2.08 CoOp(x2)",
 },
 
 "17__R.I.P.":
@@ -1612,7 +1745,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "S1 S4 S6 S9 S13 S15 S18 D7 D15 D17 D20 CoOp(x2)",
+	Phoenix: "S1 S4 S6 S9 S13 S15 S18 D7 D15 D17 D20 CoOp(x2) @2.08 D23",
 },
 
 
@@ -2225,7 +2358,7 @@ data = {
 	arcadeID: "1637",
 	pumpoutID: 881,
 
-	Phoenix: "= D13`12",
+	Phoenix: "= D13`12 @2.08 D23",
 	XX: "@2.06 S3 S7 S10 S16 D12 D18 S19.lock D21.lock",
 },
 
@@ -2309,7 +2442,7 @@ data = {
 	arcadeID: "1644",
 	pumpoutID: 770,
 
-	Phoenix: "= S18`17 D19`18 -Dp4",
+	Phoenix: "= S18`17 D19`18 -Dp4 @2.08 CoOp(x2)",
 	XX: "@1.01 S2 S4 S7 S15 S17.lock D11 D16 D18.lock  @1.04 Dp4",
 },
 
@@ -2688,7 +2821,7 @@ data = {
 	arcadeID: "1677",
 	pumpoutID: 831,
 
-	Phoenix: "= D14`15 -Dp3",
+	Phoenix: "= D14`15 -Dp3 @2.08 S21",
 	XX: "@2.02 S8 S12 S16 D10 D15 D18 S19.lock D21.lock  @2.04 Dp3  @2.07 D23.lock",
 },
 
@@ -3607,7 +3740,7 @@ data = {
 	arcadeID: "1511",
 	pumpoutID: 676,
 
-	Phoenix: "= S13`12 D8`7 D13`12 -S4 -S7 -Dp3",
+	Phoenix: "= S13`12 D8`7 D13`12 -S4 -S7 -Dp3 @2.08 D22",
 	XX: "=  @1.04 Dp3",
 	Prime2: "@2.03 S4 S7 S12 S16 S18.ampass D7 D12 D18",
 },
@@ -5429,7 +5562,7 @@ data = {
 	arcadeID: "1461",
 	pumpoutID: 508,
 
-	Phoenix: "= S4`3 S11`10 -Dp2",
+	Phoenix: "= S4`3 S11`10 -Dp2 @2.08 CoOp(x4)",
 	XX: "=",
 	Prime2: "=  @1.08 Dp2  @2.03 D21",
 	Prime: "@1.19 S3 S10 S17 D6 D18",

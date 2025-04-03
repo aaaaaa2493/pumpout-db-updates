@@ -32,6 +32,7 @@ patches = {
         'v2.05.0',
         'v2.06.0',
         'v2.07.0',
+        'v2.08.0',
     ],
     XX: [
         'v1.00.1',
@@ -596,7 +597,11 @@ SELECT
     (SELECT MAX(chartRatingId) + 1 FROM chartRating),
     (SELECT MAX(chartId) FROM chart),
     (SELECT modeId FROM mode WHERE internalAbbreviation = '{e(chart_mode)}'),
-    (SELECT difficultyId FROM difficulty WHERE value = {chart_difficulty});
+    ({
+        f"""SELECT difficultyId FROM difficulty WHERE value = {chart_difficulty}"""
+        if str(chart_difficulty).isdigit() else 
+        f"""SELECT difficultyId FROM difficulty WHERE internalTitle = '{e(chart_difficulty)}'"""
+    });
 """, end='')
 
         print(f"""
@@ -756,7 +761,7 @@ SELECT
         if type(curr_stepmakers) == str:
             found_stepmakers = [curr_stepmakers]
         else:
-            found_stepmakers = [i[0] for i in curr_stepmakers if curr_chart in i[1]]
+            found_stepmakers = [i[0] for i in curr_stepmakers if curr_chart in (i[1].split() if type(i[1]) == str else i[1])]
             if len(found_stepmakers) == 0:
                 found_stepmakers = [i[0] for i in curr_stepmakers if i[1] == '*']
 
