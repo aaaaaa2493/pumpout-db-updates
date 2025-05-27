@@ -1,53 +1,53 @@
-1) Title : 1948
-  Artist : SLAM
-  BPM : 240
-  Category : Original
-  Step charts : S18, S21, S24, S26, D24, D27, D??
-
-2) Title : Super Akuma Emperor
-  Artist : REDALiCE
-  BPM : 240
-  Category : Original
-  Step charts : S15, S18, S20, S22, S24, D18, D24, D26
-
-3) Title : Deca Dance
-  Artist : Yooh
-  BPM : 160
-  Category : Original
-  Step charts : S9, S13, S16, S18, S21, D17, D20, D23
-
-4) Title : Burn Out
-  Artist : WyvernP
+1) Title : Vanish 2 - Roar of the invisible dragon
+  Artist : Applesoda
   BPM : 190
   Category : Original
-  Step charts : S11, S15, S17, S20, D13, D20, D23
+  Step charts : S12, S17, S20, S22, D13, D18, D24
 
-5) Title : Ultimate Eyes
-  Artist : HyuN
-  BPM : 185
+2) Title : Autumn Break
+  Artist : Cosmograph
+  BPM : 175
   Category : Original
-  Step charts : S4, S7, S11, S14, S16, S19, S22, D13, D21, D24
+  Step charts : S4, S7, S12, S16, S21, D14, D18, D23
 
-6) Title : Rush-Hour
-  Artist : litmus*
-  BPM : 112
+3) Title : Solve My Hurt
+  Artist : Doin
+  BPM : 234
+  Category : Original
+  Step charts : S10, S14, S18, S21, D15, D19, D23, Co-Op (x2)
+
+4) Title : Eternal Universe
+  Artist : Quree
+  BPM : 200
+  Category : Original
+  Step charts : S4, S7, S12, S16, S20, S23, D19, D23, D25
+
+5) Title : Becouse of You
+  Artist : Srav3R & USAO
+  BPM : 175
   Category : World Music
-  Step charts : S13, S16, S20, S22, D17, D22, D24
+  Step charts : S11, S14, S16, S18, S21, D12, D17, D20, D22
 
-7) Title : Human Extinction (PIU Edit.)
-  Artist : MonstDeath
-  BPM : 199
+6) Title : About The Universe
+  Artist : SOTUI & MIssionary
+  BPM : 180
   Category : World Music
-  Step charts : S12, S18, S20, S22, S24, D20, D23, D25
+  Step charts : S7, S12, S16, S18, S21, D18, D21, D24
 
-8) Title : Neo Catharsis - SHORT CUT -
-  Artist : TAG underground overlay
-  BPM : 120~300
-  Category : Short Cut
-  Step charts : S19, S21, S23, D23, D25
+7) Title : ALiVE
+  Artist : REDALiCE
+  BPM : 170
+  Category : World Music
+  Step charts : S5, S12, S15, S18, S22, D13, D17, D21, D24
 
-9) Title : Hymn of Golden Glory - SHORT CUT -
-  Artist : Essbee
-  BPM : 244
+8) Title : Halloween Party ~Multiverse~ - SHORT CUT -
+  Artist : SHK
+  BPM : 160
   Category : Short Cut
-  Step charts : S15, S18, S20, S23, D17, D20, D22, D24
+  Step charts : S14, S19, S21, D18, D21
+
+9) Title :  Stardream -Eurobeat Remix- - SHORT CUT -
+  Artist : MAX x Cashew x Dave Rodgers
+  BPM : 160
+  Category : Short Cut
+  Step charts : S12, S16, S18, S21, D14, D18, D20, D22

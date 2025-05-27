@@ -223,6 +223,16 @@ STEPMAKERS = {
 	"Human Extinction (PIU Edit.)": [("OSING", ('S12', 'S18', 'S20', 'S22', 'S24')), ("NIMGO", ('D20', 'D23', 'D25'))],
 	"Neo Catharsis  [SHORT]": "DIESEL",
 	"Hymn of Golden Glory  [SHORT]": "GGWANG",
+
+	"Vanish 2 - Roar of the invisible dragon": "SPHAM",
+	"Autumn Break": "SUNNY",
+	"Solve My Hurt": "SPHAM",
+	"Eternal Universe": [("SUNNY", ('S4', 'S7', 'S12', 'S16', 'S20', 'S23')), ("NIMGO", ('D19', 'D23', 'D25'))],
+	"Becouse of You": "FEFEMZ",
+	"About The Universe": [("OSING", ('S7', 'S12', 'S16', 'S18', 'S21')), ("CONRAD", ('D18', 'D21', 'D24'))],
+	"ALiVE": "SPHAM",
+	"Halloween Party ~Multiverse~  [SHORT]": "JUNARE",
+	"Stardream -Eurobeat Remix-  [SHORT]": "GGWANG",
 }
 
 KOREAN_TITLES = {
@@ -371,10 +381,128 @@ KOREAN_TITLES = {
 	"Human Extinction (PIU Edit.)": "휴먼 익스팅션",
 	"Neo Catharsis  [SHORT]": "네오 카타르시스",
 	"Hymn of Golden Glory  [SHORT]": "힘 오브 골든 글로리",
+
+	"Vanish 2 - Roar of the invisible dragon": "배니쉬 2",
+	"Autumn Break": "어텀 브레이크",
+	"Solve My Hurt": "솔브 마이 허트",
+	"Eternal Universe": "이터널 유니버스",
+	"Becouse of You": "비코즈 오브 유",
+	"About The Universe": "어바웃 더 유니버스",
+	"ALiVE": "얼라이브",
+	"Halloween Party ~Multiverse~  [SHORT]": "할로윈 파티",
+	"Stardream -Eurobeat Remix-  [SHORT]": "스타드림",
 }
 
 
 data = {
+"17__Vanish_2__Roar_of_the_invisible_dragon":
+{
+	title: "Vanish 2 - Roar of the invisible dragon", artist: "Applesoda", channel: ORIGINAL, bpm: "190",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.09 S12 S17 S20 S22 D13 D18 D24",
+},
+
+"17__Autumn_Break":
+{
+	title: "Autumn Break", artist: "Cosmograph", channel: ORIGINAL, bpm: "175",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.09 S4 S7 S12 S16 S21 D14 D18 D23",
+},
+
+"17__Solve_My_Hurt":
+{
+	title: "Solve My Hurt", artist: "Doin", channel: ORIGINAL, bpm: "234",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.09 S10 S14 S18 S21 D15 D19 D23 CoOp(x2)",
+},
+
+"17__Eternal_Universe":
+{
+	title: "Eternal Universe", artist: "Quree", channel: ORIGINAL, bpm: "200",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.09 S4 S7 S12 S16 S20 S23 D19 D23 D25",
+},
+
+"17__Becouse_of_You":
+{
+	title: "Becouse of You", artist: "Srav3R & USAO", channel: WORLD, bpm: "175",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.09 S11 S14 S16 S18 S21 D12 D17 D20 D22",
+},
+
+"17__About_The_Universe":
+{
+	title: "About The Universe", artist: "SOTUI & MIssionary", channel: WORLD, bpm: "180",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.09 S7 S12 S16 S18 S21 D18 D21 D24",
+},
+
+"17__ALiVE":
+{
+	title: "ALiVE", artist: "REDALiCE", channel: WORLD, bpm: "170",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.09 S5 S12 S15 S18 S22 D13 D17 D21 D24",
+},
+
+"17__Halloween_Party_Multiverse__SHORT":
+{
+	title: "Halloween Party ~Multiverse~  [SHORT]", artist: "SHK", channel: ORIGINAL, bpm: "160", duration: SHORT,
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.09 S14 S19 S21 D18 D21",
+},
+
+"17__Stardream_Eurobeat_Remix__SHORT":
+{
+	title: "Stardream -Eurobeat Remix-  [SHORT]", artist: "MAX x Cashew x Dave Rodgers", channel: ORIGINAL, bpm: "160", duration: SHORT,
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.09 S12 S16 S18 S21 D14 D18 D20 D22",
+},
+
 "17__1948":
 {
 	title: "1948", artist: "SLAM", channel: ORIGINAL, bpm: "240",
