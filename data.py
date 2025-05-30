@@ -415,7 +415,7 @@ data = {
 	# arcadeID: "",
 	pumpoutID: "",
 	# arcadeName: "",
-
+	'deletedAt': Phoenix + " " + "v2.09.1",
 	Phoenix: "@2.09 S4 S7 S12 S16 S21 D14 D18 D23",
 },
 

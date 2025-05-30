@@ -34,6 +34,7 @@ patches = {
         'v2.07.0',
         'v2.08.0',
         'v2.09.0',
+        'v2.09.1',
     ],
     XX: [
         'v1.00.1',
@@ -102,7 +103,8 @@ new_songs = [
 
 deleted_songs = [
     i for i in data.values()
-    if (MIX not in i or MIX in i and not get_info_for_patch(PATCH, i[MIX], INITIAL_PATCH)) and PREV_MIX in i and INITIAL_PATCH
+    if (MIX not in i or MIX in i and not get_info_for_patch(PATCH, i[MIX], INITIAL_PATCH)) and PREV_MIX in i and INITIAL_PATCH or
+       'deletedAt' in i and i['deletedAt'] == MIX + " " + PATCH
 ]
 
 changed_charts = [
@@ -813,12 +815,16 @@ for index, song in enumerate(deleted_songs):
     if NOSQL:
         p(f"{curr_title}")
 
+    find_song_id = f'''
+SELECT songId FROM song WHERE internalTitle = '{e(curr_title)}'
+'''.strip()
+
     print(f"""
 -- Remove {curr_title}
 
 INSERT INTO songVersion (songId, versionId, operationId, internalDescription)
 SELECT 
-    {pumpout_id},
+    {pumpout_id if len(pumpout_id) else f'''({find_song_id})'''},
     (SELECT versionId FROM version 
      WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
      AND internalTitle = '{e(PATCH)}'),
@@ -848,7 +854,7 @@ FROM (
   JOIN version v2 ON crv.versionId = v2.versionId
   WHERE v.mixId NOT IN {IGNORED_MIXES}
   AND v2.mixId NOT IN {IGNORED_MIXES}
-  AND c.songId = {pumpout_id}
+  AND c.songId = {pumpout_id if len(pumpout_id) else f'''({find_song_id})'''}
   AND v.versionId != (SELECT versionId FROM version
    WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
    AND internalTitle = '{e(PATCH)}')

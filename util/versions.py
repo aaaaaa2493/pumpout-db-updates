@@ -8,6 +8,9 @@ def trim_version(version_string):
     # Split the version string by dots
     version_parts = version_string.split('.')
 
+    if version_parts[-1] != '0':
+        return version_string
+
     # Take only the first two parts (major versions) and join them back into a string
     trimmed_version = '.'.join(version_parts[:2])
 
