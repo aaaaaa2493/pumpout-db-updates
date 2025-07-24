@@ -233,6 +233,16 @@ STEPMAKERS = {
 	"ALiVE": "SPHAM",
 	"Halloween Party ~Multiverse~  [SHORT]": "JUNARE",
 	"Stardream -Eurobeat Remix-  [SHORT]": "GGWANG",
+
+	"4NT": [("OSING", ('S9', 'S12', 'S16', 'S20', 'S22')), ("SUNNY", ('D14', 'D20', 'D24'))],
+	"The Apocalypse": "CONRAD",
+	"Glimmer Gleam": "SPHAM",
+	"Demon of Laplace": "NIMGO",
+	"†DOOF†SENC†": "CONRAD",
+	"That Kitty (PIU Edit.)": "SPHAM",
+	"Spooky Macaron": "CONRAD",
+	"PRiMA MATERiA  [SHORT]": "refos",
+	"DUEL  [SHORT]": "GGWANG",
 }
 
 KOREAN_TITLES = {
@@ -391,10 +401,128 @@ KOREAN_TITLES = {
 	"ALiVE": "얼라이브",
 	"Halloween Party ~Multiverse~  [SHORT]": "할로윈 파티",
 	"Stardream -Eurobeat Remix-  [SHORT]": "스타드림",
+
+	"4NT": "4NT",
+	"The Apocalypse": "더 아포칼립스",
+	"Glimmer Gleam": "글리머 글림",
+	"Demon of Laplace": "데몬 오브 라플라스",
+	"†DOOF†SENC†": "†도프†센시†",
+	"That Kitty (PIU Edit.)": "댓키티",
+	"Spooky Macaron": "스푸키 마카롱",
+	"PRiMA MATERiA  [SHORT]": "프ㄹi마 마테ㄹi아",
+	"DUEL  [SHORT]": "결투",
 }
 
 
 data = {
+"17__4NT":
+{
+	title: "4NT", artist: "PODA", channel: ORIGINAL, bpm: "180",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.10 S9 S12 S16 S20 S22 D14 D20 D24",
+},
+
+"17__The_Apocalypse":
+{
+	title: "The Apocalypse", artist: "HyuN feat. Elika", channel: ORIGINAL, bpm: "171",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.10 S4 S7 S11 S14 S16 S18 S20 D13 D16 D18 D20 D23",
+},
+
+"17__Glimmer_Gleam":
+{
+	title: "Glimmer Gleam", artist: "Doin", channel: ORIGINAL, bpm: "85",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.10 S8 S13 S18 S21 D14 D19 D23",
+},
+
+"17__Demon_of_Laplace":
+{
+	title: "Demon of Laplace", artist: "Quree", channel: ORIGINAL, bpm: "144",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.10 S6 S10 S17 S20 D15 D20 D23",
+},
+
+"17__DOOFSENC":
+{
+	title: "†DOOF†SENC†", artist: "Kobaryo", channel: WORLD, bpm: "200",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.10 S15 S18 S21 S23 D16 D19 D23 D25",
+},
+
+"17__That_Kitty_PIU_Edit":
+{
+	title: "That Kitty (PIU Edit.)", artist: "MonstDeath", channel: WORLD, bpm: "190",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.10 S13 S17 S20 S23 D15 D18 D22 D24",
+},
+
+"17__Spooky_Macaron":
+{
+	title: "Spooky Macaron", artist: "Sobrem", channel: WORLD, bpm: "201",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.10 S14 S17 S20 S23 D16 D18 D22 D25",
+},
+
+"17__PRiMA_MATERiA__SHORT":
+{
+	title: "PRiMA MATERiA  [SHORT]", artist: "xi", channel: ORIGINAL, bpm: "187", duration: SHORT,
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.10 S18 S21 S23 D22 D24",
+},
+
+"17__DUEL__SHORT":
+{
+	title: "DUEL  [SHORT]", artist: "Cashew & D_AAN", channel: ORIGINAL, bpm: "155", duration: SHORT,
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.10 S16 S19 S21 D18 D21 D23",
+},
+
 "17__Vanish_2__Roar_of_the_invisible_dragon":
 {
 	title: "Vanish 2 - Roar of the invisible dragon", artist: "Applesoda", channel: ORIGINAL, bpm: "190",
