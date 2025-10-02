@@ -243,6 +243,12 @@ STEPMAKERS = {
 	"Spooky Macaron": "CONRAD",
 	"PRiMA MATERiA  [SHORT]": "refos",
 	"DUEL  [SHORT]": "GGWANG",
+
+	"Dead End": "DulKi",
+	"Binary star": [("NIMGO", ('S5', 'S13', 'S17', 'S20')), ("SPHAM", ('D15', 'D19', 'D23'))],
+	"Alice in Misanthrope": [("CONRAD", '*'), ('EXC', 'S22')],
+	"Solve My Hurt  [SHORT]": "AbySS",
+	"Murdoch vs Otada  [SHORT]": "DIESEL",
 }
 
 KOREAN_TITLES = {
@@ -411,10 +417,76 @@ KOREAN_TITLES = {
 	"Spooky Macaron": "스푸키 마카롱",
 	"PRiMA MATERiA  [SHORT]": "프ㄹi마 마테ㄹi아",
 	"DUEL  [SHORT]": "결투",
+
+	"Dead End": "데드 엔드",
+	"Binary star": "바이너리 스타",
+	"Alice in Misanthrope": "앨리스 인 미산트로프",
+	"Solve My Hurt  [SHORT]": "솔브 마이 허트",
+	"Murdoch vs Otada  [SHORT]": "머독 vs 오타다",
 }
 
 
 data = {
+"17__Dead_End":
+{
+	title: "Dead End", artist: "Cosmograph", channel: ORIGINAL, bpm: "212",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.11 S18 S21 S23 S25 D22 D26 D28",
+},
+
+"17__Binary_star":
+{
+	title: "Binary star", artist: "SYNTHWULF", channel: WORLD, bpm: "170",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.11 S5 S13 S17 S20 D15 D19 D23",
+},
+
+"17__Alice_in_Misanthrope":
+{
+	title: "Alice in Misanthrope", artist: "LeaF", channel: WORLD, bpm: "154~174",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.11 S12 S15 S17 S20 S22 D13 D18 D21 D24",
+},
+
+"17__Solve_My_Hurt__SHORT":
+{
+	title: "Solve My Hurt  [SHORT]", artist: "Doin", channel: ORIGINAL, bpm: "234", duration: SHORT,
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.11 S20 S23 D26",
+},
+
+"17__Murdoch_vs_Otada__SHORT":
+{
+	title: "Murdoch vs Otada  [SHORT]", artist: "ESPITZ vs WONDERTRAVELER Project", channel: ORIGINAL, bpm: "180", duration: SHORT,
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.11 S15 S18 S21 D20 D24",
+},
+
 "17__4NT":
 {
 	title: "4NT", artist: "PODA", channel: ORIGINAL, bpm: "180",
