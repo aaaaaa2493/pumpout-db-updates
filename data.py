@@ -77,6 +77,15 @@ STEPMAKERS = {
 	"Slapstick Parfait":  [("refos", 'D23')],
 	"Timing":  [("SUNNY", 'CoOp(x2)')],
 	"Feel My Happiness":  [("SUNNY", 'CoOp(x4)')],
+	"All I Want For X-mas": [("SUNNY", 'S15 S17 D16 D18')],
+	"Magical Vacation": [("refos", 'D21')],
+	"Katkoi": [("GGWANG", 'S22 D24')],
+	"Passacaglia": [("AbySS", 'D25')],
+	"Moment Day": [("refos", 'D23')],
+	"Black Dragon": [("refos", 'D23')],
+	"Yoropiku Pikuyoro!": [("GGWANG", 'S22 D24')],
+	"Rage of Fire": [("refos", 'S20 D22')],
+	"Conflict": [("SPHAM", 'D18'), ("EXC", 'D26')],
 
 	"After LIKE": [("CONRAD", 'S1 S4 S6 S9 S13 S15 S18 D7 D15 D17 D20 CoOp(x2)'), ('EXC', 'D23')],
 	"Amor Fati": "EXC",
@@ -84,7 +93,7 @@ STEPMAKERS = {
 	"VECTOR": "SPHAM",
 	"Versailles": "CONRAD",
 	"Showdown": "CONRAD",
-	"Euphorianic": "CONRAD",
+	"Euphorianic": [("CONRAD", 'S3 S5 S8 S11 S16 S19 D10 D18 D21'), ('refos', 'D23')],
 	"Jupin": "DulKi",
 	"Etude Op 10-4": [("SUNNY", '*'), ('EXC', ('S22', 'D25'))],
 	"Altale": "FEFEMZ",
@@ -146,7 +155,7 @@ STEPMAKERS = {
 
 	"Lucid Dream": "SPHAM",
 	"Solfeggietto": "WINDFORCE",
-	"Le Nozze di Figaro ~Celebrazione Remix~": "SPHAM",
+	"Le Nozze di Figaro ~Celebrazione Remix~": [("SPHAM", 'S9 S13 S17 S20 D14 D18 D21'), ("SUNNY", 'CoOp(x2)')],
 	"PRiMA MATERiA": "EXC",
 	"Destr0yer": "EXC",
 
@@ -173,7 +182,7 @@ STEPMAKERS = {
 
 	"DO or DIE": "FEFEMZ",
 	"Appassionata": "EXC",
-	"Murdoch vs Otada": [("FEFEMZ", '*'), ("GGWANG", "D24")],
+	"Murdoch vs Otada": [("FEFEMZ", 'S9 S13 S16 S19 S22 D17 D21 D25'), ("GGWANG", "D24"), ('SUNNY', 'CoOp(x3)')],
 	"Dancing": [("NIMGO", 'S7'), ("NIMGO", 'S13'), ("NIMGO", 'S16'), ("NIMGO", 'S20'), ("DulKi", 'D13'), ("DulKi", 'D17'), ("DulKi", 'D21'), ("DulKi", 'D24')],
 	"Mahika": "CONRAD",
 
@@ -186,11 +195,11 @@ STEPMAKERS = {
 	"DUEL": [("FEFEMZ", '*'), ('EXC', 'S21')],
 	"INVASION": "SPHAM",
 	"Underworld (PIU Edit.)": [("BME", 'S8'), ("BME", 'S11'), ("BME", 'S16'), ("BME", 'S19'), ("BME", 'S22'), ("CONRAD", 'S23'), ("CONRAD", 'D18'), ("CONRAD", 'D23'), ("CONRAD", 'D25'), ],
-	"Odin": "SPHAM",
+	"Odin": [("SPHAM", 'S8 S12 S17 S21 S23 D14 D18 D23 D25'), ('SUNNY', 'CoOp(x2)')],
 	"Soldiers": "SUNNY",
 
 	"Nyan-turne": "SUNNY",
-	"Doppelganger": "CONRAD",
+	"Doppelganger": [("CONRAD", 'S9 S13 S16 S20 S22 S24 D15 D18 D24 D26'), ('EXC', 'CoOp(x2)')],
 	"SONIC BOOM": "SUNNY",
 	"Extreme Music School 1st period": "NIMGO",
 	"Extreme Music School 2nd period": "NIMGO",
@@ -249,6 +258,9 @@ STEPMAKERS = {
 	"Alice in Misanthrope": [("CONRAD", '*'), ('EXC', 'S22')],
 	"Solve My Hurt  [SHORT]": "AbySS",
 	"Murdoch vs Otada  [SHORT]": "DIESEL",
+
+	"SWEET WONDERLAND": "CONRAD",
+	"Heliosphere": "NIMGO",
 }
 
 KOREAN_TITLES = {
@@ -423,10 +435,37 @@ KOREAN_TITLES = {
 	"Alice in Misanthrope": "앨리스 인 미산트로프",
 	"Solve My Hurt  [SHORT]": "솔브 마이 허트",
 	"Murdoch vs Otada  [SHORT]": "머독 vs 오타다",
+
+	"SWEET WONDERLAND": "스위트 원더랜드",
+	"Heliosphere": "헬리오스피어",
 }
 
 
 data = {
+"17__SWEET_WONDERLAND":
+{
+	title: "SWEET WONDERLAND", artist: "MAX feat. ankimo", channel: XROSS, bpm: "170",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.12 S3 S5 S8 S12 S15 S17 S20 D14 D18 D22 CoOp(x2)",
+},
+
+"17__Heliosphere":
+{
+	title: "Heliosphere", artist: "BlackY", channel: XROSS, bpm: "182",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix: "@2.12 S14 S18 S21 S23 D20 D23 D25",
+},
+
 "17__Dead_End":
 {
 	title: "Dead End", artist: "Cosmograph", channel: ORIGINAL, bpm: "212",
@@ -615,8 +654,7 @@ data = {
 	# arcadeID: "",
 	pumpoutID: "",
 	# arcadeName: "",
-	'deletedAt': Phoenix + " " + "v2.09.1",
-	Phoenix: "@2.09 S4 S7 S12 S16 S21 D14 D18 D23",
+	Phoenix: "@2.09 S4 S7 S12 S16 S21 D14 D18 D23 @2.09.1 --",
 },
 
 "17__Solve_My_Hurt":
@@ -1036,7 +1074,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@2.05 S9 S13 S16 S20 S22 S24 D15 D18 D24 D26",
+	Phoenix: "@2.05 S9 S13 S16 S20 S22 S24 D15 D18 D24 D26 @2.12 CoOp(x2)",
 },
 
 "17__SONIC_BOOM":
@@ -1121,7 +1159,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@2.04 S8 S12 S17 S21 S23 D14 D18 D23 D25",
+	Phoenix: "@2.04 S8 S12 S17 S21 S23 D14 D18 D23 D25 @2.12 CoOp(x2)",
 },
 
 "17__Soldiers_TANOC_W_TEAM_RED_ANTHEM":
@@ -1231,7 +1269,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@2.02 S9 S13 S16 S19 S22 D17 D21 D24 D25",
+	Phoenix: "@2.02 S9 S13 S16 S19 S22 D17 D21 D24 D25 @2.12 CoOp(x3)",
 },
 
 "17__Dancing":
@@ -1519,7 +1557,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "@1.08 S9 S13 S17 S20 D14 D18 D21",
+	Phoenix: "@1.08 S9 S13 S17 S20 D14 D18 D21 @2.12 CoOp(x2)",
 },
 
 "17__PRiMA_MATERiA":
@@ -2121,7 +2159,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
-	Phoenix: "S3 S5 S8 S11 S16 S19 D10 D18 D21",
+	Phoenix: "S3 S5 S8 S11 S16 S19 D10 D18 D21 @2.12 D23",
 },
 
 
@@ -2492,7 +2530,7 @@ data = {
 	arcadeID: "1621",
 	pumpoutID: 838,
 
-	Phoenix: "= S5`6 S9`10 D13`12 D17`16 -S22 -Dp2 -D24",
+	Phoenix: "= S5`6 S9`10 D13`12 D17`16 -S22 -Dp2 -D24 @2.12 ^S22 ^D24",
 	XX: "@2.03 S6 S10 S16 D12 D16 S19.lock S22.lock D20.lock D24.lock  @2.04 Dp2",
 },
 
@@ -3137,7 +3175,7 @@ data = {
 	arcadeID: "1676",
 	pumpoutID: 784,
 
-	Phoenix: "@2.00 = -Dp4 D25`24 D12`13",
+	Phoenix: "@2.00 = -Dp4 D25`24 D12`13 @2.12 D18 D26",
 	XX: "@1.03 S6 S11 S17 S19 D13 D21 S22.lock D24.lock  @1.04 S15 CoOp(x2)  @2.02 Dp4",
 },
 
@@ -3197,7 +3235,7 @@ data = {
 	arcadeID: "1681",
 	pumpoutID: 782,
 
-	Phoenix: "= D11`10 -Dp3",
+	Phoenix: "= D11`10 -Dp3 @2.12 S20 D22",
 	XX: "@1.02 S7 S11 S16 D10 D17 CoOp(x2) S18.lock D19.lock  @1.04 Dp3",
 },
 
@@ -4664,7 +4702,7 @@ data = {
 	arcadeID: "15A0",
 	pumpoutID: 683,
 
-	Phoenix: "= S4`5 S21`20 D12`11 -Dp4",
+	Phoenix: "= S4`5 S21`20 D12`11 -Dp4 @2.12 D23",
 	XX: "=  @1.04 Dp4",
 	Prime2: "@2.04 S5 S8 S11 S17 D11 D17 S20 D19",
 },
@@ -4715,7 +4753,7 @@ data = {
 	pumpoutID: 642,
 	altID: "15_Magical_Vacation",
 
-	Phoenix: "= -Dp3",
+	Phoenix: "= -Dp3 @2.12 D21",
 	XX: "= S18`19  @2.03  CoOp(x2)",
 	Prime2: "@1.06 S6 S11 S16 D7 D13 S19.ampass D18.ampass  @2.01 Dp3",
 },
@@ -5182,7 +5220,7 @@ data = {
 	arcadeID: "1402",
 	pumpoutID: 348,
 
-	Phoenix: "= S8`7 S11`10 -Dp4",
+	Phoenix: "= S8`7 S11`10 -Dp4 @2.12 S22 D24",
 	XX: "=",
 	Prime2: "=  @1.08 Dp4",
 	Prime: "@1.07 S7 S10 S14 S18 D12 D15 D19",
@@ -6039,7 +6077,7 @@ data = {
 	arcadeID: "1474",
 	pumpoutID: 501,
 
-	Phoenix: "= D11`9 -Dp5",
+	Phoenix: "= D11`9 -Dp5 @2.12 D23",
 	XX: "= D18`19",
 	Prime2: "=  @1.08 Dp5",
 	Prime: "@1.16 S3 S6 S10 S15 S17 D9 D16 CoOp(x2)  S18 D19",
@@ -6065,7 +6103,7 @@ data = {
 	arcadeID: "1476",
 	pumpoutID: 465,
 
-	Phoenix: "= S10`9 -Sp3 -Dp4",
+	Phoenix: "= S10`9 -Sp3 -Dp4 @2.12 S22 D24",
 	XX: "=  @2.07 CoOp(x2)",
 	Prime2: "=",
 	Prime: "@1.10 S3 S5 S9 S15 D5 D16 Sp3  @1.15 Dp4",
@@ -6685,7 +6723,7 @@ data = {
 	arcadeID: "1303",
 	pumpoutID: 212,
 
-	Phoenix: "= S8`7 S12`11 D14`13",
+	Phoenix: "= S8`7 S12`11 D14`13 @2.12 D25",
 	XX: "= S11`10 S17`16 S19`20 D13`12 D18`17 D23`24",
 	Prime2: "=",
 	Prime: "= -S19",
@@ -14184,7 +14222,7 @@ data = {
 	arcadeID: "504",
 	pumpoutID: 1,
 
-	Phoenix: "= S5`6 D8`7",
+	Phoenix: "= S5`6 D8`7 @2.12 S15 S17 D16 D18",
 	XX: "= S9`11",
 	Prime2: "=",
 	Prime: "=",

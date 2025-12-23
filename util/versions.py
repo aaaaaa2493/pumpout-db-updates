@@ -29,9 +29,9 @@ def get_info_for_patch(patch, charts, is_initial):
     else:
         if at_version not in charts:
             return []
-        if charts.count(at_version) != 1:
+        if charts.count(at_version + " ") != 1:
             raise Exception()
-        charts = charts.split(at_version)[1]
+        charts = charts.split(at_version + " ")[1]
         if '@' in charts:
             charts = charts.split('@')[0]
 
@@ -45,6 +45,9 @@ if __name__ == '__main__':
     print(trim_version("v2.08.1.01.01"))
 
     print(get_info_for_patch('v1.00.1', 'S20 S21 @1.01 S22 @1.02 S23', True))
-    print(get_info_for_patch('v1.01.1', 'S20 S21 @1.01 S22 @1.02 S23', False))
-    print(get_info_for_patch('v1.02.1', 'S20 S21 @1.01 S22 @1.02 S23', False))
-    print(get_info_for_patch('v1.03.1', 'S20 S21 @1.01 S22 @1.02 S23', False))
+    print(get_info_for_patch('v1.01.0', 'S20 S21 @1.01 S22 @1.02 S23', False))
+    print(get_info_for_patch('v1.02.0', 'S20 S21 @1.01 S22 @1.02 S23', False))
+    print(get_info_for_patch('v1.03.0', 'S20 S21 @1.01 S22 @1.02 S23 @1.02.1 S24 S25 @1.03 S26', False))
+    print(get_info_for_patch('v1.02.0', 'S20 S21 @1.01 S22 @1.02 S23 @1.02.1 S24 S25 @1.03 S26', False))
+    print(get_info_for_patch('v1.02.1', 'S20 S21 @1.01 S22 @1.02 S23 @1.02.1 S24 S25 @1.03 S26', False))
+    print(get_info_for_patch('v1.03.0', 'S20 S21 @1.01 S22 @1.02 S23 @1.02.1 S24 S25 @1.03 S26', False))

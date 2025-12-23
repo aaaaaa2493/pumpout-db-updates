@@ -1,6 +1,6 @@
 import re
 
-from data import FULL, FULL_MARKER, REMIX, title, duration, artist, bpm, channel
+from data import FULL, FULL_MARKER, REMIX, XROSS, title, duration, artist, bpm, channel
 from data import SHORT, SHORT_MARKER, KPOP, ORIGINAL, WORLD, Phoenix
 
 SHORT_CUT_PATCHNOTE_MARK = ' - SHORT CUT -'
@@ -9,7 +9,7 @@ STEP_CHARTS = 'stepcharts'
 
 MIX_ID = 17
 MIX_NAME = Phoenix
-PATCH_VERSION = '2.11'
+PATCH_VERSION = '2.12'
 
 
 def convert_coop_format(text):
@@ -77,6 +77,9 @@ def parse_song_data(file_path):
 
             elif song_category.upper() == 'WORLD MUSIC':
                 song[channel] = WORLD
+
+            elif song_category.upper() == 'XROSS':
+                song[channel] = XROSS
 
             elif song_category.upper() == 'FULL SONG':
                 song[channel] = ORIGINAL
