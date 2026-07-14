@@ -5,6 +5,7 @@ def split_string(input_string, additional_splitters_on_first_split=False):
     # Define primary and additional splitters
     splitters = [
         "vs.",
+        "Vs.",
         "vs ",
         "remixed by ",
         "ft.",
@@ -126,6 +127,14 @@ if __name__ == '__main__':
 
         "t+pazolite":
             [('', 't+pazolite')],
+
+        "D-D-Dice Vs. Tanchiky Vs. Karameru":
+            [('', 'D-D-Dice'), ('Vs.', 'Tanchiky'), ('Vs.', 'Karameru')],
+
+        "Doin x neur6sia": (
+            [('', 'Doin x neur6sia')],
+            [('', 'Doin'), ('x', 'neur6sia')]
+        ),
     }
 
     for key, expected in tests.items():

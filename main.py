@@ -1,6 +1,7 @@
-from data import data, Phoenix, XX, ARCADE, SHORT, FULL, REMIX, duration, title, pumpoutID, artist, arcadeName, bpm
+from data import Phoenix2, data, Phoenix, XX, ARCADE, SHORT, FULL, REMIX, duration, title, pumpoutID, artist, \
+    arcadeName, bpm
 from data import STEPMAKERS, KPOP, ORIGINAL, WORLD, JMUSIC, XROSS, channel, arcadeID, artists as artists_key
-from data import KOREAN_TITLES, SHORT_MARKER, FULL_MARKER
+from data import KOREAN_TITLES, SHORT_MARKER, FULL_MARKER, premiumModeExclusive, steamLinkExclusive
 from util.splitter import split_string
 from util.get_bpm import bpm_min_max
 from util.versions import trim_version, get_info_for_patch
@@ -9,11 +10,21 @@ from util.printing import get_writable_print, escape as e
 from builtins import print as p
 
 mix_ids = {
+    Phoenix2: '18',
     Phoenix: '17',
     XX: '16',
 }
 
+mix_names = {
+    Phoenix2: 'Phoenix 2',
+    Phoenix: 'Phoenix',
+    XX: 'XX',
+}
+
 patches = {
+    Phoenix2: [
+        'v1.00.0',
+    ],
     Phoenix: [
         'v1.00.1',
         'v1.01.0',
@@ -49,6 +60,7 @@ patches = {
 mixes = [
     XX,
     Phoenix,
+    Phoenix2,
 ]
 
 
@@ -66,12 +78,14 @@ class Language:
     KOREAN = 'Korean'
 
 
-MIX = Phoenix
+MIX = Phoenix2
+MIX_NAME = mix_names[MIX]
 PATCHES = patches[MIX]
 PATCH = patches[MIX][-1]
 
 MIX_ID = mix_ids[MIX]
 PREV_MIX = mixes[mixes.index(MIX)-1]
+PREV_MIX_NAME = mix_names[PREV_MIX]
 INITIAL_PATCH = PATCHES[0] == PATCH
 IGNORED_MIXES = (2, 8)  # Infinity and Prime JE
 
@@ -90,6 +104,17 @@ cut = {
     FULL: 'Full Song',
 }
 
+
+def get_song_title_and_cut(song):
+    curr_title = song[title]
+    for marker in (SHORT_MARKER, FULL_MARKER):
+        if curr_title.endswith(marker):
+            curr_title = curr_title.removesuffix(marker).strip()
+
+    curr_duration = song.get(duration, ARCADE)
+    return curr_title, cut.get(curr_duration, curr_duration)
+
+
 category = {
     KPOP: "K-POP",
     ORIGINAL: "ORIGINAL",
@@ -97,6 +122,38 @@ category = {
     JMUSIC: "J-MUSIC",
     XROSS: "XROSS",
 }
+
+exclusive_labels = {
+    premiumModeExclusive: 'PREMIUM MODE EXCLUSIVE',
+    steamLinkExclusive: 'STEAM LINK EXCLUSIVE',
+}
+
+
+def add_exclusive_labels(song, entity):
+    entity_id = f'{entity}Id'
+    label_table = f'{entity}Label'
+    label_id = f'{label_table}Id'
+
+    for flag, label in exclusive_labels.items():
+        if not song.get(flag):
+            continue
+
+        print(f"""
+INSERT INTO {label_table} ({label_id}, {entity_id}, labelId)
+SELECT
+    (SELECT COALESCE(MAX({label_id}), 0) + 1 FROM {label_table}),
+    (SELECT MAX({entity_id}) FROM {entity}),
+    (SELECT labelId FROM label WHERE internalTitle = '{e(label)}');
+
+INSERT INTO {label_table}Version ({label_id}, versionId, operationId, internalDescription)
+SELECT
+    (SELECT MAX({label_id}) FROM {label_table}),
+    (SELECT versionId FROM version
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
+     AND internalTitle = '{e(PATCH)}'),
+    (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.INSERT)}'),
+    NULL;
+""", end='')
 
 new_songs = [
     i for i in data.values()
@@ -107,9 +164,12 @@ new_songs = [
 
 deleted_songs = [
     i for i in data.values()
-    if (MIX not in i or MIX in i and not get_info_for_patch(PATCH, i[MIX], INITIAL_PATCH)) and PREV_MIX in i and INITIAL_PATCH
-        or
+    if (
+        INITIAL_PATCH and PREV_MIX in i and not i[PREV_MIX].rstrip().endswith('--')
+        and (MIX not in i or not get_info_for_patch(PATCH, i[MIX], INITIAL_PATCH))
+    ) or (
         MIX in i and '--' in get_info_for_patch(PATCH, i[MIX], INITIAL_PATCH)
+    )
 ]
 
 changed_charts = [
@@ -163,10 +223,7 @@ rerated_charts = []
 
 for song in changed_charts:
     pumpout = song[pumpoutID]
-    if arcadeName in song:
-        curr_title = song[arcadeName]
-    else:
-        curr_title = song[title]
+    curr_title, curr_cut = get_song_title_and_cut(song)
 
     charts = get_info_for_patch(PATCH, song[MIX], INITIAL_PATCH)
 
@@ -174,7 +231,7 @@ for song in changed_charts:
         if '`' in change:
             after, before = change.split('`')
             before = after[0] + before
-            rerated_charts += [(pumpout, curr_title, before, after)]
+            rerated_charts += [(pumpout, curr_title, curr_cut, before, after)]
             # print(song_title, before, '->', after)
         elif change[0] == '-':
             elem = [(pumpout, curr_title, change.upper()[1:])]
@@ -198,14 +255,14 @@ for song in changed_charts:
 
 if INITIAL_PATCH:
     print(f"""
--- Add {MIX} mix
+-- Add {MIX_NAME} mix
 
 INSERT INTO mix (mixId, gameId, internalTitle, parentMixId, sortOrder)
 SELECT
     (SELECT MAX(mixId) + 1 FROM mix),
     (SELECT gameId FROM game WHERE internalTitle = 'pump-it-up'),
-    '{e(MIX)}',
-    (SELECT mixId FROM mix WHERE internalTitle = '{e(PREV_MIX)}'),
+    '{e(MIX_NAME)}',
+    (SELECT mixId FROM mix WHERE internalTitle = '{e(PREV_MIX_NAME)}'),
     (SELECT MAX(sortOrder) + 10 FROM mix);
 """, end='')
     print()
@@ -219,17 +276,57 @@ else:
     MIX_PREV_PATCH = MIX
     PREV_PATCH = patches[MIX][patches[MIX].index(PATCH) - 1]
 
+MIX_PREV_PATCH_NAME = mix_names[MIX_PREV_PATCH]
+
+
+def find_active_song_id(curr_title, curr_cut, pumpout_id=''):
+    return f'''
+SELECT songId
+FROM (
+    SELECT
+        songId,
+        COUNT(*) OVER () AS total_count
+    FROM (
+        SELECT
+            s.songId,
+            o.internalTitle AS operation,
+            ROW_NUMBER() OVER (
+                PARTITION BY s.songId
+                ORDER BY va.ancestorSortOrder DESC
+            ) AS rn
+        FROM song s
+        JOIN songVersion sv ON sv.songId = s.songId
+        JOIN operation o ON o.operationId = sv.operationId
+        JOIN _derived_versionAncestor va ON va.ancestorId = sv.versionId
+        WHERE va.versionId = (
+            SELECT v.versionId
+            FROM version v
+            JOIN mix m ON m.mixId = v.mixId
+            WHERE m.internalTitle = '{e(MIX_PREV_PATCH_NAME)}'
+            AND v.internalTitle = '{e(PREV_PATCH)}'
+        )
+        AND {f's.songId = {pumpout_id}' if pumpout_id else f'''
+        LOWER(s.internalTitle) = LOWER('{e(curr_title)}')
+        AND s.cutId = (SELECT cutId FROM cut WHERE internalTitle = '{e(curr_cut)}')
+    '''.strip()}
+    )
+    WHERE rn = 1
+    AND operation != '{e(Operations.DELETE)}'
+)
+WHERE total_count = 1
+'''.strip()
+
 
 print(f"""
--- Add {MIX} {PATCH} version
+-- Add {MIX_NAME} {PATCH} version
 
 INSERT INTO version (versionId, mixId, internalTitle, parentVersionId, sortOrder)
 SELECT
     (SELECT MAX(versionId) + 1 FROM version),
-    (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}'),
+    (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}'),
     '{e(PATCH)}',
     (SELECT versionId FROM version
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_PREV_PATCH)}')
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_PREV_PATCH_NAME)}')
      AND internalTitle = '{e(PREV_PATCH)}'),
     (SELECT MAX(sortOrder) + 10 FROM version);
 """, end='')
@@ -238,36 +335,36 @@ print()
 
 
 print(f"""
--- Add ancestors for {MIX} {PATCH}
+-- Add ancestors for {MIX_NAME} {PATCH}
 
 INSERT INTO _derived_versionAncestor (versionId, ancestorId, sortOrder, ancestorSortOrder)
 SELECT
     (SELECT versionId FROM version
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}'),
     d.ancestorId,
     (SELECT sortOrder FROM version
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}'),
     d.ancestorSortOrder
 FROM _derived_versionAncestor d
     JOIN version v on d.versionId = v.versionId
     JOIN mix m on v.mixId = m.mixId
-    WHERE m.internalTitle = '{e(MIX_PREV_PATCH)}' AND v.internalTitle = '{e(PREV_PATCH)}';
+    WHERE m.internalTitle = '{e(MIX_PREV_PATCH_NAME)}' AND v.internalTitle = '{e(PREV_PATCH)}';
 
 INSERT INTO _derived_versionAncestor (versionId, ancestorId, sortOrder, ancestorSortOrder)
 SELECT
     (SELECT versionId FROM version
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}'),
     (SELECT versionId FROM version
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}'),
     (SELECT sortOrder FROM version
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}'),
     (SELECT sortOrder FROM version
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}');
 """, end="")
 print()
@@ -338,7 +435,7 @@ for index, curr_artist in enumerate(sorted(artists, key=str.lower)):
     print(f"""
 -- Add {curr_artist}
 INSERT INTO artist (artistId, internalTitle)
-SELECT 
+SELECT
     (SELECT MAX(artistId) + 1 FROM artist),
     '{e(curr_artist)}'
 WHERE NOT EXISTS (SELECT 1 FROM artist WHERE LOWER(internalTitle) = LOWER('{e(curr_artist)}'));
@@ -450,7 +547,7 @@ SELECT
     (SELECT MAX(songCategoryId) FROM songCategory),
     (SELECT MAX(songId) FROM song),
     (SELECT versionId FROM version 
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}');
 """, end='')
 
@@ -471,7 +568,7 @@ SELECT
     (SELECT MAX(songBpmId) FROM songBpm),
     (SELECT MAX(songId) FROM song),
     (SELECT versionId FROM version
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}');
 """, end='')
 
@@ -495,7 +592,7 @@ INSERT INTO songGameIdentifierVersion (songGameIdentifierId, versionId, operatio
 SELECT 
     (SELECT songGameIdentifierId FROM songGameIdentifier WHERE gameIdentifier = '{e(curr_song_id)}'),
     (SELECT versionId FROM version 
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}'),
     (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.INSERT)}'),
     NULL;
@@ -524,7 +621,7 @@ SELECT
     (SELECT MAX(songId) FROM song),
     (SELECT languageId FROM language WHERE internalTitle = '{e(Language.ENGLISH)}'),
     (SELECT versionId FROM version 
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}');
  """, end='')
 
@@ -544,7 +641,7 @@ SELECT
     (SELECT MAX(songId) FROM song),
     (SELECT languageId FROM language WHERE internalTitle = '{e(Language.KOREAN)}'),
     (SELECT versionId FROM version 
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}');
  """, end='')
 
@@ -553,11 +650,13 @@ INSERT INTO songVersion (songId, versionId, operationId, internalDescription)
 SELECT 
     (SELECT MAX(songId) FROM song),
     (SELECT versionId FROM version 
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}'),
     (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.INSERT)}'),
     NULL;
 """, end='')
+
+    add_exclusive_labels(song, 'song')
 
     song_card_name = [i for i in curr_title if i.isalnum() or i in ' -_']
     song_card_name = MIX + '_' + ''.join(song_card_name).replace(' ', '_').replace('-', '_')
@@ -577,7 +676,7 @@ INSERT INTO songCardVersion (songCardId, versionId, operationId, internalDescrip
 SELECT 
     (SELECT MAX(songCardId) FROM songCard),
     (SELECT versionId FROM version 
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}'),
     (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.INSERT)}'),
     NULL;
@@ -629,7 +728,7 @@ SELECT
     (SELECT MAX(chartRatingId) FROM chartRating),
     (SELECT MAX(chartId) FROM chart),
     (SELECT versionId FROM version 
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}');
 """, end='')
 
@@ -638,11 +737,13 @@ INSERT INTO chartVersion (chartId, versionId, operationId, internalDescription)
 SELECT 
     (SELECT MAX(chartId) FROM chart),
     (SELECT versionId FROM version 
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}'),
     (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.INSERT)}'),
     NULL;
 """, end='')
+
+        add_exclusive_labels(song, 'chart')
 
         curr_stepmakers = STEPMAKERS[original_title]
         if type(curr_stepmakers) == str:
@@ -761,7 +862,7 @@ SELECT
     (SELECT MAX(chartRatingId) FROM chartRating),
     (SELECT MAX(chartId) FROM chart),
     (SELECT versionId FROM version 
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}');
 """, end='')
 
@@ -770,11 +871,13 @@ INSERT INTO chartVersion (chartId, versionId, operationId, internalDescription)
 SELECT 
     (SELECT MAX(chartId) FROM chart),
     (SELECT versionId FROM version 
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}'),
     (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.INSERT)}'),
     NULL;
 """, end='')
+
+        add_exclusive_labels(song, 'chart')
 
         curr_stepmakers = STEPMAKERS[original_title]
         if type(curr_stepmakers) == str:
@@ -816,33 +919,24 @@ if deleted_songs:
 """, end='')
 
     if NOSQL:
-        p(f"\nRemove deleted songs add charts that exist in {MIX_PREV_PATCH} {PREV_PATCH}")
+        p(f"\nRemove deleted songs add charts that exist in {MIX_PREV_PATCH_NAME} {PREV_PATCH}")
 
 
 for index, song in enumerate(deleted_songs):
-
-    if arcadeName in song:
-        curr_title = song[arcadeName]
-    else:
-        curr_title = song[title]
-
+    curr_title, curr_cut = get_song_title_and_cut(song)
     pumpout_id = song[pumpoutID]
 
     if NOSQL:
         p(f"{curr_title}")
 
-    find_song_id = f'''
-SELECT songId FROM song WHERE internalTitle = '{e(curr_title)}'
-'''.strip()
-
     print(f"""
 -- Remove {curr_title}
 
 INSERT INTO songVersion (songId, versionId, operationId, internalDescription)
-SELECT 
-    {pumpout_id if len(pumpout_id) else f'''({find_song_id})'''},
-    (SELECT versionId FROM version 
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+SELECT
+    ({find_active_song_id(curr_title, curr_cut, pumpout_id)}),
+    (SELECT versionId FROM version
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}'),
     (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.DELETE)}'),
     NULL;
@@ -853,7 +947,7 @@ INSERT INTO chartVersion (chartId, versionId, operationId, internalDescription)
 SELECT
   sub.chartId,
   (SELECT versionId FROM version
-   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
    AND internalTitle = '{e(PATCH)}'),
   (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.DELETE)}'),
   NULL
@@ -870,12 +964,12 @@ FROM (
   JOIN version v2 ON crv.versionId = v2.versionId
   WHERE v.mixId NOT IN {IGNORED_MIXES}
   AND v2.mixId NOT IN {IGNORED_MIXES}
-  AND c.songId = {pumpout_id if len(pumpout_id) else f'''({find_song_id})'''}
+  AND c.songId = ({find_active_song_id(curr_title, curr_cut, pumpout_id)})
   AND v.versionId != (SELECT versionId FROM version
-   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
    AND internalTitle = '{e(PATCH)}')
 ) AS sub
-WHERE rn = 1 
+WHERE rn = 1
 AND operationId != (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.DELETE)}');
 """, end='')
 
@@ -925,7 +1019,7 @@ INSERT INTO chartVersion (chartId, versionId, operationId, internalDescription)
 SELECT 
   sub.chartId,
   (SELECT versionId FROM version
-   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
    AND internalTitle = '{e(PATCH)}') as versionId,
   (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.DELETE)}') as operationId,
   NULL
@@ -945,7 +1039,7 @@ FROM (
   AND v2.mixId NOT IN {IGNORED_MIXES}
   AND c.songId = {pumpout_id}
   AND v2.versionId != (SELECT versionId FROM version
-   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
    AND internalTitle = '{e(PATCH)}')
 ) AS sub
 WHERE sub.rn = 1
@@ -992,7 +1086,7 @@ INSERT INTO songVersion (songId, versionId, operationId, internalDescription)
 SELECT 
     {pumpout_id},
     (SELECT versionId FROM version 
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}') 
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}'),
     (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.REVIVE)}'),
     NULL;
@@ -1008,7 +1102,7 @@ INSERT INTO chartVersion (chartId, versionId, operationId, internalDescription)
 SELECT
   sub.chartId,
   (SELECT versionId FROM version
-   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
    AND internalTitle = '{e(PATCH)}'),
   (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.REVIVE)}'),
   NULL
@@ -1029,7 +1123,7 @@ FROM (
   AND v2.mixId NOT IN {IGNORED_MIXES}
   AND c.songId = {pumpout_id}
   AND v.versionId != (SELECT versionId FROM version
-   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
    AND internalTitle = '{e(PATCH)}')
 ) AS sub
 WHERE rn = 1 
@@ -1078,7 +1172,7 @@ INSERT INTO chartVersion (chartId, versionId, operationId, internalDescription)
 SELECT
   sub.chartId,
   (SELECT versionId FROM version
-   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
    AND internalTitle = '{e(PATCH)}'),
   (SELECT operationId FROM operation WHERE internalTitle = '{e(Operations.REVIVE)}'),
   NULL
@@ -1099,7 +1193,7 @@ FROM (
   AND v2.mixId NOT IN {IGNORED_MIXES}
   AND c.songId = {pumpout_id}
   AND v.versionId != (SELECT versionId FROM version
-   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
    AND internalTitle = '{e(PATCH)}')
 ) AS sub
 WHERE rn = 1 
@@ -1124,10 +1218,9 @@ if rerated_charts:
 
 
 for index, rerate in enumerate(rerated_charts):
-    pumpout_id, curr_title, before, after = rerate
+    pumpout_id, curr_title, curr_cut, before, after = rerate
     before_mode, before_diff = get_difficulty(before)
     after_mode, after_diff = get_difficulty(after)
-
     if NOSQL:
         p(f"{curr_title} {before} -> {after}")
 
@@ -1135,13 +1228,13 @@ for index, rerate in enumerate(rerated_charts):
 --  Rerate {curr_title} {before} -> {after}
 
 INSERT INTO chartRating (chartRatingId, chartId, modeId, difficultyId)
-SELECT 
+SELECT
   (SELECT MAX(chartRatingId) FROM chartRating) + 1,
   sub.chartId,
   (SELECT modeId FROM mode WHERE internalAbbreviation = '{e(after_mode)}'),
   (SELECT difficultyId FROM difficulty WHERE value = {after_diff})
 FROM (
-  SELECT 
+  SELECT
     crv.chartId,
     crv.chartRatingId,
     cv.operationId,
@@ -1156,9 +1249,9 @@ FROM (
   JOIN version v2 ON crv.versionId = v2.versionId
   WHERE v.mixId NOT IN {IGNORED_MIXES}
   AND v2.mixId NOT IN {IGNORED_MIXES}
-  AND c.songId = {pumpout_id}
+  AND c.songId = ({find_active_song_id(curr_title, curr_cut, pumpout_id)})
   AND v2.versionId != (SELECT versionId FROM version
-   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
    AND internalTitle = '{e(PATCH)}')
 ) AS sub
 WHERE sub.rn = 1
@@ -1179,13 +1272,13 @@ SELECT
   cr2.chartRatingId,
   cr2.chartId,
   (SELECT versionId FROM version
-   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+   WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
    AND internalTitle = '{e(PATCH)}')
 FROM chartRating cr2
 WHERE cr2.chartId IN (
   SELECT sub.chartId
   FROM (
-    SELECT 
+    SELECT
       crv.chartId,
       cv.operationId,
       cr.modeId,
@@ -1199,9 +1292,9 @@ WHERE cr2.chartId IN (
     JOIN version v2 ON crv.versionId = v2.versionId
     WHERE v.mixId NOT IN {IGNORED_MIXES}
     AND v2.mixId NOT IN {IGNORED_MIXES}
-    AND c.songId = {pumpout_id}
+    AND c.songId = ({find_active_song_id(curr_title, curr_cut, pumpout_id)})
     AND v2.versionId != (SELECT versionId FROM version
-     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX)}')
+     WHERE mixId = (SELECT mixId FROM mix WHERE internalTitle = '{e(MIX_NAME)}')
      AND internalTitle = '{e(PATCH)}')
   ) AS sub
   WHERE sub.rn = 1

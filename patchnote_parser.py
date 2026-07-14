@@ -2,10 +2,16 @@ import re
 
 from data import FULL, FULL_MARKER, REMIX, XROSS, title, duration, artist, bpm, channel
 from data import SHORT, SHORT_MARKER, KPOP, ORIGINAL, WORLD, Phoenix
+from data import premiumModeExclusive, steamLinkExclusive
 
 SHORT_CUT_PATCHNOTE_MARK = ' - SHORT CUT -'
 FULL_SONG_PATCHNOTE_MARK = ' - FULL SONG -'
 STEP_CHARTS = 'stepcharts'
+PREMIUM_MODE_EXCLUSIVE_MARK = re.compile(
+    r'\s+\(\*?(?:Exclusive song for premium mode|Premium mode Only)\)\*?$',
+    re.IGNORECASE,
+)
+STEAM_LINK_EXCLUSIVE_MARK = 'steam link exclusive track'
 
 MIX_ID = 17
 MIX_NAME = Phoenix
@@ -47,8 +53,16 @@ def parse_song_data(file_path):
         if line.strip() == "":
             continue
 
-        if "Title" in line:
+        if STEAM_LINK_EXCLUSIVE_MARK in line.casefold():
+            song[steamLinkExclusive] = True
+
+        elif "Title" in line:
             song_title = line.split(":", 1)[1].strip()
+
+            premium_mode_mark = PREMIUM_MODE_EXCLUSIVE_MARK.search(song_title)
+            if premium_mode_mark:
+                song_title = song_title[:premium_mode_mark.start()].rstrip()
+                song[premiumModeExclusive] = True
 
             if song_title.endswith(SHORT_CUT_PATCHNOTE_MARK):
                 song_title = song_title[0:len(song_title) - len(SHORT_CUT_PATCHNOTE_MARK)] + SHORT_MARKER
@@ -116,6 +130,11 @@ print('_' * 80)
 
 for song in song_data:
     song_key = f'{MIX_ID}__{convert_string_to_key(song[title])}'
+    exclusive_properties = '\n'.join(
+        f'\t{key}: True,'
+        for key in (premiumModeExclusive, steamLinkExclusive)
+        if song.get(key)
+    )
 
     print(f'''
 "{song_key}":
@@ -126,6 +145,8 @@ for song in song_data:
 	# arcadeID: "",
 	pumpoutID: "",
 	# arcadeName: "",
+
+{exclusive_properties}
 
 	{MIX_NAME}: "@{PATCH_VERSION} {' '.join(song[STEP_CHARTS])}",
 }},

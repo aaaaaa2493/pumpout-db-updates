@@ -5,6 +5,8 @@ artists = 'artists'
 channel = 'channel'
 bpm = 'bpm'
 pumpoutID = 'pumpoutID'
+premiumModeExclusive = 'premiumModeExclusive'
+steamLinkExclusive = 'steamLinkExclusive'
 sortingID = 'sortingID'
 shortTitle = 'shortTitle'
 arcadeName = 'arcadeName'
@@ -17,6 +19,7 @@ fromMix = 'fromMix'
 changes = 'changes'
 banner = 'banner'
 
+Phoenix2 = 'Phoenix2'
 Phoenix = 'Phoenix'
 XX = 'XX'
 Prime2 = 'Prime2'
@@ -261,6 +264,36 @@ STEPMAKERS = {
 
 	"SWEET WONDERLAND": "CONRAD",
 	"Heliosphere": "NIMGO",
+
+	"T.B.H": "NIMGO",
+	"Do the Dance": "CONRAD",
+	"BANG BANG": "CONRAD",
+	"404 (New Era)": "NIMGO",
+	"Enjoy The Show": "NIMGO",
+	"Punishment Restaurant": "JUNARE",
+	"BLAZOR": "GGWANG",
+	"B3": "CONRAD",
+	"Digitalis": "SPHAM",
+	"The Last Rebellion": "GGWANG",
+	"OVERNIGHT FLOWER": "CONRAD",
+	"Legendary Dominion": "EXC",
+	"Crash-Landing Rendezvous": "FEFEMZ",
+	"QUATTUORUX": "FEFEMZ",
+	"NightTheater": "FEFEMZ",
+	"INFiNiTE ENERZY -Overdoze-": "refos",
+	"Freedom Dive": "EXC",
+	"Dreamchasers": "GGWANG",
+	"SUPER☆HARAGURO☆POP": "refos",
+	"Cynical": "CONRAD",
+	"Rise Up": "CONRAD",
+	"Ercitite": "FEFEMZ",
+	"King’s Tomb": "refos",
+	"Dizzy Dance, Street Light": "NIMGO",
+	"Unfelicitas": "SUNNY",
+	"Pull me up": "SUNNY",
+	"Antique Serenade": "GGWANG",
+	"We Love Your Step": "refos",
+	"Lucky Star": "CONRAD",
 }
 
 KOREAN_TITLES = {
@@ -438,10 +471,418 @@ KOREAN_TITLES = {
 
 	"SWEET WONDERLAND": "스위트 원더랜드",
 	"Heliosphere": "헬리오스피어",
+
+	"T.B.H": "고민중독",
+	"Do the Dance": "빌려온 고양이",
+	"BANG BANG": "뱅 뱅",
+	"404 (New Era)": "뉴 에라",
+	"Enjoy The Show": "엔조이 더 쇼",
+	"Punishment Restaurant": "응징 레스토랑",
+	"BLAZOR": "블레이저",
+	"B3": "B3",
+	"Digitalis": "디기탈리스",
+	"The Last Rebellion": "더 라스트 리벨리온",
+	"OVERNIGHT FLOWER": "오버나이트 플라워",
+	"Legendary Dominion": "레전더리 도미니언",
+	"Crash-Landing Rendezvous": "크래쉬 랜딩 랑데부",
+	"QUATTUORUX": "콰투오룩스",
+	"NightTheater": "나이트시어터",
+	"INFiNiTE ENERZY -Overdoze-": "인피니트 에너지 -Overdoze-",
+	"Freedom Dive": "프리덤 다이브",
+	"Dreamchasers": "드림체이서즈",
+	"SUPER☆HARAGURO☆POP": "슈퍼☆하라구로☆팝",
+	"Cynical": "시니컬",
+	"Rise Up": "라이즈 업 (feat. Miori Celesta)",
+	"Ercitite": "에르시타이트",
+	"King’s Tomb": "왕의 무덤",
+	"Dizzy Dance, Street Light": "취낙원무",
+	"Unfelicitas": "불행의 여신",
+	"Pull me up": "풀 미 업 (Feat. Monya)",
+	"Antique Serenade": "앤티크 세레나데",
+	"We Love Your Step": "위 러브 유어 스텝",
+	"Lucky Star": "럭키 스타",
 }
 
 
 data = {
+# \18 - Phoenix 2
+
+
+"18__TBH":
+{
+	title: "T.B.H", artist: "QWER", channel: KPOP, bpm: "178",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S2 S4 S6 S14 S17 S20 S22 D18 D22 D24"
+},
+
+"18__Do_the_Dance":
+{
+	title: "Do the Dance", artist: "ILLIT", channel: KPOP, bpm: "130",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S1 S3 S5 S8 S15 S17 S20 D7 D16 D18 D22 CoOp(x2)"
+},
+
+"18__BANG_BANG":
+{
+	title: "BANG BANG", artist: "IVE", channel: KPOP, bpm: "152",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S2 S4 S6 S10 S16 S18 S21 D12 D18 D20 D23 CoOp(x2)"
+},
+
+"18__404_New_Era_":
+{
+	title: "404 (New Era)", artist: "KiiiKiii", channel: KPOP, bpm: "127",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S1 S3 S5 S16 S18 S21 D17 D20 D23"
+},
+
+"18__Enjoy_The_Show":
+{
+	title: "Enjoy The Show", artist: "RiraN ft. Negoto Bunnyla", channel: ORIGINAL, bpm: "160",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S10 S18 S21 S23 D19 D23 D25"
+},
+
+"18__Punishment_Restaurant":
+{
+	title: "Punishment Restaurant", artist: "memme", channel: ORIGINAL, bpm: "175",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S4 S8 S11 S17 S21 D14 D18 D22"
+},
+
+"18__BLAZOR":
+{
+	title: "BLAZOR", artist: "WONDERTRAVELER Project", channel: ORIGINAL, bpm: "161",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S11 S15 S18 S20 S22 D18 D20 D22 D24"
+},
+
+"18__B3":
+{
+	title: "B3", artist: "MAX", channel: ORIGINAL, bpm: "160",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S7 S11 S16 S18 S20 D12 D18 D21"
+},
+
+"18__Digitalis":
+{
+	title: "Digitalis", artist: "NeLiME", channel: ORIGINAL, bpm: "160",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S11 S14 S18 S21 D16 D21 D24"
+},
+
+"18__The_Last_Rebellion":
+{
+	title: "The Last Rebellion", artist: "MonstDeath", channel: ORIGINAL, bpm: "199",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S16 S19 S21 S23 D21 D23 D25"
+},
+
+"18__OVERNIGHT_FLOWER":
+{
+	title: "OVERNIGHT FLOWER", artist: "P*Light", channel: ORIGINAL, bpm: "210",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S12 S16 S19 S22 S24 D18 D20 D24 D26"
+},
+
+"18__Legendary_Dominion":
+{
+	title: "Legendary Dominion", artist: "Laur", channel: ORIGINAL, bpm: "210",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S16 S20 S22 S25 D21 D25 D27"
+},
+
+"18__Crash_Landing_Rendezvous":
+{
+	title: "Crash-Landing Rendezvous", artist: "Xyris", channel: WORLD, bpm: "128~190",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S13 S16 S19 S22 D17 D21 D24"
+},
+
+"18__QUATTUORUX":
+{
+	title: "QUATTUORUX", artist: "D-D-Dice Vs. Tanchiky Vs. Karameru", channel: WORLD, bpm: "220",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S15 S19 S22 S24 D17 D21 D24 D26"
+},
+
+"18__NightTheater":
+{
+	title: "NightTheater", artist: "*wakadori", channel: WORLD, bpm: "151",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S12 S15 S18 S21 D16 D19 D22"
+},
+
+"18__INFiNiTE_ENERZY_Overdoze_":
+{
+	title: "INFiNiTE ENERZY -Overdoze-", artist: "Reku Mochizuki", channel: WORLD, bpm: "180",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S13 S16 S18 S21 S23 D19 D22 D25"
+},
+
+"18__Freedom_Dive":
+{
+	title: "Freedom Dive", artist: "xi", channel: WORLD, bpm: "222.22",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	arcadeName: "FREEDOM DiVE",
+
+	Phoenix2: "S13 S17 S22 S25 D18 D24 D27"
+},
+
+"18__Dreamchasers":
+{
+	title: "Dreamchasers", artist: "s-don", channel: XROSS, bpm: "155",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S12 S15 S17 S20 D17 D20 D22"
+},
+
+"18__SUPER_HARAGURO_POP":
+{
+	title: "SUPER☆HARAGURO☆POP", artist: "Zekk", channel: XROSS, bpm: "160",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	Phoenix2: "S4 S7 S10 S12 S16 S18 S20 S22 D17 D20 D22 D24"
+},
+
+"18__Cynical":
+{
+	title: "Cynical", artist: "RiraN ft. Negoto Bunnyla", channel: XROSS, bpm: "155",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "S8 S12 S16 S18 S21 D14 D19 D23"
+},
+
+"18__Rise_Up":
+{
+	title: "Rise Up", artist: "memme", channel: XROSS, bpm: "190",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	arcadeName: "Rise Up feat. Miori Celesta",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "S11 S16 S18 S22 D14 D18 D20 D24"
+},
+
+"18__Ercitite":
+{
+	title: "Ercitite", artist: "Doin x neur6sia", channel: XROSS, bpm: "135",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "S3 S6 S9 S12 S15 S18 S21 D11 D16 D19 D23"
+},
+
+"18__King_s_Tomb":
+{
+	title: "King’s Tomb", artist: "r300k", channel: XROSS, bpm: "113",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "S4 S7 S10 S13 S17 S20 S22 D14 D18 D21 D24"
+},
+
+"18__Dizzy_Dance_Street_Light":
+{
+	title: "Dizzy Dance, Street Light", artist: "WyvernP", channel: XROSS, bpm: "128",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "S6 S16 S18 S20 D18 D22 D24"
+},
+
+"18__Unfelicitas":
+{
+	title: "Unfelicitas", artist: "Fiverwater", channel: XROSS, bpm: "192",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "S4 S7 S12 S17 S20 S22 D15 D21 D24"
+},
+
+"18__Pull_me_up":
+{
+	title: "Pull me up", artist: "Applesoda", channel: XROSS, bpm: "160",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	arcadeName: "Pull me up Feat. Monya",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "S3 S7 S11 S16 S19 D13 D17 D21"
+},
+
+"18__Antique_Serenade":
+{
+	title: "Antique Serenade", artist: "Abel", channel: XROSS, bpm: "214",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "S12 S16 S18 S21 D18 D20 D23"
+},
+
+"18__We_Love_Your_Step":
+{
+	title: "We Love Your Step", artist: "EmoCosine", channel: XROSS, bpm: "205",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "S11 S14 S18 S20 S22 D16 D20 D22 D24 CoOp(x2)"
+},
+
+"18__Lucky_Star":
+{
+	title: "Lucky Star", artist: "INFX feat. Miori Celesta", channel: XROSS, bpm: "180",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "S8 S11 S15 S17 S20 D13 D16 D18 D21"
+},
+
+
+
+# \17 - Phoenix
+
+
+
+
 "17__SWEET_WONDERLAND":
 {
 	title: "SWEET WONDERLAND", artist: "MAX feat. ankimo", channel: XROSS, bpm: "170",
@@ -451,6 +892,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S21`20 D23`22",
 	Phoenix: "@2.12 S3 S5 S8 S12 S15 S17 S20 D14 D18 D22 CoOp(x2)",
 },
 
@@ -463,6 +905,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.12 S14 S18 S21 S23 D20 D23 D25",
 },
 
@@ -475,6 +918,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "=",
 	Phoenix: "@2.11 S18 S21 S23 S25 D22 D26 D28",
 },
 
@@ -487,6 +933,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.11 S5 S13 S17 S20 D15 D19 D23",
 },
 
@@ -499,6 +946,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.11 S12 S15 S17 S20 S22 D13 D18 D21 D24",
 },
 
@@ -511,6 +959,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.11 S20 S23 D26",
 },
 
@@ -523,6 +972,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.11 S15 S18 S21 D20 D24",
 },
 
@@ -535,6 +985,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.10 S9 S12 S16 S20 S22 D14 D20 D24",
 },
 
@@ -547,6 +998,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S21`20 D24`23",
 	Phoenix: "@2.10 S4 S7 S11 S14 S16 S18 S20 D13 D16 D18 D20 D23",
 },
 
@@ -559,6 +1011,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.10 S8 S13 S18 S21 D14 D19 D23",
 },
 
@@ -571,6 +1024,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S5`6 S8`10",
 	Phoenix: "@2.10 S6 S10 S17 S20 D15 D20 D23",
 },
 
@@ -583,6 +1037,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.10 S15 S18 S21 S23 D16 D19 D23 D25",
 },
 
@@ -595,6 +1050,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.10 S13 S17 S20 S23 D15 D18 D22 D24",
 },
 
@@ -607,6 +1063,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S22`23",
 	Phoenix: "@2.10 S14 S17 S20 S23 D16 D18 D22 D25",
 },
 
@@ -619,6 +1076,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.10 S18 S21 S23 D22 D24",
 },
 
@@ -631,6 +1089,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.10 S16 S19 S21 D18 D21 D23",
 },
 
@@ -643,6 +1102,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.09 S12 S17 S20 S22 D13 D18 D24",
 },
 
@@ -666,6 +1126,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.09 S10 S14 S18 S21 D15 D19 D23 CoOp(x2)",
 },
 
@@ -678,6 +1139,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.09 S4 S7 S12 S16 S20 S23 D19 D23 D25",
 },
 
@@ -690,6 +1152,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.09 S11 S14 S16 S18 S21 D12 D17 D20 D22",
 },
 
@@ -702,6 +1165,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S20`21 D20`21",
 	Phoenix: "@2.09 S7 S12 S16 S18 S21 D18 D21 D24",
 },
 
@@ -714,6 +1178,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.09 S5 S12 S15 S18 S22 D13 D17 D21 D24",
 },
 
@@ -726,6 +1191,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.09 S14 S19 S21 D18 D21",
 },
 
@@ -738,6 +1204,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.09 S12 S16 S18 S21 D14 D18 D20 D22",
 },
 
@@ -750,6 +1217,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "=",
 	Phoenix: "@2.08 S18 S21 S24 S26 D24 D27 D??",
 },
 
@@ -762,6 +1232,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "=",
 	Phoenix: "@2.08 S15 S18 S20 S22 S24 D18 D24 D26",
 },
 
@@ -774,6 +1247,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D18`17",
 	Phoenix: "@2.08 S9 S13 S16 S18 S21 D17 D20 D23",
 },
 
@@ -786,6 +1260,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.08 S11 S15 S17 S20 D13 D20 D23",
 },
 
@@ -798,6 +1273,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.08 S4 S7 S11 S14 S16 S19 S22 D13 D21 D24",
 },
 
@@ -810,6 +1286,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.08 S13 S16 S20 S22 D17 D22 D24",
 },
 
@@ -822,6 +1299,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S21`22",
 	Phoenix: "@2.08 S12 S18 S20 S22 S24 D20 D23 D25",
 },
 
@@ -834,6 +1312,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D24`23",
 	Phoenix: "@2.08 S19 S21 S23 D23 D25",
 },
 
@@ -846,6 +1325,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.08 S15 S18 S20 S23 D17 D20 D22 D24",
 },
 
@@ -858,6 +1338,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.07 S14 S17 S19 S23 D18 D21 D25",
 },
 
@@ -870,6 +1351,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D16`15 D20`19",
 	Phoenix: "@2.07 S7 S13 S18 S20 S22 D15 D19 D22 D24",
 },
 
@@ -882,6 +1364,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S12`11",
 	Phoenix: "@2.07 S11 S16 S19 S21 D17 D20 D23",
 },
 
@@ -894,6 +1377,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "= D21`22",
 	Phoenix: "@2.07 S12 S16 S18 S20 S22 S24 D18 D22 D24 D26",
 },
 
@@ -906,6 +1392,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.07 S10 S15 S20 S23 D16 D24",
 },
 
@@ -918,6 +1405,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.07 S12 S15 S18 S21 S23 D20 D23 D26",
 },
 
@@ -930,6 +1418,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.07 S4 S7 S11 S16 S18 S21 D13 D19 D23",
 },
 
@@ -942,6 +1431,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.07 S12 S16 S18 D16 D20 CoOp(x2)",
 },
 
@@ -954,6 +1444,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.07 S14 S18 S22 D20 D24",
 },
 
@@ -966,6 +1457,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "=",
 	Phoenix: "@2.06 S7 S12 S15 S17 S19 S22 D13 D18 D21 D24",
 },
 
@@ -978,6 +1472,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S15`14 S19`18",
 	Phoenix: "@2.06 S3 S5 S11 S14 S18 S21 D11 D15 D19 D23",
 },
 
@@ -990,6 +1485,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.06 S7 S12 S16 S19 S21 D14 D18 D20 D23",
 },
 
@@ -1002,6 +1498,7 @@ data = {
 	pumpoutID: "",
 	arcadeName: "Break Through Myself feat. Risa Yuzuki",
 
+	Phoenix2: "=",
 	Phoenix: "@2.06 S12 S15 S18 S21 S23 D17 D20 D23 D25",
 },
 
@@ -1014,6 +1511,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.06 S3 S7 S10 S14 S16 S19 D12 D18 D21",
 },
 
@@ -1038,6 +1536,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.06 S13 S18 S22 D20 D24",
 },
 
@@ -1050,6 +1549,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S20`21 S21`22",
 	Phoenix: "@2.06 S12 S13 S14 S21 S22 S23 D16 D19 D20 D23 D24",
 },
 
@@ -1062,6 +1562,7 @@ data = {
 	pumpoutID: "",
 	arcadeName: "Nyan-turne (feat. KuTiNA)",
 
+	Phoenix2: "=",
 	Phoenix: "@2.05 S4 S7 S11 S16 S19 D12 D17 D21 CoOp(x2)",
 },
 
@@ -1074,6 +1575,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.05 S9 S13 S16 S20 S22 S24 D15 D18 D24 D26 @2.12 CoOp(x2)",
 },
 
@@ -1086,6 +1588,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D24`23",
 	Phoenix: "@2.05 S4 S7 S10 S16 S19 S21 S23 D14 D18 D23 D25",
 },
 
@@ -1098,6 +1601,7 @@ data = {
 	pumpoutID: "",
 	arcadeName: "Extreme Music School 1st period feat. Nanahira",
 
+	Phoenix2: "=",
 	Phoenix: "@2.05 S15 S18 S20 S23 D20 D23 D25",
 },
 
@@ -1110,6 +1614,9 @@ data = {
 	pumpoutID: "",
 	arcadeName: "Extreme Music School 2nd period feat. Nanahira",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "=",
 	Phoenix: "@2.05 S16 S18 S22 S24 D19 D24 D26",
 },
 
@@ -1122,6 +1629,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.04 S10 S13 S16 S18 S21 S22 D14 D18 D21 D24",
 },
 
@@ -1134,6 +1642,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S14`13",
 	Phoenix: "@2.04 S13 S17 S21 S23 D15 D18 D23 D25",
 },
 
@@ -1147,6 +1656,7 @@ data = {
 	pumpoutID: "",
 	arcadeName: "Underworld ft. Skizzo (PIU Edit.)",
 
+	Phoenix2: "= D22`23",
 	Phoenix: "@2.04 S8 S11 S16 S19 S22 S23 D18 D23 D25",
 },
 
@@ -1159,6 +1669,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S20`21",
 	Phoenix: "@2.04 S8 S12 S17 S21 S23 D14 D18 D23 D25 @2.12 CoOp(x2)",
 },
 
@@ -1173,6 +1684,7 @@ data = {
 	pumpoutID: "",
 	arcadeName: "Soldiers (TANO*C W TEAM RED ANTHEM)",
 
+	Phoenix2: "=",
 	Phoenix: "@2.04 S4 S6 S11 S15 S18 S20 D13 D19 D22",
 },
 
@@ -1185,6 +1697,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.03 S3 S5 S8 S14 S17 S20 D10 D15 D18 D21",
 },
 
@@ -1197,6 +1710,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.03 S7 S12 S17 S19 S21 D13 D18 D20 D23",
 },
 
@@ -1209,6 +1723,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "=",
 	Phoenix: "@2.03 S15 S19 S22 S25 D21 D23 D25",
 },
 
@@ -1221,6 +1738,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.03 S4 S7 S12 S16 S19 S21 D14 D18 D21 D24",
 },
 
@@ -1233,6 +1751,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.03 S13 S16 S20 S22 S24 D18 D22 D24 D26",
 },
 
@@ -1257,6 +1776,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "=",
 	Phoenix: "@2.02 S13 S16 S19 S22 S25 D21 D25 D27 CoOp(x4)",
 },
 
@@ -1269,6 +1791,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.02 S9 S13 S16 S19 S22 D17 D21 D24 D25 @2.12 CoOp(x3)",
 },
 
@@ -1281,6 +1804,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.02 S7 S13 S16 S20 D13 D17 D21 D24",
 },
 
@@ -1293,6 +1817,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D21`22",
 	Phoenix: "@2.02 S13 S16 S19 S22 D15 D18 D22 D24",
 },
 
@@ -1329,6 +1854,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.01 S12 S17 S21 S23 D14 D18 D23 D25",
 },
 
@@ -1341,6 +1867,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S20`21",
 	Phoenix: "@2.01 S4 S7 S11 S16 S21 D13 D18 D22",
 },
 
@@ -1353,6 +1880,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S19`20",
 	Phoenix: "@2.01 S4 S7 S12 S17 S20 S22 D15 D21 D24",
 },
 
@@ -1365,6 +1893,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S19`20 S21`22",
 	Phoenix: "@2.01 S4 S7 S11 S16 S20 S22 D14 D20 D23",
 },
 
@@ -1377,6 +1906,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.01 S9 S12 S15 S18 S21 S24 D18 D23 D26",
 },
 
@@ -1389,6 +1919,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.01 S13 S16 S18 S22 D14 D17 D19 D23",
 },
 
@@ -1401,6 +1932,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.01 S12 S16 S19 S22 D17 D21 D24",
 },
 
@@ -1449,6 +1981,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "=",
 	Phoenix: "@2.00 S10 S14 S18 S22 D16 D20 D23 D25",
 },
 
@@ -1461,6 +1996,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.00 S14 S19 S22 S24 D15 D20 D24 D26",
 },
 
@@ -1473,6 +2009,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.00 S4 S7 S11 S14 S17 S20 D13 D18 D22",
 },
 
@@ -1485,6 +2022,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.00 S12 S15 S18 S21 D15 D19 D22",
 },
 
@@ -1497,6 +2035,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "=",
 	Phoenix: "@2.00 S12 S16 S18 S20 S22 D14 D20 D22 D24",
 },
 
@@ -1509,6 +2050,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@2.00 S11 S14 S16 S19 S21 D17 D20 D23",
 },
 
@@ -1521,6 +2063,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D22`21",
 	Phoenix: "@2.00 S4 S7 S12 S16 S19 S21 D12 D16 D21 D24 @2.06 CoOp(x2)",
 },
 
@@ -1533,6 +2076,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S20`21",
 	Phoenix: "@1.08 S8 S13 S19 S21 D14 D20 D22",
 },
 
@@ -1545,6 +2089,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.08 S9 S15 S19 S21 S22 D11 D16 D20 D23 D25",
 },
 
@@ -1557,6 +2102,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.08 S9 S13 S17 S20 D14 D18 D21 @2.12 CoOp(x2)",
 },
 
@@ -1569,6 +2115,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "=",
 	Phoenix: "@1.08 S14 S18 S21 S24 D17 D24 D26",
 },
 
@@ -1581,6 +2130,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.08 S7 S13 S18 S22 D15 D20 D24",
 },
 
@@ -1593,6 +2143,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.07 S11 S16 S19 S22 D13 D18 D20 D23",
 },
 
@@ -1605,6 +2156,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.07 S8 S13 S15 S17 S19 S21 D17 D21 D23",
 },
 
@@ -1617,6 +2169,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D19`20 D22`23",
 	Phoenix: "@1.07 S8 S13 S16 S19 S21 D11 D15 D17 D20 D23 CoOp(x2)",
 },
 
@@ -1631,6 +2184,7 @@ data = {
 	pumpoutID: "",
 	arcadeName: "Simon Says, EURODANCE!! (feat. Sara☆M)",
 
+	Phoenix2: "=",
 	Phoenix: "@1.07 S4 S7 S11 S16 S18 S20 D13 D19 D22",
 },
 
@@ -1643,6 +2197,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.07 S8 S11 S15 S17 S19 D12 D16 D18 D20 CoOp(x2)",
 },
 
@@ -1679,6 +2234,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.06 S3 S5 S8 S12 S16 S20 D6 D14 D18 D21",
 },
 
@@ -1691,6 +2247,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S20`21",
 	Phoenix: "@1.06 S11 S14 S18 S21 D15 D19 D22",
 },
 
@@ -1703,6 +2260,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "= D17`16",
 	Phoenix: "@1.06 S15 S18 S21 S23 D16 D20 D23 D25",
 },
 
@@ -1727,6 +2287,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.05 S3 S6 S11 S16 S20 D12 D18 D22 CoOp(x3)",
 },
 
@@ -1739,6 +2300,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D21`22",
 	Phoenix: "@1.05 S10 S15 S18 S20 S22 D16 D22 D24",
 },
 
@@ -1751,6 +2313,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.05 S8 S13 S18 S22 S24 D16 D19 D24 D26",
 },
 
@@ -1763,6 +2326,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "=",
 	Phoenix: "@1.05 S7 S11 S14 S17 S19 S21 S23 D16 D21 D23 D25",
 },
 
@@ -1787,6 +2353,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "= D25`24 D28`27",
 	Phoenix: "@1.04 S13 S17 S20 S22 S25 D21 D24 D27",
 },
 
@@ -1799,6 +2368,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D24`23",
 	Phoenix: "@1.04 S11 S16 S18 S22 D16 D19 D23 CoOp(x2)",
 },
 
@@ -1811,6 +2381,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.04 S15 S17 S19 S22 S24 D17 D21 D24 D26",
 },
 
@@ -1823,6 +2394,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.04 S11 S16 S19 S23 D14 D21 D25",
 },
 
@@ -1835,6 +2407,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D22`21",
 	Phoenix: "@1.03 S8 S12 S16 S18 S20 D13 D17 D21 CoOp(x2) @2.08 D23",
 },
 
@@ -1847,6 +2420,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.03 S4 S7 S10 S17 D12 D19",
 },
 
@@ -1871,6 +2445,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S19`18 S23`22 D21`20 D25`24",
 	Phoenix: "@1.03 S4 S7 S11 S15 S18 S22 D13 D16 D20 D24",
 },
 
@@ -1883,6 +2458,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.03 S3 S6 S10 S13 S15 S17 S20 D9 D15 D18 D22",
 },
 
@@ -1907,6 +2483,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.02 S9 S14 S17 S20 S22 D16 D22 D24 @2.08 CoOp(x2)",
 },
 
@@ -1919,6 +2496,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S13`12",
 	Phoenix: "@1.02 S12 S16 S19 S22 D16 D21 D24",
 },
 
@@ -1931,6 +2509,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "=",
 	Phoenix: "@1.02 S15 S18 S20 S22 S24 D17 D22 D24 D26 @2.00 S21",
 },
 
@@ -1943,6 +2524,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.02 S13 S16 S19 S21 S23 D17 D20 D23 D25",
 },
 
@@ -1955,6 +2537,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.02 S7 S12 S16 S21 D14 D19 D22",
 },
 
@@ -1967,6 +2550,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D19`20 D21`22",
 	Phoenix: "@1.02 S11 S18 S20 S22 D14 D20 D22 D24",
 },
 
@@ -1991,6 +2575,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S15`14 D17`16",
 	Phoenix: "@1.01 S2 S4 S6 S9 S14 S17 D8 D16 D19 @2.01 CoOp(x3)",
 },
 
@@ -2003,6 +2588,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.01 S4 S7 S12 S16 S20 D13 D18 D21 CoOp(x2)",
 },
 
@@ -2015,6 +2601,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S12`10 D13`12",
 	Phoenix: "@1.01 S7 S10 S15 S17 S20 D12 D16 D18 D22",
 },
 
@@ -2027,6 +2614,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "= D20`21",
 	Phoenix: "@1.01 S18 S20 S23 S25 D21 D23 D25 D27",
 },
 
@@ -2039,6 +2629,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "@1.01 S1 S3 S5 S13 S15 S17 D8 D16 D18 @2.01 CoOp(x3)",
 },
 
@@ -2123,6 +2714,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D19`20",
 	Phoenix: "S8 S14 S18 S22 D15 D20 D24",
 },
 
@@ -2135,6 +2727,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S21`20 D13`12",
 	Phoenix: "S7 S10 S16 S19 S20 D12 D20 D23",
 },
 
@@ -2147,6 +2740,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D21`22",
 	Phoenix: "S6 S10 S14 S17 S20 D11 D16 D18 D22",
 },
 
@@ -2159,6 +2753,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D12`10",
 	Phoenix: "S3 S5 S8 S11 S16 S19 D10 D18 D21 @2.12 D23",
 },
 
@@ -2171,6 +2766,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S13`12",
 	Phoenix: "S12 S17 S19 S21 S23 D14 D18 D23 D25",
 },
 
@@ -2183,6 +2779,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "= S17`16 S23`22 D18`17",
 	Phoenix: "S4 S7 S11 S16 S22 D13 D17 D25",
 },
 
@@ -2195,6 +2794,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "S8 S12 S16 S18 S21 D12 D16 D20 D24",
 },
 
@@ -2207,6 +2807,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "S10 S15 S18 S21 D13 D19 D22",
 },
 
@@ -2219,6 +2820,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= D21`22",
 	Phoenix: "S7 S11 S16 S18 S20 D13 D19 D22 @2.06 CoOp(x3)",
 },
 
@@ -2231,6 +2833,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "S7 S11 S15 S17 S20 D11 D16 D19 D22",
 },
 
@@ -2243,6 +2846,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S21`20 D13`12",
 	Phoenix: "S7 S11 S15 S17 S20 D12 D16 D19 D23 CoOp(x3)",
 },
 
@@ -2257,6 +2861,7 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "= S20`19",
 	Phoenix: "S12 S16 S19 D22",
 },
 
@@ -2269,18 +2874,22 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	premiumModeExclusive: True,
+
+	Phoenix2: "=",
 	Phoenix: "S2 S6 S9 S12 S15 S18 S21 D6 D16 D19 D23",
 },
 
 
 "17__Halcyon":
 {
-	title: "Halcyon", artist: "xi", channel: WORLD,bpm: "40-191",
+	title: "Halcyon", artist: "xi", channel: WORLD,bpm: "40~191",
 	#sortingID: "",  # between  () and  ()
 	# arcadeID: "",
 	pumpoutID: "",
 	# arcadeName: "",
 
+	Phoenix2: "=",
 	Phoenix: "S12 S18 S20 S22 D12 D20 D24",
 },
 
@@ -2298,6 +2907,7 @@ data = {
 	sortingID: "16F6__1",  # between 16__Switronic__SHORT (16F6.orig) and 16__Club_Night (1668.world)
 	pumpoutID: 874,
 
+	Phoenix2: "=",
 	Phoenix: "= S17`18",
 	XX: "@2.05 S8 S13 S18 D13 D18 D20 S21.lock D22.lock",
 },
@@ -2310,6 +2920,7 @@ data = {
 	sortingID: "16B3__1",  # between 16__Cross_Ray (WORLD/16B3) and 16__Kokugen_Kairou_Labyrinth (WORLD/16B3__2)
 	pumpoutID: 893,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@2.08 S17 S21 S23 S25 D25 D27",
 },
@@ -2324,6 +2935,7 @@ data = {
 	sortingID: "16B3__2",  # between 16__Ultimatum (16B3__1) and 16_Imagination (1678)
 	pumpoutID: 888,
 
+	Phoenix2: "= S10`9",
 	Phoenix: "= S13`12",
 	XX: "@2.07 S9 S12 S15 S17 D18 S20.lock S23.lock D22.lock D26.lock",
 },
@@ -2336,6 +2948,7 @@ data = {
 	arcadeID: "1601",
 	pumpoutID: 733,
 
+	Phoenix2: "= D14`13",
 	Phoenix: "= D23`22 -Dp4",
 	XX: "S4 S6 S10 S16 S18.lock S21.lock D7 D13 D19.lock D22.lock CoOp(x3).lock  @1.01 Dp4",
 },
@@ -2348,6 +2961,7 @@ data = {
 	arcadeID: "1602",
 	pumpoutID: 821,
 
+	Phoenix2: "=",
 	Phoenix: "= S17`18 D18`19 -Dp4",
 	XX: "@2.01 S3 S5 S8 S11 S15 D10 D16 CoOp(x2) S18.lock D19.lock  @2.02 Dp4  @2.08 D22",
 },
@@ -2360,6 +2974,7 @@ data = {
 	arcadeID: "1603",
 	pumpoutID: 734,
 
+	Phoenix2: "= D20`19",
 	Phoenix: "= S10`11 S15`14 S18`17 D16`15 -Dp5",
 	XX: "S7 S14 S17.lock D10 D15.lock D19.lock  @1.01 Dp5  @2.01 S11",
 },
@@ -2372,6 +2987,7 @@ data = {
 	arcadeID: "1604",
 	pumpoutID: 823,
 
+	Phoenix2: "=",
 	Phoenix: "= D20`21 -Dp3",
 	XX: "@2.01 S3 S6 S11 S16 D7 D13 D18 S19.lock D21.lock  @2.02 Dp3",
 },
@@ -2384,6 +3000,7 @@ data = {
 	arcadeID: "1605",
 	pumpoutID: 777,
 
+	Phoenix2: "=",
 	Phoenix: "= D22`21 -S26 -Dp4",
 	XX: "@1.02 S16 D21 D28 S21.lock S23.lock  @1.04 D26.lock  @2.00 Dp4  @2.07 S26.lock",  # @1.05 D28 changed
 },
@@ -2396,6 +3013,7 @@ data = {
 	arcadeID: "1607",
 	pumpoutID: 817,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3",
 	XX: "@2.00 S8 S12 S17 D14 D19 CoOp(x2) S20.lock D22.lock  @2.02 Dp3",
 },
@@ -2409,6 +3027,7 @@ data = {
 	arcadeID: "1608",
 	pumpoutID: 735,
 
+	Phoenix2: "=",
 	Phoenix: "= S12`11 S17`16 S20`19 D14`13 D18`17 D22`21 -Dp5",
 	XX: "S3 S7 S11 S16 S19.lock D6 D13 D17.lock D21.lock  @1.01 Dp5",
 },
@@ -2421,6 +3040,7 @@ data = {
 	arcadeID: "1609",
 	pumpoutID: 829,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp4",
 	XX: "@2.02 S10 S15 D12 D17 CoOp(x3) S19.lock D21.lock  @2.04 Dp4  @2.05 S6",
 },
@@ -2433,6 +3053,7 @@ data = {
 	arcadeID: "1613",
 	pumpoutID: 885,
 
+	Phoenix2: "=",
 	Phoenix: "= S19`18 D17`16",
 	XX: "@2.07 S4 S7 S11 S15 D11 D16 CoOp(x2) S18.lock D20.lock",
 },
@@ -2445,6 +3066,7 @@ data = {
 	arcadeID: "1614",
 	pumpoutID: 886,
 
+	Phoenix2: "= D22`23",
 	Phoenix: "=",
 	XX: "@2.07 S10 S13 S17 S19 D13 D20 S21.lock S23.lock D23.lock D26.lock",
 },
@@ -2457,6 +3079,7 @@ data = {
 	arcadeID: "1615",
 	pumpoutID: 736,
 
+	Phoenix2: "= S19`18",
 	Phoenix: "= S13`12 S17`16 D17`16 -Dp4",
 	XX: "S12 S16 S18.lock S21 S23.lock D16 D20.lock D23.lock D25.lock  @1.01 Dp4",
 },
@@ -2470,6 +3093,7 @@ data = {
 	arcadeID: "1616",
 	pumpoutID: 799,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`11 -Dp5",
 	XX: "@1.04 S11 S14 S17 D13 D18 S21.lock S23.lock D22.lock D25.lock  @2.00 Dp5  @2.01 CoOp(x4)",
 },
@@ -2482,6 +3106,7 @@ data = {
 	arcadeID: "1617",
 	pumpoutID: 818,
 
+	Phoenix2: "=",
 	Phoenix: "= S21`22 -Dp4",
 	XX: "@2.00 S10 S16 D11 D17 S19.lock S22.lock D21.lock D23.lock  @2.02 Dp4",
 },
@@ -2494,6 +3119,7 @@ data = {
 	arcadeID: "1618",
 	pumpoutID: 737,
 
+	Phoenix2: "=",
 	Phoenix: "= S19`18 -Dp4",
 	XX: "S12.lock S18.lock S22.lock S24.lock D14.lock D22.lock D25.lock  @1.01 Dp4",
 },
@@ -2506,6 +3132,7 @@ data = {
 	arcadeID: "1619",
 	pumpoutID: 837,
 
+	Phoenix2: "= S23`22 D21`20 D22`21",
 	Phoenix: "= D18`17 -Dp3 @2.01 D20",
 	XX: "@2.03 S7 S10 S16 D11 D17 S20.lock S22.lock D24.lock  @2.04 Dp3  @2.05 D21",
 },
@@ -2518,6 +3145,7 @@ data = {
 	arcadeID: "1620",
 	pumpoutID: 738,
 
+	Phoenix2: "=",
 	Phoenix: "= S18`17 S20`19 -Dp4",
 	XX: "S3 S6 S10 S17 S19 D9 D13 D19.lock  @1.01 Dp4",
 },
@@ -2530,6 +3158,7 @@ data = {
 	arcadeID: "1621",
 	pumpoutID: 838,
 
+	Phoenix2: "=",
 	Phoenix: "= S5`6 S9`10 D13`12 D17`16 -S22 -Dp2 -D24 @2.12 ^S22 ^D24",
 	XX: "@2.03 S6 S10 S16 D12 D16 S19.lock S22.lock D20.lock D24.lock  @2.04 Dp2",
 },
@@ -2542,6 +3171,7 @@ data = {
 	arcadeID: "1622",
 	pumpoutID: 739,
 
+	Phoenix2: "= S21`20 D23`22",
 	Phoenix: "= S18`17 -Dp5",
 	XX: "S8 S13 S17 S20.lock D19 D22.lock  @1.01 Dp5",
 },
@@ -2555,6 +3185,7 @@ data = {
 	arcadeID: "1623",
 	pumpoutID: 803,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp4",
 	XX: "@1.05 S12 S16 D13 S18.lock S21.lock D20.lock D22.lock  @2.00 Dp4",
 },
@@ -2567,6 +3198,7 @@ data = {
 	arcadeID: "1624",
 	pumpoutID: 740,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3",
 	XX: "S12 S17 D13 D18.lock  @1.01 Dp3  @2.03  CoOp(x2)  @2.05 S4 S7",
 },
@@ -2579,6 +3211,7 @@ data = {
 	arcadeID: "1625",
 	pumpoutID: 771,
 
+	Phoenix2: "= S4`3",
 	Phoenix: "= S11`10 D12`11 D20`21 -Dp3",
 	XX: "@1.01 S7 S10 S17 S20.lock D11 D17 D21.lock CoOp(x2)  @1.04 Dp3  @2.01 S3",
 },
@@ -2591,6 +3224,7 @@ data = {
 	arcadeID: "1626",
 	pumpoutID: 741,
 
+	Phoenix2: "= D23`22",
 	Phoenix: "= S15`14 S21`20 -Dp2",
 	XX: "S3 S6 S10 S14.lock S20 D8 D16 D22.lock  @1.01 Dp2  @2.00 CoOp(x2)",
 },
@@ -2603,6 +3237,7 @@ data = {
 	arcadeID: "1627",
 	pumpoutID: 830,
 
+	Phoenix2: "=",
 	Phoenix: "= S15`14 D19`18 D23`22 -Dp4",
 	XX: "@2.02 S3 S5 S8 S14 S18 D12 D18 S21.lock D22.lock  @2.03  CoOp(x2)  @2.04 Dp4",
 },
@@ -2615,6 +3250,7 @@ data = {
 	arcadeID: "1628",
 	pumpoutID: 742,
 
+	Phoenix2: "=",
 	Phoenix: "= D10`9 D13`12 -Dp4",
 	XX: "S6 S12 S17.lock S20 D9 D12 D18.lock D22.lock  @1.01 Dp4  @2.03  CoOp(x2)  @2.06 D24.lock",
 },
@@ -2627,6 +3263,7 @@ data = {
 	arcadeID: "1629",
 	pumpoutID: 805,
 
+	Phoenix2: "=",
 	Phoenix: "= S17`16 S20`19 D14`13 D18`17 D21`20 -Dp3",
 	XX: "@1.05 S9 S12 S16 D13 D17 CoOp(x2) S19.lock D20.lock  @2.00 Dp3",
 },
@@ -2639,6 +3276,7 @@ data = {
 	arcadeID: "1630",
 	pumpoutID: 743,
 
+	Phoenix2: "= D22`21",
 	Phoenix: "= D17`16 -Dp4",
 	XX: "S14.lock S17.lock S20.lock D16.lock D21.lock  @1.01 Dp4  @2.03  CoOp(x2)",
 },
@@ -2651,6 +3289,7 @@ data = {
 	arcadeID: "1631",
 	pumpoutID: 802,
 
+	Phoenix2: "=",
 	Phoenix: "= S4`6 -Dp3",
 	XX: "@1.05 S6 S13 S16 D18 S19.lock S21.lock D21.lock D23.lock  @2.00 Dp3",
 },
@@ -2663,6 +3302,7 @@ data = {
 	arcadeID: "1632",
 	pumpoutID: 845,
 
+	Phoenix2: "=",
 	Phoenix: "= S9`8 S21`22 D14`15 D23`24",
 	XX: "@2.04 S8 S12 S16 S19 D15 D19 S22.lock D24.lock",
 },
@@ -2675,6 +3315,7 @@ data = {
 	arcadeID: "1633",
 	pumpoutID: 846,
 
+	Phoenix2: "=",
 	Phoenix: "= D13`12",
 	XX: "@2.04 S11 S15 S18 D12 D16 D19 CoOp(x3) S22.lock D23.lock",
 },
@@ -2687,6 +3328,7 @@ data = {
 	arcadeID: "1634",
 	pumpoutID: 811,
 
+	Phoenix2: "=",
 	Phoenix: "= S16`15 S20`19 -Dp4",
 	XX: "@2.00 S10 S15 D12 D18 S19.lock D21.lock  @2.02 Dp4",
 },
@@ -2699,6 +3341,7 @@ data = {
 	arcadeID: "1635",
 	pumpoutID: 796,
 
+	Phoenix2: "=",
 	Phoenix: "= D24`23 -Dp4",
 	XX: "@1.04 S4 S7 S11 S14 S17 D13 D20 S20.lock D23.lock  @2.01 CoOp(x3)  @2.02 Dp4",  # @1.05 D23 changed
 },
@@ -2712,6 +3355,7 @@ data = {
 	arcadeID: "1636",
 	pumpoutID: 847,
 
+	Phoenix2: "= D21`22",
 	Phoenix: "= D16`15",
 	XX: "@2.04 S6 S10 S15 S18 D11 D15 D19 CoOp(x2) S21.lock D22.lock  @2.05 S1 S3",
 },
@@ -2724,6 +3368,7 @@ data = {
 	arcadeID: "1637",
 	pumpoutID: 881,
 
+	Phoenix2: "=",
 	Phoenix: "= D13`12 @2.08 D23",
 	XX: "@2.06 S3 S7 S10 S16 D12 D18 S19.lock D21.lock",
 },
@@ -2736,6 +3381,7 @@ data = {
 	arcadeID: "1638",
 	pumpoutID: 890,
 
+	Phoenix2: "= D20`21",
 	Phoenix: "= D14`13 D18`17",
 	XX: "@2.06 S8 S12 S16 D13 D17 S19.lock S22.lock D21.lock D24.lock",
 },
@@ -2748,6 +3394,7 @@ data = {
 	arcadeID: "1639",
 	pumpoutID: 891,
 
+	Phoenix2: "= S12`11",
 	Phoenix: "= D13`12 -Sp18 -Dp22",
 	XX: "@2.06 S5 S7 S11 S15 D12 D19 Sp18 Dp22 S21.lock D23.lock",
 },
@@ -2760,6 +3407,7 @@ data = {
 	arcadeID: "1640",
 	pumpoutID: 879,
 
+	Phoenix2: "= D24`23",
 	Phoenix: "= S13`12 S17`16 D14`13 D18`17",
 	XX: "@2.06 S10.lock S12.lock S16.lock S20.lock D13.lock D17.lock D21.lock D23.lock CoOp(x2).lock",
 },
@@ -2772,6 +3420,7 @@ data = {
 	arcadeID: "1641",
 	pumpoutID: 844,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@2.04 S3 S5 S9 S16 D7 D16 S18.lock D18.lock D22.lock",
 },
@@ -2796,6 +3445,7 @@ data = {
 	arcadeID: "1643",
 	pumpoutID: 800,
 
+	Phoenix2: "= S19`20 S21`22 D19`20",
 	Phoenix: "= -Dp3",
 	XX: "@1.05 S2 S4 S6 S16 D14 D20 CoOp(x2) S20.lock S22.lock D24.lock  @2.00 Dp3",
 },
@@ -2808,6 +3458,7 @@ data = {
 	arcadeID: "1644",
 	pumpoutID: 770,
 
+	Phoenix2: "=",
 	Phoenix: "= S18`17 D19`18 -Dp4 @2.08 CoOp(x2)",
 	XX: "@1.01 S2 S4 S7 S15 S17.lock D11 D16 D18.lock  @1.04 Dp4",
 },
@@ -2820,6 +3471,7 @@ data = {
 	arcadeID: "1645",
 	pumpoutID: 730,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3",
 	XX: "S1 S3 S5 S9 S15 S18.lock D10 D16.ampass D19.lock Dp3  @1.05 S20 D21  @2.04 CoOp(x2)",
 },
@@ -3031,6 +3683,7 @@ data = {
 	arcadeID: "1664",
 	pumpoutID: 779,
 
+	Phoenix2: "= S15`14 D15`14 D25`24",
 	Phoenix: "= S14`13 D24`25 -Dp3",
 	XX: "@1.02 S1 S4 S7 S13 S17 D14 D17 S21.lock D20.lock D25.lock  @1.04 Dp3  @2.06 CoOp(x2)",
 },
@@ -3077,6 +3730,7 @@ data = {
 	arcadeID: "1668",
 	pumpoutID: 753,
 
+	Phoenix2: "= D19`18 D22`21 D24`23",
 	Phoenix: "= S9`8 S17`16 S19`18 -Dp5",
 	XX: "S8 S16 S18.lock S22.lock D12.lock D18.lock D21.lock CoOp(x2).lock  @1.01 Dp5  @2.06 D23.lock",
 },
@@ -3089,6 +3743,7 @@ data = {
 	arcadeID: "1669",
 	pumpoutID: 824,
 
+	Phoenix2: "=",
 	Phoenix: "= S9`8 S12`13 D15`14 -Dp5 -D21",
 	XX: "@2.01 S8 S13 S19 D14 D20 CoOp(x2) S22.lock D21.lock D22.lock  @2.02 S17 Dp5  @2.07 D25.lock",  # @2.02 S22 changed
 },
@@ -3101,6 +3756,7 @@ data = {
 	arcadeID: "1670",
 	pumpoutID: 754,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3",
 	XX: "S12.lock S16.lock S20.lock D18.lock D21.lock  @1.01 Dp3  @2.08 CoOp(x2)",
 },
@@ -3114,6 +3770,7 @@ data = {
 	arcadeID: "1671",
 	pumpoutID: 806,
 
+	Phoenix2: "= D13`12",
 	Phoenix: "= -Dp4",
 	XX: "@1.05 S8 S17 D12 D18 S20.lock S22.lock D20.lock D24.lock  @2.00 Dp4",
 },
@@ -3126,6 +3783,7 @@ data = {
 	arcadeID: "1672",
 	pumpoutID: 839,
 
+	Phoenix2: "=",
 	Phoenix: "= S11`10 -Dp2",
 	XX: "@2.03 S10 S16 S19 D13 D20 S21.lock D23.lock  @2.04 Dp2",
 },
@@ -3138,6 +3796,7 @@ data = {
 	arcadeID: "1673",
 	pumpoutID: 814,
 
+	Phoenix2: "=",
 	Phoenix: "= S19`20 D20`21 -Dp4",
 	XX: "@2.00 S4 S7 S12 S18 D14 S20.lock D21.lock  @2.01 D23.lock  @2.04 Dp4",
 },
@@ -3150,6 +3809,7 @@ data = {
 	arcadeID: "1674",
 	pumpoutID: 808,
 
+	Phoenix2: "=",
 	Phoenix: "= S14`15 D8`7 -Dp3",
 	XX: "@2.00 S1 S3 S5 S8 S15 D7 D16  @2.02 Dp3",
 },
@@ -3163,6 +3823,7 @@ data = {
 	arcadeID: "1675",
 	pumpoutID: 798,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp4",
 	XX: "@1.04 S10 S15 S19 D12 D17 S21.lock S23.lock D21.lock D25.lock  @2.00 Dp4",
 },
@@ -3175,6 +3836,7 @@ data = {
 	arcadeID: "1676",
 	pumpoutID: 784,
 
+	Phoenix2: "= D13`12",
 	Phoenix: "@2.00 = -Dp4 D25`24 D12`13 @2.12 D18 D26",
 	XX: "@1.03 S6 S11 S17 S19 D13 D21 S22.lock D24.lock  @1.04 S15 CoOp(x2)  @2.02 Dp4",
 },
@@ -3187,6 +3849,7 @@ data = {
 	arcadeID: "1677",
 	pumpoutID: 831,
 
+	Phoenix2: "=",
 	Phoenix: "= D14`15 -Dp3 @2.08 S21",
 	XX: "@2.02 S8 S12 S16 D10 D15 D18 S19.lock D21.lock  @2.04 Dp3  @2.07 D23.lock",
 },
@@ -3199,6 +3862,7 @@ data = {
 	arcadeID: "1678",
 	pumpoutID: 755,
 
+	Phoenix2: "= D17`16",
 	Phoenix: "= S18`17 -Dp5",
 	XX: "S12.lock S15.lock S19.lock D16.lock D21.lock  @1.01 Dp5  @2.02 S17",
 },
@@ -3211,6 +3875,7 @@ data = {
 	arcadeID: "1679",
 	pumpoutID: 756,
 
+	Phoenix2: "=",
 	Phoenix: "= S15`14 -Dp4",
 	XX: "S12.lock S14.lock S16.lock S19.lock D15.lock D22.lock  @1.01 Dp4",  # @1.05 D22 changed
 },
@@ -3223,6 +3888,7 @@ data = {
 	arcadeID: "1680",
 	pumpoutID: 757,
 
+	Phoenix2: "=",
 	Phoenix: "= D12`11 -Dp3",
 	XX: "S2 S4 S7 S10 S15.lock S17.lock D11 D15.lock D17.lock CoOp(x2)  @1.01 Dp3",
 },
@@ -3235,6 +3901,7 @@ data = {
 	arcadeID: "1681",
 	pumpoutID: 782,
 
+	Phoenix2: "=",
 	Phoenix: "= D11`10 -Dp3 @2.12 S20 D22",
 	XX: "@1.02 S7 S11 S16 D10 D17 CoOp(x2) S18.lock D19.lock  @1.04 Dp3",
 },
@@ -3247,6 +3914,7 @@ data = {
 	arcadeID: "1682",
 	pumpoutID: 833,
 
+	Phoenix2: "=",
 	Phoenix: "= D19`20 D21`22 -Dp4",
 	XX: "@2.02 S7 S11 S16 S18 D13 D20 CoOp(x2) S20.lock D22.lock  @2.04 Dp4",
 },
@@ -3259,6 +3927,7 @@ data = {
 	arcadeID: "1683",
 	pumpoutID: 826,
 
+	Phoenix2: "=",
 	Phoenix: "= S19`20 D20`21 -Dp4",
 	XX: "@2.01 S3 S7 S10 S16 D11 D16 S20.lock D21.lock  @2.02 Dp4",
 },
@@ -3271,6 +3940,7 @@ data = {
 	arcadeID: "1684",
 	pumpoutID: 819,
 
+	Phoenix2: "= D25`24",
 	Phoenix: "= S15`16 D12`11 -Dp4",
 	XX: "@2.00 S9 S16 D11 D17 S19.lock S22.lock D20.lock D24.lock  @2.02 Dp4",
 },
@@ -3283,6 +3953,7 @@ data = {
 	arcadeID: "1685",
 	pumpoutID: 772,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp5",
 	XX: "@1.01 S12 S17 S21.lock S24.lock D18 D22.lock D25.lock  @2.00 Dp5  @2.03  CoOp(x3)",
 },
@@ -3295,6 +3966,7 @@ data = {
 	arcadeID: "1686",
 	pumpoutID: 795,
 
+	Phoenix2: "=",
 	Phoenix: "= S11`10 D12`11 -Dp3",
 	XX: "@1.04 S6 S10 S15 D11 D17 CoOp(x2) S17.lock D19.lock  @2.00 Dp3",
 },
@@ -3307,6 +3979,7 @@ data = {
 	arcadeID: "1687",
 	pumpoutID: 840,
 
+	Phoenix2: "= D18`17",
 	Phoenix: "= -Dp3",
 	XX: "@2.03 S4 S8 S11 S15 D13 D17 CoOp(x3) S19.lock D21.lock  @2.04 Dp3",
 },
@@ -3319,6 +3992,7 @@ data = {
 	arcadeID: "1688",
 	pumpoutID: 848,
 
+	Phoenix2: "=",
 	Phoenix: "= S6`5",
 	XX: "@2.04 S5 S10 S15 S19 D12 D17 CoOp(x2) S21.lock D21.lock",
 },
@@ -3332,6 +4006,7 @@ data = {
 	arcadeID: "1689",
 	pumpoutID: 849,
 
+	Phoenix2: "= D15`14",
 	Phoenix: "= S14`15",
 	XX: "@2.04 S11 S15 S17 D14 S20.lock D21.lock  @2.07 D18",
 },
@@ -3344,6 +4019,7 @@ data = {
 	arcadeID: "1690",
 	pumpoutID: 758,
 
+	Phoenix2: "=",
 	Phoenix: "= S20`19 D20`19 -Dp3",
 	XX: "S12.lock S16.lock S19.lock S21.lock D12.lock D19.lock  @1.01 Dp3  @2.00 CoOp(x2)",
 },
@@ -3357,6 +4033,7 @@ data = {
 	arcadeID: "1691",
 	pumpoutID: 759,
 
+	Phoenix2: "=",
 	Phoenix: "= D20`21 -Dp2",
 	XX: "S23.lock D26.lock  @1.01 Dp2  @2.04 S15 S18 S21 D21 D24.lock",
 },
@@ -3369,6 +4046,7 @@ data = {
 	arcadeID: "1692",
 	pumpoutID: 850,
 
+	Phoenix2: "=",
 	Phoenix: "= D19`18",
 	XX: "@2.04 S3 S6 S9 S15 D8 D16 S17.lock D18.lock",
 },
@@ -3381,6 +4059,7 @@ data = {
 	arcadeID: "1693",
 	pumpoutID: 810,
 
+	Phoenix2: "=",
 	Phoenix: "= S15`14 -Dp4",
 	XX: "@2.00 S9 S14 S17 D10 D18 S21.lock D23.lock  @2.02 Dp4",
 },
@@ -3394,6 +4073,7 @@ data = {
 	arcadeID: "1694",
 	pumpoutID: 773,
 
+	Phoenix2: "=",
 	Phoenix: "= D22`23 -Dp4",
 	XX: "@1.01 S8 S15 S18 S21.lock D17 D19.lock D23.lock  @1.04 Dp4",
 },
@@ -3406,6 +4086,7 @@ data = {
 	arcadeID: "1695",
 	pumpoutID: 801,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3 -D22",
 	XX: "@1.05 S11 S15 S17 S19 S22 D13 D18 D21  @2.00 Dp3  @2.07 D22  @2.08 D24",
 },
@@ -3418,6 +4099,7 @@ data = {
 	arcadeID: "1696",
 	pumpoutID: 832,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3",
 	XX: "@2.02 S11 S16 S19 D15 D20 S21.lock D22.lock  @2.04 Dp3",
 },
@@ -3430,6 +4112,7 @@ data = {
 	arcadeID: "1697",
 	pumpoutID: 872,
 
+	Phoenix2: "=",
 	Phoenix: "= S19`18",
 	XX: "@2.05 S3.lock S5.lock S8.lock S11.lock S16.lock S18.lock S22.lock D8.lock D14.lock D20.lock D24.lock  @2.08 CoOp(x2)",
 },
@@ -3443,6 +4126,7 @@ data = {
 	arcadeID: "1698",
 	pumpoutID: 875,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@2.05 S2 S4 S7 S10 S16 D11 D18 S19.lock D21.lock",
 },
@@ -3455,6 +4139,7 @@ data = {
 	arcadeID: "1699",
 	pumpoutID: 887,
 
+	Phoenix2: "=",
 	Phoenix: "= D25`24",
 	XX: "@2.07 S10 S14 S17 D16 D18 S20.lock S23.lock D21.lock D24.lock",
 },
@@ -3468,6 +4153,7 @@ data = {
 	arcadeID: "16A0",
 	pumpoutID: 785,
 
+	Phoenix2: "=",
 	Phoenix: "= S21`22 -Dp3",
 	XX: "@1.03 S8 S13 S16 S19 D12 D15 D18 S22.lock D23.lock  @2.00 Dp3  @2.01 CoOp(x2)",
 },
@@ -3483,6 +4169,7 @@ data = {
 	arcadeID: "16A1",
 	pumpoutID: 786,
 
+	Phoenix2: "=",
 	Phoenix: "= S7`6 -Dp3",
 	XX: "@1.03 S6 S13 S15 S16 D11 D14 D16 D18 CoOp(x2) S20.lock D21.lock  @1.04 D19 Dp3",
 },
@@ -3495,6 +4182,7 @@ data = {
 	arcadeID: "16A2",
 	pumpoutID: 787,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3",
 	XX: "@1.03 S6 S10 S16 S18 D11 D18 S20.lock D22.lock  @2.00 Dp3  @2.01 CoOp(x2)",
 },
@@ -3509,6 +4197,7 @@ data = {
 	arcadeID: "16A3",
 	pumpoutID: 788,
 
+	Phoenix2: "= D23`22",
 	Phoenix: "= S16`17 D7`8 D22`21 -Dp3",
 	XX: "@1.03 S3 S5 S8 S17 D8 D17  @1.05 S20 D21  @2.00 Dp3",
 },
@@ -3521,6 +4210,7 @@ data = {
 	arcadeID: "16A4",
 	pumpoutID: 789,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp4",
 	XX: "@1.03 S3 S6 S8 S13 S16 D5 D11 D14 D17 CoOp(x2) S18.lock D20.lock  @2.00 Dp4",
 },
@@ -3533,6 +4223,7 @@ data = {
 	arcadeID: "16A5",
 	pumpoutID: 880,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@2.06 S4 S6 S10 S16 S19 D13 D21 S22.lock D24.lock",
 },
@@ -3545,6 +4236,7 @@ data = {
 	arcadeID: "16A6",
 	pumpoutID: 884,
 
+	Phoenix2: "= S23`22",
 	Phoenix: "= D13`12",
 	XX: "@2.07 S6 S10 S16 D12 D17 S19.lock S22.lock D20.lock D23.lock D26.lock",
 },
@@ -3557,6 +4249,7 @@ data = {
 	arcadeID: "16A7",
 	pumpoutID: 876,
 
+	Phoenix2: "= D13`12",
 	Phoenix: "= D22`21",
 	XX: "@2.05 S3 S5 S8 S11 S15 S17 D12 D18 S19.lock S21.lock D21.lock",
 },
@@ -3568,6 +4261,7 @@ data = {
 	arcadeID: "16B1",
 	pumpoutID: 894,
 
+	Phoenix2: "= D26`25",
 	Phoenix: "= S21`20 D17`16 D24`23",
 	XX: "@2.08 S11 S15 S17 S20 S23 D16 D19 D23 D25 CoOp(x2)",
 },
@@ -3579,6 +4273,7 @@ data = {
 	arcadeID: "16B2",
 	pumpoutID: 895,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@2.08 S12 S15 S19 S21 S23 D18 D22 D25",
 },
@@ -3591,6 +4286,7 @@ data = {
 	pumpoutID: 896,
 	arcadeName: "CROSS RAY",
 
+	Phoenix2: "= D15`14 D24`23",
 	Phoenix: "= S21`22",
 	XX: "@2.08 S4 S7 S12 S16 S19 S22 D14 D20 D23",
 },
@@ -3602,6 +4298,7 @@ data = {
 	arcadeID: "16B4",
 	pumpoutID: 897,
 
+	Phoenix2: "= D13`12 D20`21",
 	Phoenix: "= S21`22 D23`24",
 	XX: "@2.08 S4 S7 S11 S17 S19 S22 D12 D18 D21 D24",
 },
@@ -3613,6 +4310,7 @@ data = {
 	arcadeID: "16B5",
 	pumpoutID: 898,
 
+	Phoenix2: "=",
 	Phoenix: "= @2.07 CoOp(x3)",
 	XX: "@2.08 S2 S4 S7 S11 S16 S19 D6 D13 D18 D21",
 },
@@ -3625,6 +4323,7 @@ data = {
 	pumpoutID: 899,
 	arcadeName: "Paradoxx - SHORT CUT -",
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@2.08 S21 S24 D26",
 },
@@ -3636,6 +4335,7 @@ data = {
 	arcadeID: "16B7",
 	pumpoutID: 900,
 
+	Phoenix2: "=",
 	Phoenix: "= S25`24",
 	XX: "@2.08 S19 S21 S24 D21 D24 D26",
 },
@@ -3648,6 +4348,7 @@ data = {
 	arcadeID: "16B8",
 	pumpoutID: 901,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@2.08 S18 S21 S24 D26",
 },
@@ -3661,6 +4362,7 @@ data = {
 	arcadeID: "16C5",
 	pumpoutID: 780,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@1.02 S23.lock D25.lock  @2.02 S18 D21",
 },
@@ -3674,6 +4376,7 @@ data = {
 	arcadeID: "16C9",
 	pumpoutID: 889,
 
+	Phoenix2: "=",
 	Phoenix: "= D20`21",
 	XX: "@2.07 S12 S19 D14 D21 S22.lock D23.lock",
 },
@@ -3686,6 +4389,7 @@ data = {
 	arcadeID: "16D0",
 	pumpoutID: 744,
 
+	Phoenix2: "= D20`19",
 	Phoenix: "=",
 	XX: "S20.lock S22.lock D23.lock  @1.04 S18 D19  @2.08 D25",
 },
@@ -3698,6 +4402,7 @@ data = {
 	arcadeID: "16D1",
 	pumpoutID: 852,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@2.04 S19 S23 D24 S25.lock D27.lock",
 },
@@ -3712,6 +4417,7 @@ data = {
 	arcadeID: "16D3",
 	pumpoutID: 781,
 
+	Phoenix2: "=",
 	Phoenix: "= D18`19",
 	XX: "@1.02 S18 D19 S21.lock D22.lock",
 },
@@ -3724,6 +4430,7 @@ data = {
 	arcadeID: "16D4",
 	pumpoutID: 807,
 
+	Phoenix2: "=",
 	Phoenix: "= D20`21 -Dp24",
 	XX: "@1.05 S15 D23 Dp24 S21.lock S23.lock D26.lock  @2.07 D21",
 },
@@ -3736,6 +4443,7 @@ data = {
 	arcadeID: "16D5",
 	pumpoutID: 834,
 
+	Phoenix2: "=",
 	Phoenix: "= S19`20 D20`21",
 	XX: "@2.02 S15 S20 D21 S23.lock D25.lock",
 },
@@ -3749,6 +4457,7 @@ data = {
 	arcadeID: "16D7",
 	pumpoutID: 873,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@2.05 S20 S22.lock D24.lock",
 },
@@ -3870,6 +4579,7 @@ data = {
 	arcadeID: "16F0",
 	pumpoutID: 745,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "S22 D24.lock",
 },
@@ -3883,6 +4593,7 @@ data = {
 	arcadeID: "16F1",
 	pumpoutID: 746,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "S18 D20  @2.06 S4 S7 S11 S15 D6 D13",
 },
@@ -3897,6 +4608,7 @@ data = {
 	arcadeID: "16F2",
 	pumpoutID: 804,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@1.05 D13 D15.lock D17.lock D19.lock D21.lock D23.lock D25.lock",
 },
@@ -3910,6 +4622,7 @@ data = {
 	arcadeID: "16F3",
 	pumpoutID: 775,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@1.01 S3 S6 S11 S16 D12 D17",
 },
@@ -3923,6 +4636,7 @@ data = {
 	arcadeID: "16F4",
 	pumpoutID: 843,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@2.03 S4 S7 S11 S19 D13 D21",
 },
@@ -3935,6 +4649,7 @@ data = {
 	arcadeID: "16F5",
 	pumpoutID: 791,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "@1.03 S11 S14 S18 S21 D14 D21",
 },
@@ -3948,6 +4663,7 @@ data = {
 	arcadeID: "16F6",
 	pumpoutID: 822,
 
+	Phoenix2: "=",
 	Phoenix: "= S9`10 S17`18 D4`5 D11`12 D17`18",
 	XX: "@2.01 S3 S6 S10 S14 S18 D5 D12 D18",
 },
@@ -3961,6 +4677,7 @@ data = {
 	arcadeID: "16F7",
 	pumpoutID: 774,
 
+	Phoenix2: "=",
 	Phoenix: "= S15`16",
 	XX: "@1.01 S16.lock S21.lock D23.lock",
 },
@@ -3974,6 +4691,7 @@ data = {
 	arcadeID: "16F9",
 	pumpoutID: 851,
 
+	Phoenix2: "=",
 	Phoenix: "= S15`16 S18`19",
 	XX: "@2.04 S16 S19 D20 S21.lock D23.lock",
 },
@@ -3989,6 +4707,7 @@ data = {
 	arcadeID: "1501",
 	pumpoutID: 516,
 
+	Phoenix2: "=",
 	Phoenix: "= S9`8 S16`15 D8`7 D17`16 -Dp3",
 	XX: "=",
 	Prime2: "S3 S5 S8 S13 S15.ampass D7 D14 D16.ampass  Dp3  @1.05 D18.ampass",
@@ -4001,6 +4720,7 @@ data = {
 	arcadeID: "1502",
 	pumpoutID: 657,
 
+	Phoenix2: "= S17`16 D12`11 D20`19",
 	Phoenix: "= S12`11 -Dp4",
 	XX: "= S19`18 D19`18  @1.04 Dp4  @2.02 D23.lock",
 	Prime2: "@2.00 S4 S7 S11 S16 D11 S18 D18",
@@ -4013,6 +4733,7 @@ data = {
 	arcadeID: "1503",
 	pumpoutID: 517,
 
+	Phoenix2: "=",
 	Phoenix: "= D10`9 -Dp4",
 	XX: "=  @2.01 S22.lock",
 	Prime2: "S7 S11 S15 S18.ampass D9 D19.ampass D23  @1.06 Dp4",
@@ -4026,6 +4747,7 @@ data = {
 	arcadeID: "1504",
 	pumpoutID: 675,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp4",
 	XX: "= D21`22  @1.04 Dp4",
 	Prime2: "@2.03 S8 S12 S17 D10 D14 S20 D19 D22",
@@ -4040,6 +4762,7 @@ data = {
 	arcadeID: "1505",
 	pumpoutID: 681,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp4",
 	XX: "= D15`14  @1.04 Dp4  @2.01 CoOp(x2)",
 	Prime2: "@2.04 S7 S11 S15 D14 S18 S22 D19 D23",
@@ -4053,6 +4776,7 @@ data = {
 	arcadeID: "1507",
 	pumpoutID: 518,
 
+	Phoenix2: "=",
 	Phoenix: "= S4`5 -Dp4",
 	XX: "=",
 	Prime2: "S5 S8 S13 S18 S20.ampass D9 D17 D21.ampass  @1.06 Dp4",
@@ -4066,6 +4790,7 @@ data = {
 	arcadeID: "1508",
 	pumpoutID: 641,
 
+	Phoenix2: "= D24`23",
 	Phoenix: "= S16`15 -Dp3",
 	XX: "= S12`11 D18`17",
 	Prime2: "@1.06 S11 S15 S19 D17 S21 S24 D23 D26  @2.01 Dp3",
@@ -4078,6 +4803,7 @@ data = {
 	arcadeID: "1509",
 	pumpoutID: 519,
 
+	Phoenix2: "= S12`11 D15`14",
 	Phoenix: "= S11`10 S16`15 -Dp3",
 	XX: "=  @2.00 S15",
 	Prime2: "S10 S18 S22 S24.ampass D14 D22 D25.ampass  @1.06 Dp3  @2.03 D17",
@@ -4092,6 +4818,7 @@ data = {
 	arcadeID: "1510",
 	pumpoutID: 686,
 
+	Phoenix2: "=",
 	Phoenix: "= S11`10 D16`15",
 	XX: "= S16`17 S19`20 D15`14  @2.02 D22",
 	Prime2: "@2.05 S10 S17 D14 S20 S23 D24",
@@ -4106,6 +4833,7 @@ data = {
 	arcadeID: "1511",
 	pumpoutID: 676,
 
+	Phoenix2: "= D14`13 D19`18",
 	Phoenix: "= S13`12 D8`7 D13`12 -S4 -S7 -Dp3 @2.08 D22",
 	XX: "=  @1.04 Dp3",
 	Prime2: "@2.03 S4 S7 S12 S16 S18.ampass D7 D12 D18",
@@ -4118,6 +4846,7 @@ data = {
 	arcadeID: "1512",
 	pumpoutID: 520,
 
+	Phoenix2: "=",
 	Phoenix: "= D9`8 -Dp5",
 	XX: "=",
 	Prime2: "S7 S12 S17 D8 D19.ampass  @1.06 Dp5  @1.07 S19.ampass",
@@ -4131,6 +4860,7 @@ data = {
 	arcadeID: "1513",
 	pumpoutID: 685,
 
+	Phoenix2: "= D14`12 D21`20",
 	Phoenix: "=",
 	XX: "= D20`22",
 	Prime2: "@2.05 S4 S8 S12 S16 D12 S19 D18 D22",
@@ -4143,6 +4873,7 @@ data = {
 	arcadeID: "1516",
 	pumpoutID: 521,
 
+	Phoenix2: "= S21`20",
 	Phoenix: "= -Dp4",
 	XX: "= S19`18 D21`20  @2.05 CoOp(x2)",
 	Prime2: "S2 S4 S7 S16 S18.ampass D11 D18 D20.ampass  @1.06 Dp4  @2.03 D24  @2.04 S12  @2.05 S20",
@@ -4155,6 +4886,7 @@ data = {
 	arcadeID: "1517",
 	pumpoutID: 624,
 
+	Phoenix2: "=",
 	Phoenix: "= S21`20 D24`23 -Dp3",
 	XX: "=",
 	Prime2: "@1.02 S4 S7 S9 S16 S18 S20.ampass D12 D19 D23.ampass  @1.06 CoOp(x2).ampass  @2.01 Dp3",
@@ -4168,6 +4900,7 @@ data = {
 	arcadeID: "1518",
 	pumpoutID: 644,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`9 D8`7 D15`14 -Dp3",
 	XX: "=",
 	Prime2: "@1.07 S5 S9 S15 D7 D14 S18.ampass D19.ampass  @2.01 Dp3",
@@ -4181,6 +4914,7 @@ data = {
 	arcadeID: "1524",
 	pumpoutID: 679,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3",
 	XX: "= S19`20  @1.04 Dp3",
 	Prime2: "@2.03 S8 S12 S16 S20 D10 D20.ampass",
@@ -4193,6 +4927,7 @@ data = {
 	arcadeID: "1525",
 	pumpoutID: 514,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp2",
 	XX: "=",
 	Prime2: "S4 S9 S16 S20.ampass D10 D17 D20.ampass  @1.06 Dp2",
@@ -4206,6 +4941,7 @@ data = {
 	arcadeID: "1526",
 	pumpoutID: 632,
 
+	Phoenix2: "= S21`20",
 	Phoenix: "= S6`5 S11`10 S18`17 -Dp4",
 	XX: "= S14`13 D15`14  @2.07 CoOp(x3)",
 	Prime2: "@1.04 S5 S10 S13 S17 D14 S20 D20  @2.01 Dp4",
@@ -4219,6 +4955,7 @@ data = {
 	arcadeID: "1529",
 	pumpoutID: 658,
 
+	Phoenix2: "=",
 	Phoenix: "= S18`17 D10`9 D19`18 -Dp3",
 	XX: "=  @1.04 Dp3",
 	Prime2: "@2.00 S3 S5 S8 S15 D9 S17 D18  @2.04 D22",
@@ -4233,6 +4970,7 @@ data = {
 	arcadeID: "1530",
 	pumpoutID: 636,
 
+	Phoenix2: "= D21`20",
 	Phoenix: "= -Dp5",
 	XX: "= S17`16 D20`19",
 	Prime2: "@1.05 S7 S11 S16 D11 D19 S20.ampass D18.ampass  @2.01 Dp5",
@@ -4246,6 +4984,7 @@ data = {
 	arcadeID: "1533",
 	pumpoutID: 645,
 
+	Phoenix2: "= D17`16",
 	Phoenix: "= -Dp4",
 	XX: "=  @2.05 S3",
 	Prime2: "@1.07 S5 S10 S15 D10 D16  @2.01 Dp4",
@@ -4260,6 +4999,7 @@ data = {
 	arcadeID: "1536",
 	pumpoutID: 659,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp4",
 	XX: "= S19`18 D21`20  @1.04 Dp4  @2.03  CoOp(x2)",
 	Prime2: "@2.00 S4 S6 S10 S16 D10 D17 S18 D20",
@@ -4273,6 +5013,7 @@ data = {
 	arcadeID: "1537",
 	pumpoutID: 660,
 
+	Phoenix2: "= D20`19",
 	Phoenix: "= D11`10 D13`12 D24`23 -Dp4",
 	XX: "=  @1.04 Dp4  @2.03  CoOp(x2)",
 	Prime2: "@2.00 S2 S4 S7 S14 D10 D12 S17 S21 D19 D23",
@@ -4288,6 +5029,7 @@ data = {
 	arcadeID: "1538",
 	pumpoutID: 672,
 
+	Phoenix2: "=",
 	Phoenix: "= D10`9 D21`20 -Dp5",
 	XX: "=  @1.04 Dp5",
 	Prime2: "@2.02 S3 S5 S8 S17 D9 D18  @2.03 D20",
@@ -4301,6 +5043,7 @@ data = {
 	arcadeID: "1539",
 	pumpoutID: 673,
 
+	Phoenix2: "=",
 	Phoenix: "= D13`12 -Dp3",
 	XX: "=  @1.04 Dp3",
 	Prime2: "@2.02 S3 S7 S11 S17 D12 D18 D21  S19 D23",
@@ -4314,6 +5057,7 @@ data = {
 	arcadeID: "1540",
 	pumpoutID: 669,
 
+	Phoenix2: "= S20`19 D15`14 D19`18 D21`20",
 	Phoenix: "= D14`13 -Dp3",
 	XX: "=  @1.04 Dp3",
 	Prime2: "@2.01 S4 S7 S15 S17 D13 D18  S19 D20",
@@ -4327,6 +5071,7 @@ data = {
 	arcadeID: "1541",
 	pumpoutID: 678,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp2 @2.01 S22 D24",
 	XX: "=  @1.04 Dp2  @2.01 CoOp(x2)",
 	Prime2: "@2.03 S7 S10 S14 S16 D9 D13 D17 S19 D20",
@@ -4340,8 +5085,9 @@ data = {
 	arcadeID: "1542",
 	pumpoutID: 689,
 
+	Phoenix2: "= D20`19",
 	Phoenix: "= -Dp4",
-	XX: "=  @1.04 Dp4  @2.02 D26.lock",  # TODO: D26 modified on 2.03
+	XX: "=  @1.04 Dp4  @2.02 D26.lock",
 	Prime2: "@2.05 S15 S18 D19 S21 S24 D22",
 },
 
@@ -4353,6 +5099,7 @@ data = {
 	arcadeID: "1543",
 	pumpoutID: 682,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3",
 	XX: "=  @1.04 Dp3",
 	Prime2: "@2.04 S8 S11 S14 S17 D12 D18 S19 D20 CoOp(x2).ampass",
@@ -4395,6 +5142,7 @@ data = {
 	arcadeID: "1547",
 	pumpoutID: 623,
 
+	Phoenix2: "= D12`11",
 	Phoenix: "= -Dp3",
 	XX: "= S17`18 S20`21 D18`19",
 	Prime2: "@1.02 S3 S5 S9 S15 S18 D11 D19 S21.ampass D23.ampass CoOp(x2)  @2.01 Dp3",
@@ -4469,6 +5217,7 @@ data = {
 	arcadeID: "1554",
 	pumpoutID: 631,
 
+	Phoenix2: "=",
 	Phoenix: "= S6`5 D6`5 -Dp3",
 	XX: "=",
 	Prime2: "@1.04 S3 S5 S9 S17 D5 D19 S20 S23 D22 D24  @2.01 Dp3",
@@ -4569,6 +5318,7 @@ data = {
 	arcadeID: "1575",
 	pumpoutID: 625,
 
+	Phoenix2: "= S14`13",
 	Phoenix: "= -Dp2",
 	XX: "=",
 	Prime2: "@1.02 S7 S13 S17 D12 D18 D20.ampass  @2.01 Dp2",
@@ -4593,6 +5343,7 @@ data = {
 	arcadeID: "1577",
 	pumpoutID: 654,
 
+	Phoenix2: "= S12`11",
 	Phoenix: "= S11`10 -Dp4",
 	XX: "= S15`14 S19`18 D16`15 D20`19",
 	Prime2: "@1.10 S10 S14 S18 D15 D19.ampass CoOp(x2)  @2.01 Dp4",
@@ -4606,6 +5357,7 @@ data = {
 	arcadeID: "1578",
 	pumpoutID: 653,
 
+	Phoenix2: "=",
 	Phoenix: "= D10`9 D21`20 -Dp3",
 	XX: "=",
 	Prime2: "@1.10 S7 S11 S16 D9 D18  S18 D20  @2.01 Dp3",
@@ -4623,6 +5375,7 @@ data = {
 	arcadeID: "1584",
 	pumpoutID: 629,
 
+	Phoenix2: "=",
 	Phoenix: "= S15`14 D7`6 -Dp4",
 	XX: "=  @1.04 Dp4",
 	Prime2: "@1.03 S3 S5 S8 S14 D6 D15",
@@ -4636,6 +5389,7 @@ data = {
 	arcadeID: "1593",
 	pumpoutID: 664,
 
+	Phoenix2: "=",
 	Phoenix: "= D10`9 -Dp2",
 	XX: "=  @1.04 Dp2",
 	Prime2: "@2.00 S6 S9 S14 D9 S17 D18 D24  @2.03 D21",
@@ -4649,6 +5403,7 @@ data = {
 	arcadeID: "1594",
 	pumpoutID: 655,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3",
 	XX: "= S12`11 S16`15  @2.07 D22",
 	Prime2: "@1.10 S3 S7 S11 S15 S18.ampass D11 D17 D20.ampass  @2.01 Dp3",
@@ -4663,6 +5418,7 @@ data = {
 	arcadeID: "1595",
 	pumpoutID: 670,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp5",
 	XX: "=  @1.04 Dp5",
 	Prime2: "@2.01 S11 S16 S18 D11 D17  S20.ampass D20.ampass",
@@ -4676,6 +5432,7 @@ data = {
 	arcadeID: "1597",
 	pumpoutID: 627,
 
+	Phoenix2: "=",
 	Phoenix: "= D12`11 D16`15 -Dp5 @2.00 D23",
 	XX: "=",
 	Prime2: "@1.03 S5 S7 S11 S16 S18 D11 D15 S19.ampass D19.ampass  @2.01 Dp5",
@@ -4689,6 +5446,7 @@ data = {
 	arcadeID: "1598",
 	pumpoutID: 628,
 
+	Phoenix2: "=",
 	Phoenix: "= S4`5 S17`18 -Dp4",
 	XX: "=",
 	Prime2: "@1.03 S5 S9 S14 D11 D18 S18.ampass D20.ampass  @2.01 Dp4",
@@ -4702,6 +5460,7 @@ data = {
 	arcadeID: "15A0",
 	pumpoutID: 683,
 
+	Phoenix2: "=",
 	Phoenix: "= S4`5 S21`20 D12`11 -Dp4 @2.12 D23",
 	XX: "=  @1.04 Dp4",
 	Prime2: "@2.04 S5 S8 S11 S17 D11 D17 S20 D19",
@@ -4715,8 +5474,9 @@ data = {
 	arcadeID: "15A1",
 	pumpoutID: 688,
 
+	Phoenix2: "=",
 	Phoenix: "= S12`11 -Dp5",
-	XX: "= S16`17 S19`20 S21`22  @1.04 Dp5  @2.02 CoOp(x2)",  # TODO: CoOp(x2) modified on 2.03
+	XX: "= S16`17 S19`20 S21`22  @1.04 Dp5  @2.02 CoOp(x2)",
 	Prime2: "@2.05 S8 S11 S17 D13 S20 S22 D20 D23",
 },
 
@@ -4728,6 +5488,7 @@ data = {
 	arcadeID: "15A2",
 	pumpoutID: 637,
 
+	Phoenix2: "=",
 	Phoenix: "= S16`15 D13`12 D19`18 -Dp3",
 	XX: "=",
 	Prime2: "@1.05 S4 S8 S11 S15 D12 S19 D20  @2.01 Dp3  @2.04 D18",
@@ -4740,6 +5501,7 @@ data = {
 	arcadeID: "15A3",
 	pumpoutID: 650,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3",
 	XX: "=",
 	Prime2: "@1.09 S8 S15 D10 D16 S18 D20  @2.01 Dp3",
@@ -4753,6 +5515,7 @@ data = {
 	pumpoutID: 642,
 	altID: "15_Magical_Vacation",
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3 @2.12 D21",
 	XX: "= S18`19  @2.03  CoOp(x2)",
 	Prime2: "@1.06 S6 S11 S16 D7 D13 S19.ampass D18.ampass  @2.01 Dp3",
@@ -4768,6 +5531,7 @@ data = {
 	pumpoutID: 687,
 	altID: "15_Visual_Dream_II",
 
+	Phoenix2: "=",
 	Phoenix: "= D11`10 -Dp3",
 	XX: "=  @1.04 Dp3",
 	Prime2: "@2.05 S5 S8 S16 D10 S18 D19",
@@ -4780,6 +5544,7 @@ data = {
 	arcadeID: "15A6",
 	pumpoutID: 532,
 
+	Phoenix2: "= S13`12 S20`19 D22`21",
 	Phoenix: "= S12`11 -Dp3",
 	XX: "= S11`10",
 	Prime2: "S3 S6 S10 S14 S17 S19.ampass D7 D17 D21.ampass CoOp(x2)  @1.06 Dp3",
@@ -4793,6 +5558,7 @@ data = {
 	arcadeID: "15A7",
 	pumpoutID: 633,
 
+	Phoenix2: "= D18`17",
 	Phoenix: "= S6`7 S8`9 D10`9 -Dp4",
 	XX: "=  @2.07 D21.lock",
 	Prime2: "@1.04 S7 S9 S11 S17 D9 D12 D17.ampass  @2.01 Dp4",
@@ -4805,6 +5571,7 @@ data = {
 	arcadeID: "15A8",
 	pumpoutID: 533,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp4",
 	XX: "= ",
 	Prime2: "S3 S5 S8 S14 D9 D15 CoOp(x2)  @1.06 Dp4",
@@ -4817,6 +5584,7 @@ data = {
 	arcadeID: "15A9",
 	pumpoutID: 656,
 
+	Phoenix2: "= D22`21",
 	Phoenix: "= S13`12 D13`12 -Dp3",
 	XX: "= D21`22",
 	Prime2: "@1.10 S6 S12 S15 D12 D17  S18 S21 D20 D22  @2.01 Dp3",
@@ -4829,6 +5597,7 @@ data = {
 	arcadeID: "15B0",
 	pumpoutID: 515,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`11 -Dp3",
 	XX: "= D22`21",
 	Prime2: "S4 S6 S11 S14 S17 S19.ampass D8 D18 D21.ampass CoOp(x2).ampass  @1.06 Dp3",
@@ -4841,6 +5610,7 @@ data = {
 	arcadeID: "15B1",
 	pumpoutID: 534,
 
+	Phoenix2: "=",
 	Phoenix: "= D10`9 -Dp6",
 	XX: "=",
 	Prime2: "S7 S12 S16 S18.ampass D9 D18 D20.ampass  @1.06 Dp6  @2.00 S20",
@@ -4855,6 +5625,7 @@ data = {
 	arcadeID: "15B2",
 	pumpoutID: 665,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp4",
 	XX: "= D23`24  @1.04 Dp4",
 	Prime2: "@2.00 S10 S15 D10 CoOp(x3) S18 S21 D19 D24",
@@ -4868,6 +5639,7 @@ data = {
 	arcadeID: "15B3",
 	pumpoutID: 677,
 
+	Phoenix2: "=",
 	Phoenix: "= S8`7 S21`20 D13`12 -Dp4",
 	XX: "= D21`20  @1.04 Dp4",
 	Prime2: "@2.03 S7 S11 S18 S20 D12 D20.ampass",
@@ -4881,6 +5653,7 @@ data = {
 	arcadeID: "15B5",
 	pumpoutID: 646,
 
+	Phoenix2: "=",
 	Phoenix: "= D15`13 -Dp4",
 	XX: "=  @2.01 CoOp(x2)",
 	Prime2: "@1.07 S8 S15 S18 D13 D20 S22 D24  @2.01 Dp4",
@@ -4894,6 +5667,7 @@ data = {
 	arcadeID: "15B6",
 	pumpoutID: 684,
 
+	Phoenix2: "= D20`19",
 	Phoenix: "= S9`8 D14`12",
 	XX: "= S16`17 S19`20 D19`20",
 	Prime2: "@2.04 S8 S11 S17 D12 S20 D20 D24",
@@ -4906,6 +5680,7 @@ data = {
 	arcadeID: "15B7",
 	pumpoutID: 620,
 
+	Phoenix2: "=",
 	Phoenix: "= D12`10 D21`22 -Dp4",
 	XX: "=  @2.01 D22",
 	Prime2: "@1.01 S4 S8 S12 S16 D10 D18  S18.ampass D20.ampass  @1.06 Dp4",
@@ -4919,6 +5694,7 @@ data = {
 	arcadeID: "15B8",
 	pumpoutID: 634,
 
+	Phoenix2: "=",
 	Phoenix: "= S11`10 D16`15 -Dp5",
 	XX: "= D15`13 D22`21  @2.05 CoOp(x3)",
 	Prime2: "@1.04 S5 S10 S16 D13 D20 S18 D19  @2.01 Dp5  @2.04 D21",
@@ -4932,6 +5708,7 @@ data = {
 	arcadeID: "15B9",
 	pumpoutID: 651,
 
+	Phoenix2: "=",
 	Phoenix: "= D10`9 -Dp4",
 	XX: "=",
 	Prime2: "@1.09 S5 S10 S15 D9 D19 S18.ampass  @2.01 Dp4",
@@ -4945,6 +5722,7 @@ data = {
 	arcadeID: "15C0",
 	pumpoutID: 671,
 
+	Phoenix2: "= D19`18",
 	Phoenix: "= S22`21 -Dp4",
 	XX: "= S13`12  @1.04 Dp4",
 	Prime2: "@2.02 S12 S17 S21 D18  D22.ampass",
@@ -4970,6 +5748,7 @@ data = {
 	arcadeID: "15C5",
 	pumpoutID: 494,
 
+	Phoenix2: "= D21`20",
 	Phoenix: "= S11`10 D11`10 D16`15 -Dp3",
 	XX: "= -D20 D20`21",  # report by Haru
 	Prime2: "@1.08 S6 S10 S17 D10 D15 D21 D20.ampass  @2.01 Dp3  @2.05 S19",
@@ -4982,6 +5761,7 @@ data = {
 	arcadeID: "15D0",
 	pumpoutID: 535,
 
+	Phoenix2: "=",
 	Phoenix: "= S19`18",
 	XX: "=  @2.06 S18",
 	Prime2: "S22 D24",
@@ -4995,10 +5775,9 @@ data = {
 	arcadeID: "15D2",
 	pumpoutID: 690,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
-		#??? D27.updated
-		# D27-XX - https:#www.youtube.com/watch?v=O5xatKUFxbY
 	Prime2: "@2.05 S25 D27",
 },
 
@@ -5010,11 +5789,9 @@ data = {
 	arcadeID: "15D3",
 	pumpoutID: 647,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
-		#??? S24.updated D26.updated
-		# S24-XX - https:#www.youtube.com/watch?v=62pnZ8a-aHw
-		# D26-XX - https:#www.youtube.com/watch?v=uSUHgPaEbXo
 	Prime2: "@1.07 S18 S21 D22 S24 D26",
 },
 
@@ -5078,9 +5855,9 @@ data = {
 	arcadeID: "15E5",
 	pumpoutID: 596,
 
+	Phoenix2: "=",
 	Phoenix: "= -S21 S21`20",
 	XX: "= S20`21 S21`20",
-		# S20-XX & S21-XX - https:#www.youtube.com/watch?v=IWbkQJcDkN4
 	Prime2: "@2.04 S20 S21 D22 S23 D25 CoOp(x2).ampass",
 },
 
@@ -5096,6 +5873,7 @@ data = {
 		"XX": { region: "" }
 	},
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "@1.03 S15 D16",
@@ -5109,6 +5887,7 @@ data = {
 	arcadeID: "15E7",
 	pumpoutID: 652,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "@1.09 S19 D25",
@@ -5122,6 +5901,7 @@ data = {
 	arcadeID: "15F0",
 	pumpoutID: 537,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`9 D19`18",
 	XX: "= S17`16 S19`18 D18`17",
 	Prime2: "S9 S16 S18 D17",
@@ -5135,6 +5915,7 @@ data = {
 	arcadeID: "15F1",
 	pumpoutID: 538,
 
+	Phoenix2: "= S23`22 D24`23",
 	Phoenix: "= D19`18",
 	XX: "= S16`15 D18`17 D23`22",
 	Prime2: "S9 S15 S19 D17 D22  @1.07 S22",
@@ -5149,6 +5930,7 @@ data = {
 	arcadeID: "15F3",
 	pumpoutID: 635,
 
+	Phoenix2: "=",
 	Phoenix: "= D19`18",
 	XX: "=",
 	Prime2: "@1.04 S7 S12 S17 D18",
@@ -5163,6 +5945,7 @@ data = {
 	arcadeID: "15F4",
 	pumpoutID: 649,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "= S21`22",
 	Prime2: "@1.08 S18 S22 D23",
@@ -5177,6 +5960,7 @@ data = {
 	arcadeID: "15F5",
 	pumpoutID: 666,
 
+	Phoenix2: "= S21`20",
 	Phoenix: "=",
 	XX: "= S16`15",
 	Prime2: "@2.00 S15 S20 D21",
@@ -5191,6 +5975,7 @@ data = {
 	arcadeID: "15F6",
 	pumpoutID: 667,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "@2.00 S20 D21",
@@ -5207,6 +5992,7 @@ data = {
 	arcadeID: "1401",
 	pumpoutID: 281,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`11 -Dp4",
 	XX: "=",
 	Prime2: "=",
@@ -5220,6 +6006,7 @@ data = {
 	arcadeID: "1402",
 	pumpoutID: 348,
 
+	Phoenix2: "=",
 	Phoenix: "= S8`7 S11`10 -Dp4 @2.12 S22 D24",
 	XX: "=",
 	Prime2: "=  @1.08 Dp4",
@@ -5233,6 +6020,7 @@ data = {
 	arcadeID: "1403",
 	pumpoutID: 282,
 
+	Phoenix2: "=",
 	Phoenix: "= D13`12 -Dp3",
 	XX: "=",
 	Prime2: "=",
@@ -5246,6 +6034,7 @@ data = {
 	arcadeID: "1404",
 	pumpoutID: 476,
 
+	Phoenix2: "=",
 	Phoenix: "= S9`8 -Dp2",
 	XX: "= S14`15 D15`16",
 	Prime2: "=",
@@ -5259,6 +6048,7 @@ data = {
 	arcadeID: "1405",
 	pumpoutID: 283,
 
+	Phoenix2: "= S10`9",
 	Phoenix: "= -Dp5",
 	XX: "= S17`18 D18`17 D24`23",
 	Prime2: "=  @1.03 S16.ucs.ampass",
@@ -5272,6 +6062,7 @@ data = {
 	arcadeID: "1406",
 	pumpoutID: 352,
 
+	Phoenix2: "=",
 	Phoenix: "= D13`12 -Dp4",
 	XX: "=  @2.02 CoOp(x2)",
 	Prime2: "=",
@@ -5285,6 +6076,7 @@ data = {
 	arcadeID: "1407",
 	pumpoutID: 284,
 
+	Phoenix2: "= D12`11",
 	Phoenix: "= D11`10 -Dp3 -D16",
 	XX: "= D16`17 D19`20  @2.06 CoOp(x3)",
 	Prime2: "=",
@@ -5298,6 +6090,7 @@ data = {
 	arcadeID: "1408",
 	pumpoutID: 327,
 
+	Phoenix2: "=",
 	Phoenix: "= S7`6 S11`9 D13`11 -Dp3",
 	XX: "= S19`18 D11`10 D19`18 D20`19 D25`24",
 	Prime2: "=  @1.03 S16.ucs.ampass D18.ucs.ampass  @2.00 CoOp(x3)",
@@ -5311,6 +6104,7 @@ data = {
 	arcadeID: "1409",
 	pumpoutID: 502,
 
+	Phoenix2: "= D14`12",
 	Phoenix: "= S8`7 -Dp3",
 	XX: "=",
 	Prime2: "=  @1.08 Dp3",
@@ -5324,6 +6118,7 @@ data = {
 	arcadeID: "1410",
 	pumpoutID: 285,
 
+	Phoenix2: "=",
 	Phoenix: "= S12`11 D10`9 -Dp4",
 	XX: "= D18`19",
 	Prime2: "=",
@@ -5337,6 +6132,7 @@ data = {
 	arcadeID: "1411",
 	pumpoutID: 330,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`9 -Dp4",
 	XX: "=",
 	Prime2: "=",
@@ -5350,6 +6146,7 @@ data = {
 	arcadeID: "1412",
 	pumpoutID: 349,
 
+	Phoenix2: "=",
 	Phoenix: "= D13`12 -Dp3",
 	XX: "= S10`11 D12`13",
 	Prime2: "=",
@@ -5363,6 +6160,7 @@ data = {
 	arcadeID: "1413",
 	pumpoutID: 286,
 
+	Phoenix2: "=",
 	Phoenix: "= S16`15 S18`17 D9`8 D17`16 D19`18 -Dp3",
 	XX: "=",
 	Prime2: "=",
@@ -5377,6 +6175,7 @@ data = {
 	arcadeID: "1414",
 	pumpoutID: 481,
 
+	Phoenix2: "=",
 	Phoenix: "= D9`7 -Dp5",
 	XX: "= S15`16",
 	Prime2: "=  @1.08 Dp5",
@@ -5390,6 +6189,7 @@ data = {
 	arcadeID: "1415",
 	pumpoutID: 6,
 
+	Phoenix2: "=",
 	Phoenix: "= D12`11 D21`20 -Dp3",
 	XX: "= S19`18",
 	Prime2: "= -S17 -D18  @1.08 Dp3",
@@ -5403,6 +6203,7 @@ data = {
 	arcadeID: "1416",
 	pumpoutID: 504,
 
+	Phoenix2: "=",
 	Phoenix: "= D13`12 D21`20 -Dp4",
 	XX: "= S7`6  @2.05 S4",
 	Prime2: "=  @1.08 Dp4",
@@ -5416,6 +6217,7 @@ data = {
 	arcadeID: "1417",
 	pumpoutID: 287,
 
+	Phoenix2: "=",
 	Phoenix: "= S12`10 D14`12 D23`22 -Dp3",
 	XX: "= S21`20 D18`19",
 	Prime2: "= -D20  @1.08 Dp3",
@@ -5429,6 +6231,7 @@ data = {
 	arcadeID: "1418",
 	pumpoutID: 507,
 
+	Phoenix2: "=",
 	Phoenix: "= D6`5 -Dp3",
 	XX: "=  @2.05 S9",
 	Prime2: "=  @1.08 Dp3  @2.04 CoOp(x2)",
@@ -5442,6 +6245,7 @@ data = {
 	arcadeID: "1419",
 	pumpoutID: 288,
 
+	Phoenix2: "= S15`14 S21`20 D19`18",
 	Phoenix: "= D12`11 -Dp2",
 	XX: "= D22`21  @1.02 S20.lock",
 	Prime2: "= -D16",
@@ -5455,6 +6259,7 @@ data = {
 	arcadeID: "1420",
 	pumpoutID: 469,
 
+	Phoenix2: "= D15`14 D19`18",
 	Phoenix: "= D12`10 -Dp4",
 	XX: "= S13`14 D14`15 D18`19  @2.05 CoOp(x2)",
 	Prime2: "=",
@@ -5468,6 +6273,7 @@ data = {
 	arcadeID: "1421",
 	pumpoutID: 289,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp4 -Dp20",
 	XX: "= S7`6 S9`8 D22`21",
 	Prime2: "=",
@@ -5481,6 +6287,7 @@ data = {
 	arcadeID: "1422",
 	pumpoutID: 462,
 
+	Phoenix2: "= D14`13",
 	Phoenix: "= S10`9 S14`13 D13`12 D20`19 -Dp4",
 	XX: "= S22`21 D24`23  @2.05 S5",
 	Prime2: "=  @1.08 Dp4",
@@ -5495,6 +6302,7 @@ data = {
 	arcadeID: "1423",
 	pumpoutID: 505,
 
+	Phoenix2: "=",
 	Phoenix: "= S9`8 D5`4 -Dp3",
 	XX: "=",
 	Prime2: "=  @1.08 Dp3",
@@ -5508,11 +6316,9 @@ data = {
 	arcadeID: "1424",
 	pumpoutID: 350,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3",
-	XX: "= S16`17 D22`21",  #??? S25.updated D27.updated
-	# S25-XX - https:#www.youtube.com/watch?v=G0on3vr0qfk
-	# S25 XX vs P2 - https:#www.youtube.com/watch?v=6GJuzGCR1aE
-	# D27-XX - https:#www.youtube.com/watch?v=h0C-o-7LWl4
+	XX: "= S16`17 D22`21",
 	Prime2: "= -S16",
 	Prime: "@1.07 S23 D25  S25 D27  @1.12 S20  @1.15 Dp3  @1.19 S16.ucs S17.ucs D21.ucs",
 },
@@ -5524,6 +6330,7 @@ data = {
 	arcadeID: "1425",
 	pumpoutID: 339,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp5",
 	XX: "= S14`15 D16`17",
 	Prime2: "=  @2.00 CoOp(x2)",
@@ -5537,6 +6344,7 @@ data = {
 	arcadeID: "1426",
 	pumpoutID: 290,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp4",
 	XX: "= S10`11 S17`16 D12`13",
 	Prime2: "=",
@@ -5550,6 +6358,7 @@ data = {
 	arcadeID: "1427",
 	pumpoutID: 353,
 
+	Phoenix2: "= D16`15",
 	Phoenix: "= S11`10 S16`15 D15`13 -Dp4",
 	XX: "= D13`12",
 	Prime2: "=  @2.02 S23",
@@ -5563,6 +6372,7 @@ data = {
 	arcadeID: "1428",
 	pumpoutID: 340,
 
+	Phoenix2: "= S21`20",
 	Phoenix: "= S10`8 D12`10 -Dp3",
 	XX: "=",
 	Prime2: "=",
@@ -5576,6 +6386,7 @@ data = {
 	arcadeID: "1429",
 	pumpoutID: 291,
 
+	Phoenix2: "=",
 	Phoenix: "= S8`7 -Dp3",
 	XX: "= S16`17 D11`10",
 	Prime2: "= -S16",
@@ -5589,6 +6400,7 @@ data = {
 	arcadeID: "1430",
 	pumpoutID: 472,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3",
 	XX: "=  @2.08 D23",
 	Prime2: "=",
@@ -5602,6 +6414,7 @@ data = {
 	arcadeID: "1431",
 	pumpoutID: 475,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`9 -Dp4",
 	XX: "=",
 	Prime2: "=",
@@ -5615,6 +6428,7 @@ data = {
 	arcadeID: "1433",
 	pumpoutID: 482,
 
+	Phoenix2: "=",
 	Phoenix: "= D22`23 -Dp4",
 	XX: "= D13`12 D21`20  @2.07 D23.lock",
 	Prime2: "=  @1.05 CoOp(x2)  @1.07 D18.ucs  @1.08 Dp4",
@@ -5628,9 +6442,8 @@ data = {
 	arcadeID: "1434",
 	pumpoutID: 509,
 
+	Phoenix2: "= D13`12",
 	Phoenix: "= D12`10 D17`16 -Dp5",
-		# TODO.Phoenix: CoOp marked as new
-		# CoOp XX - https:#www.youtube.com/watch?v=vaKfxI_iSl8
 	XX: "= S10`9  @1.04 CoOp(x2)  @2.05 S4",
 	Prime2: "=  @1.08 Dp5",
 	Prime: "@1.19 S6 S9 S16 D10 D16",
@@ -5643,6 +6456,7 @@ data = {
 	arcadeID: "1435",
 	pumpoutID: 512,
 
+	Phoenix2: "= S15`14 D16`15",
 	Phoenix: "= -Dp4",
 	XX: "= D15`14  @2.00 CoOp(x2)",
 	Prime2: "=  @1.08 Dp4",
@@ -5656,6 +6470,7 @@ data = {
 	arcadeID: "1436",
 	pumpoutID: 292,
 
+	Phoenix2: "= S15`14 D15`14",
 	Phoenix: "= S14`13 S19`18 D14`13 -Dp5",
 	XX: "= S9`8 S13`12 S22`21 D13`12 D24`23",
 	Prime2: "=",
@@ -5846,13 +6661,10 @@ data = {
 	arcadeID: "1453",
 	pumpoutID: 453,
 
+	Phoenix2: "=",
 	Phoenix: "= S12`11 -Dp3",
 	XX: "=",
 	Prime2: "= -S21 -D22 -D24 D22`23",
-		# yes, D23 on P1 became D22 on P2
-		# D22 on Prime - https:#www.youtube.com/watch?v=XCwJO8n5O7Y
-		# D23 on Prime - https:#www.youtube.com/watch?v=SZBvBn_ea4k
-		# D22 on Prime2 - https:#www.youtube.com/watch?v=pu7knXy5YXc
 	Prime: "@1.09 S7 S11 S17 S19 D12 D19  @1.11 S21.ucs D22.ucs D23.ucs D24.ucs  @1.15 Dp3",
 },
 
@@ -5863,6 +6675,7 @@ data = {
 	arcadeID: "1454",
 	pumpoutID: 325,
 
+	Phoenix2: "= D19`18 D21`20",
 	Phoenix: "= -Dp3",
 	XX: "= D20`21",
 	Prime2: "=  @1.09 D21",
@@ -5876,6 +6689,7 @@ data = {
 	arcadeID: "1457",
 	pumpoutID: 306,
 
+	Phoenix2: "=",
 	Phoenix: "= S4`3 D11`10 D19`18 -Dp2 @2.01 S17",
 	XX: "= S14`15 D15`16",
 	Prime2: "= -S16",
@@ -5889,6 +6703,7 @@ data = {
 	arcadeID: "1458",
 	pumpoutID: 351,
 
+	Phoenix2: "=",
 	Phoenix: "= D16`15 -S3 -Dp3",
 	XX: "=  @2.08 D21",
 	Prime2: "=",
@@ -5902,6 +6717,7 @@ data = {
 	arcadeID: "1459",
 	pumpoutID: 307,
 
+	Phoenix2: "= S11`10 D23`22",
 	Phoenix: "= -Dp3",
 	XX: "= D22`21",
 	Prime2: "=",
@@ -5915,6 +6731,7 @@ data = {
 	arcadeID: "1460",
 	pumpoutID: 324,
 
+	Phoenix2: "= S19`18 D20`19",
 	Phoenix: "= D13`11 D19`18 -Dp2",
 	XX: "= S18`17",
 	Prime2: "=",
@@ -5928,6 +6745,7 @@ data = {
 	arcadeID: "1461",
 	pumpoutID: 508,
 
+	Phoenix2: "=",
 	Phoenix: "= S4`3 S11`10 -Dp2 @2.08 CoOp(x4)",
 	XX: "=",
 	Prime2: "=  @1.08 Dp2  @2.03 D21",
@@ -5941,6 +6759,7 @@ data = {
 	arcadeID: "1462",
 	pumpoutID: 308,
 
+	Phoenix2: "=",
 	Phoenix: "= S8`7 S12`11 S21`20 -Dp3",
 	XX: "=",
 	Prime2: "=",
@@ -5954,6 +6773,7 @@ data = {
 	arcadeID: "1463",
 	pumpoutID: 322,
 
+	Phoenix2: "= D15`14",
 	Phoenix: "= D14`13 D17`16 -Dp3",
 	XX: "= S9`8 S17`18 D13`12",
 	Prime2: "=",
@@ -5967,6 +6787,7 @@ data = {
 	arcadeID: "1464",
 	pumpoutID: 309,
 
+	Phoenix2: "= S21`20",
 	Phoenix: "= S14`15 D17`16 -Dp4",
 	XX: "= S16`17  @2.05 D22.lock",
 	Prime2: "= -D19",
@@ -5980,6 +6801,7 @@ data = {
 	arcadeID: "1465",
 	pumpoutID: 467,
 
+	Phoenix2: "=",
 	Phoenix: "= S11`10 -Dp4",
 	XX: "= S10`9 D15`14",
 	Prime2: "=",
@@ -6051,6 +6873,7 @@ data = {
 	arcadeID: "1472",
 	pumpoutID: 454,
 
+	Phoenix2: "=",
 	Phoenix: "= -Dp3",
 	XX: "= D23`24",
 	Prime2: "=",
@@ -6064,6 +6887,7 @@ data = {
 	arcadeID: "1473",
 	pumpoutID: 463,
 
+	Phoenix2: "= S4`3 S7`6 S19`18",
 	Phoenix: "= S16`15 D11`10 D20`19 -Dp3 -Dp23",
 	XX: "= S18`17 D19`18  @1.03 Dp23",
 	Prime2: "=  @1.10 S15 D17",
@@ -6077,6 +6901,7 @@ data = {
 	arcadeID: "1474",
 	pumpoutID: 501,
 
+	Phoenix2: "=",
 	Phoenix: "= D11`9 -Dp5 @2.12 D23",
 	XX: "= D18`19",
 	Prime2: "=  @1.08 Dp5",
@@ -6090,6 +6915,7 @@ data = {
 	arcadeID: "1475",
 	pumpoutID: 461,
 
+	Phoenix2: "=",
 	Phoenix: "= D6`5 -Dp3",
 	XX: "= S14`15 D15`16",
 	Prime2: "=",
@@ -6103,6 +6929,7 @@ data = {
 	arcadeID: "1476",
 	pumpoutID: 465,
 
+	Phoenix2: "= D6`5",
 	Phoenix: "= S10`9 -Sp3 -Dp4 @2.12 S22 D24",
 	XX: "=  @2.07 CoOp(x2)",
 	Prime2: "=",
@@ -6116,6 +6943,7 @@ data = {
 	arcadeID: "1477",
 	pumpoutID: 346,
 
+	Phoenix2: "= D17`16 D22`21",
 	Phoenix: "= S8`7 D14`13 -Dp4",
 	XX: "= S21`20 D13`12 D21`20",
 	Prime2: "=  @2.04 D16",
@@ -6131,6 +6959,7 @@ data = {
 	arcadeID: "1478",
 	pumpoutID: 345,
 
+	Phoenix2: "=",
 	Phoenix: "= D9`8 -Dp4",
 	XX: "= D15`14",
 	Prime2: "S4 S6 S9 S14 S19  D8 D14 D19  @1.08 Dp4",
@@ -6144,6 +6973,7 @@ data = {
 	arcadeID: "1479",
 	pumpoutID: 344,
 
+	Phoenix2: "= S19`18",
 	Phoenix: "= D12`10 -Dp4",
 	XX: "=",
 	Prime2: "=  @1.08 Dp4",
@@ -6157,6 +6987,7 @@ data = {
 	arcadeID: "1480",
 	pumpoutID: 343,
 
+	Phoenix2: "=",
 	Phoenix: "= D9`8 -Dp5",
 	XX: "= D19`20",
 	Prime2: "=  @1.08 Dp5",
@@ -6171,6 +7002,7 @@ data = {
 	arcadeID: "1481",
 	pumpoutID: 342,
 
+	Phoenix2: "=",
 	Phoenix: "= D11`10 -Dp2",
 	XX: "= D20`21  @2.03  CoOp(x2)",
 	Prime2: "=",
@@ -6286,6 +7118,7 @@ data = {
 	arcadeID: "1490",
 	pumpoutID: 458,
 
+	Phoenix2: "=",
 	Phoenix: "= D13`12 D21`20 -Dp3",
 	XX: "= S21`20",
 	Prime2: "=  @1.08 Dp3",
@@ -6312,6 +7145,7 @@ data = {
 	arcadeID: "1492",
 	pumpoutID: 471,
 
+	Phoenix2: "=",
 	Phoenix: "= S12`11 D14`12 -Dp3",
 	XX: "=",
 	Prime2: "=",
@@ -6326,6 +7160,7 @@ data = {
 	arcadeID: "1493",
 	pumpoutID: 474,
 
+	Phoenix2: "=",
 	Phoenix: "= D11`10",
 	XX: "=",
 	Prime2: "=",
@@ -6340,8 +7175,8 @@ data = {
 	arcadeID: "1494",
 	pumpoutID: 478,
 
+	Phoenix2: "=",
 	Phoenix: "= S11`10 D15`12 D19`18 -Dp2",
-		# TODO.Phoenix: D15`12
 	XX: "=",
 	Prime2: "=",
 	Prime: "@1.14 S4 S7 S10 S16 D12 D18  S21 D22 D25  @1.15 Dp2",
@@ -6388,6 +7223,7 @@ data = {
 	arcadeID: "1497",
 	pumpoutID: 483,
 
+	Phoenix2: "= D22`21",
 	Phoenix: "= D13`12",
 	XX: "=  @2.05 D21.lock",
 	Prime2: "=",
@@ -6401,6 +7237,7 @@ data = {
 	arcadeID: "1498",
 	pumpoutID: 470,
 
+	Phoenix2: "=",
 	Phoenix: "= D11`10 -Dp4",
 	XX: "= D15`16 D19`20",
 	Prime2: "=",
@@ -6414,6 +7251,7 @@ data = {
 	arcadeID: "1499",
 	pumpoutID: 511,
 
+	Phoenix2: "=",
 	Phoenix: "= S19`18 D13`11 D20`19 -Dp2",
 	XX: "= S18`17 D19`18",
 	Prime2: "=  @1.08 Dp2",
@@ -6427,6 +7265,7 @@ data = {
 	arcadeID: "14A0",
 	pumpoutID: 310,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "= D20`21",
 	Prime2: "=",
@@ -6440,6 +7279,7 @@ data = {
 	arcadeID: "14A1",
 	pumpoutID: 329,
 
+	Phoenix2: "= S21`20",
 	Phoenix: "=",
 	XX: "= S20`19",
 	Prime2: "=",
@@ -6453,6 +7293,7 @@ data = {
 	arcadeID: "14A2",
 	pumpoutID: 506,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=  @2.04 D25",
@@ -6499,6 +7340,7 @@ data = {
 	arcadeID: "14C3",
 	pumpoutID: 468,
 
+	Phoenix2: "=",
 	Phoenix: "= -S17",
 	XX: "=",
 	Prime2: "= -D20",
@@ -6538,6 +7380,7 @@ data = {
 	arcadeID: "14C6",
 	pumpoutID: 456,
 
+	Phoenix2: "=",
 	Phoenix: "= D12`11",
 	XX: "=",
 	Prime2: "=",
@@ -6565,6 +7408,7 @@ data = {
 	arcadeID: "14E0",
 	pumpoutID: 464,
 
+	Phoenix2: "= S20`19 D18`17",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -6579,6 +7423,7 @@ data = {
 	arcadeID: "14E1",
 	pumpoutID: 313,
 
+	Phoenix2: "=",
 	Phoenix: "= S14`13",
 	XX: "=",
 	Prime2: "=",
@@ -6593,6 +7438,7 @@ data = {
 	arcadeID: "14E2",
 	pumpoutID: 354,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -6607,6 +7453,7 @@ data = {
 	arcadeID: "14E3",
 	pumpoutID: 326,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -6622,6 +7469,7 @@ data = {
 	arcadeID: "14E4",
 	pumpoutID: 314,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -6636,6 +7484,7 @@ data = {
 	arcadeID: "14E5",
 	pumpoutID: 341,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "= S17`16",
 	Prime2: "=",
@@ -6650,6 +7499,7 @@ data = {
 	arcadeID: "14E6",
 	pumpoutID: 323,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -6664,6 +7514,7 @@ data = {
 	arcadeID: "14E7",
 	pumpoutID: 457,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -6698,6 +7549,7 @@ data = {
 	arcadeID: "1301",
 	pumpoutID: 210,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`9 D11`9",
 	XX: "= S18`19  @2.05 S4",
 	Prime2: "=",
@@ -6723,6 +7575,7 @@ data = {
 	arcadeID: "1303",
 	pumpoutID: 212,
 
+	Phoenix2: "= D15`14",
 	Phoenix: "= S8`7 S12`11 D14`13 @2.12 D25",
 	XX: "= S11`10 S17`16 S19`20 D13`12 D18`17 D23`24",
 	Prime2: "=",
@@ -6737,6 +7590,7 @@ data = {
 	arcadeID: "1304",
 	pumpoutID: 213,
 
+	Phoenix2: "= S11`10 D21`20",
 	Phoenix: "= S10`9 D13`11",
 	XX: "=",
 	Prime2: "=",
@@ -6751,6 +7605,7 @@ data = {
 	arcadeID: "1305",
 	pumpoutID: 214,
 
+	Phoenix2: "= S12`11",
 	Phoenix: "= S11`10",
 	XX: "= S16`17 S18`19 S21`22 D12`13 D17`16",
 	Prime2: "=",
@@ -6766,6 +7621,7 @@ data = {
 	arcadeID: "1306",
 	pumpoutID: 215,
 
+	Phoenix2: "= D24`23",
 	Phoenix: "= S12`10 S16`15",
 	XX: "= S10`9 S22`23 -D17 D17`15 D18`19",
 	Prime2: "=",
@@ -6781,6 +7637,7 @@ data = {
 	arcadeID: "1307",
 	pumpoutID: 216,
 
+	Phoenix2: "=",
 	Phoenix: "= S7`6 S14`13",
 	XX: "= S13`12 S17`18 S21`22 D11`8 D23`24",
 	Prime2: "=",
@@ -6797,6 +7654,7 @@ data = {
 	arcadeID: "1308",
 	pumpoutID: 217,
 
+	Phoenix2: "= D16`15",
 	Phoenix: "=",
 	XX: "= S11`8 S13`11 S20`21 D14`13 D19`20  @2.06 D22.lock",
 	Prime2: "=",
@@ -6812,6 +7670,7 @@ data = {
 	arcadeID: "1309",
 	pumpoutID: 218,
 
+	Phoenix2: "= S19`18 D16`15",
 	Phoenix: "= S13`11 D15`13",
 	XX: "= S11`10 S18`17 S22`23 D13`12",
 	Prime2: "=",
@@ -6826,6 +7685,7 @@ data = {
 	arcadeID: "1310",
 	pumpoutID: 219,
 
+	Phoenix2: "= D23`22",
 	Phoenix: "= @2.00 D22",
 	XX: "= S14`15 S16`17 D18`19",
 	Prime2: "=",
@@ -6840,6 +7700,7 @@ data = {
 	arcadeID: "1311",
 	pumpoutID: 220,
 
+	Phoenix2: "=",
 	Phoenix: "= S13`11 D13`11",
 	XX: "= S11`10 S18`19",
 	Prime2: "=",
@@ -6854,6 +7715,7 @@ data = {
 	arcadeID: "1312",
 	pumpoutID: 221,
 
+	Phoenix2: "= S12`11",
 	Phoenix: "= S11`10 D14`12 D19`18",
 	XX: "= S10`9 D12`11 D20`19",
 	Prime2: "=",
@@ -6868,6 +7730,7 @@ data = {
 	arcadeID: "1313",
 	pumpoutID: 222,
 
+	Phoenix2: "= S19`18 D6`5 D18`17",
 	Phoenix: "= S9`8 D5`4 -Dp3",
 	XX: "=",
 	Prime2: "=",
@@ -6883,9 +7746,8 @@ data = {
 	arcadeID: "1314",
 	pumpoutID: 223,
 
+	Phoenix2: "= D15`14 D24`23",
 	Phoenix: "= S13`11 D14`11",
-		# TODO.Phoenix: D14`11
-		# D11.XX - https:#www.youtube.com/watch?v=dPI4E7H5eKU
 	XX: "= S11`10 S19`20",
 	Prime2: "=",
 	Prime: "= CoOp(x2)`Dp??(x2)  @1.12 S16.ucs",
@@ -7160,6 +8022,7 @@ data = {
 	arcadeID: "1338",
 	pumpoutID: 243,
 
+	Phoenix2: "=",
 	Phoenix: "= S5`4 D12`10",
 	XX: "= S20`21 D19`20",
 	Prime2: "=",
@@ -7174,6 +8037,7 @@ data = {
 	arcadeID: "1339",
 	pumpoutID: 244,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "= D23`24  @2.00 CoOp(x2)",
 	Prime2: "=",
@@ -7188,6 +8052,7 @@ data = {
 	arcadeID: "1340",
 	pumpoutID: 245,
 
+	Phoenix2: "=",
 	Phoenix: "= D10`9",
 	XX: "= D17`18",
 	Prime2: "=",
@@ -7202,6 +8067,7 @@ data = {
 	arcadeID: "1341",
 	pumpoutID: 246,
 
+	Phoenix2: "=",
 	Phoenix: "= -CoOp(x5)",
 	XX: "= D7`5 D10`12  @2.01 CoOp(x5)",
 	Prime2: "=",
@@ -7216,6 +8082,7 @@ data = {
 	arcadeID: "1390",
 	pumpoutID: 247,
 
+	Phoenix2: "= D23`22",
 	Phoenix: "= D15`13 D20`19",
 	XX: "= S13`12 D24`23  @2.03  CoOp(x4)",
 	Prime2: "=  @2.05 D22",
@@ -7255,6 +8122,7 @@ data = {
 	arcadeID: "13A2",
 	pumpoutID: 250,
 
+	Phoenix2: "=",
 	Phoenix: "= S19`20",
 	XX: "= D19`20",
 	Prime2: "=",
@@ -7270,6 +8138,7 @@ data = {
 	arcadeID: "13A3",
 	pumpoutID: 251,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "= S18`19 D23`24",
 	Prime2: "=",
@@ -7357,6 +8226,7 @@ data = {
 	arcadeID: "13E0",
 	pumpoutID: 258,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -7372,6 +8242,7 @@ data = {
 	arcadeID: "13E1",
 	pumpoutID: 259,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -7388,6 +8259,7 @@ data = {
 	arcadeID: "13E2",
 	pumpoutID: 260,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -7403,6 +8275,7 @@ data = {
 	arcadeID: "13E3",
 	pumpoutID: 261,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -7418,6 +8291,7 @@ data = {
 	arcadeID: "13E4",
 	pumpoutID: 262,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -7433,6 +8307,7 @@ data = {
 	arcadeID: "13E5",
 	pumpoutID: 263,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -7451,6 +8326,7 @@ data = {
 	arcadeID: "1201",
 	pumpoutID: 264,
 
+	Phoenix2: "= D23`22",
 	Phoenix: "=",
 	XX: "= S15`16 D14`13 D17`18 D22`23  @1.03 S21.lock",
 	Prime2: "=  @1.10 D23",
@@ -7508,6 +8384,7 @@ data = {
 	arcadeID: "1209",
 	pumpoutID: 268,
 
+	Phoenix2: "= S15`14 D15`14",
 	Phoenix: "= S14`13 D14`13",
 	XX: "=",
 	Prime2: "=",
@@ -7523,6 +8400,7 @@ data = {
 	arcadeID: "1210",
 	pumpoutID: 547,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "S1 S3 S5 S14 D6 D15 CoOp(x2)",
 },
@@ -7534,11 +8412,9 @@ data = {
 	arcadeID: "1212",
 	pumpoutID: 269,
 
+	Phoenix2: "= D16`15",
 	Phoenix: "= S12`11 S22`21",
 	XX: "= D15`16 D22`23  @2.07 S18",
-		#??? D22.updated
-		# D22-XX - https:#www.youtube.com/watch?v=gPUJICScJeI
-		# D23-P2 vs D22-XX - https:#www.youtube.com/watch?v=mbsveAMw7sk
 	Prime2: "=",
 	Prime: "=",
 	Fiesta2: "S4 S7 S11  @1.50 S21 D16  @1.60 D23",
@@ -7567,6 +8443,7 @@ data = {
 	arcadeID: "1219",
 	pumpoutID: 271,
 
+	Phoenix2: "=",
 	Phoenix: "= S4`3 S5`6",
 	XX: "= S17`16 D17`15",
 	Prime2: "=",
@@ -7633,6 +8510,7 @@ data = {
 	arcadeID: "1228",
 	pumpoutID: 208,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "= -S22 D23`24",
 	Prime2: "=",
@@ -7667,6 +8545,7 @@ data = {
 	arcadeID: "1235",
 	pumpoutID: 277,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`9 D13`9 @2.00 S20 D22",
 	XX: "=",
 	Prime2: "=",
@@ -7681,6 +8560,7 @@ data = {
 	arcadeID: "1236",
 	pumpoutID: 278,
 
+	Phoenix2: "= S6`5 S15`14",
 	Phoenix: "= S10`9",
 	XX: "= D17`18",
 	Prime2: "=",
@@ -7709,6 +8589,7 @@ data = {
 	arcadeID: "1240",
 	pumpoutID: 209,
 
+	Phoenix2: "= D20`19",
 	Phoenix: "=",
 	XX: "= D17`16",
 	Prime2: "=",
@@ -7723,6 +8604,7 @@ data = {
 	arcadeID: "1241",
 	pumpoutID: 280,
 
+	Phoenix2: "=",
 	Phoenix: "= S13`12 D22`21",
 	XX: "= D15`14",
 	Prime2: "=",
@@ -7741,6 +8623,7 @@ data = {
 	arcadeID: "1101",
 	pumpoutID: 172,
 
+	Phoenix2: "= S14`13",
 	Phoenix: "= S13`12",
 	XX: "= S17`18 S21`22 D25`24",
 	Prime2: "=",
@@ -7756,6 +8639,7 @@ data = {
 	arcadeID: "1102",
 	pumpoutID: 173,
 
+	Phoenix2: "= D14`13",
 	Phoenix: "= S12`11 D13`12 D19`18 -Sp2 -Dp3",
 	XX: "= D18`19 D22`21",
 	Prime2: "=",
@@ -7771,6 +8655,7 @@ data = {
 	arcadeID: "1103",
 	pumpoutID: 174,
 
+	Phoenix2: "= S10`9 S16`15 S18`17 D16`15",
 	Phoenix: "= S4`3 S9`8 D6`4 -Sp4 -Dp2",
 	XX: "= S15`14",
 	Prime2: "=",
@@ -7786,6 +8671,7 @@ data = {
 	arcadeID: "1104",
 	pumpoutID: 175,
 
+	Phoenix2: "= S12`11 S21`20 D20`19 D23`22 D24`23",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -7801,6 +8687,7 @@ data = {
 	arcadeID: "1105",
 	pumpoutID: 176,
 
+	Phoenix2: "= S14`13 S17`16",
 	Phoenix: "= S4`3 S9`8 D8`7 -Sp2 -Dp3",
 	XX: "=",
 	Prime2: "=",
@@ -7816,6 +8703,7 @@ data = {
 	arcadeID: "1106",
 	pumpoutID: 177,
 
+	Phoenix2: "= S21`20",
 	Phoenix: "= -Sp2 -Dp3",
 	XX: "= D19`20",
 	Prime2: "=",
@@ -7831,8 +8719,8 @@ data = {
 	arcadeID: "1107",
 	pumpoutID: 178,
 
+	Phoenix2: "=",
 	Phoenix: "= S9`8 D7`4 -Sp2 -S20 -Dp3",
-		# TODO.Phoenix: D7`4
 	XX: "=",
 	Prime2: "=",
 	Prime: "=",
@@ -7983,6 +8871,7 @@ data = {
 	arcadeID: "1120",
 	pumpoutID: 200,
 
+	Phoenix2: "= S22`21 D19`20",
 	Phoenix: "=",
 	XX: "= S21`20",
 	Prime2: "=",
@@ -7998,6 +8887,7 @@ data = {
 	arcadeID: "1121",
 	pumpoutID: 201,
 
+	Phoenix2: "=",
 	Phoenix: "= S11`9 D14`12 -Sp2",
 	XX: "=",
 	Prime2: "=",
@@ -8013,6 +8903,7 @@ data = {
 	arcadeID: "1122",
 	pumpoutID: 202,
 
+	Phoenix2: "= D24`23",
 	Phoenix: "= S5`4 D11`9 -Sp1 -Dp6",
 	XX: "= S10`11",
 	Prime2: "=",
@@ -8028,6 +8919,7 @@ data = {
 	arcadeID: "1123",
 	pumpoutID: 179,
 
+	Phoenix2: "= D22`21",
 	Phoenix: "= S9`8 D11`9 -Sp2",
 	XX: "=  @2.06 D21.lock",
 	Prime2: "=",
@@ -8043,6 +8935,7 @@ data = {
 	arcadeID: "1124",
 	pumpoutID: 180,
 
+	Phoenix2: "= S20`19 D22`20",
 	Phoenix: "= D15`14",
 	XX: "= S19`20 D14`13 D20`21",
 	Prime2: "=",
@@ -8058,6 +8951,7 @@ data = {
 	arcadeID: "1125",
 	pumpoutID: 203,
 
+	Phoenix2: "=",
 	Phoenix: "= D13`11 D21`20 -Sp2 -Dp6",
 	XX: "=",
 	Prime2: "=",
@@ -8073,6 +8967,7 @@ data = {
 	arcadeID: "1126",
 	pumpoutID: 181,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`9 D11`10 -Sp2 -Dp3",
 	XX: "=",
 	Prime2: "=",
@@ -8088,6 +8983,7 @@ data = {
 	arcadeID: "1127",
 	pumpoutID: 204,
 
+	Phoenix2: "= S17`16 D18`17",
 	Phoenix: "= S3`4 -Sp1 -Dp3",
 	XX: "=",
 	Prime2: "=",
@@ -8103,6 +8999,7 @@ data = {
 	arcadeID: "1128",
 	pumpoutID: 205,
 
+	Phoenix2: "=",
 	Phoenix: "= D15`14 -Sp2 -Dp3",
 	XX: "= D14`13 D23`24",
 	Prime2: "=",
@@ -8139,6 +9036,7 @@ data = {
 	arcadeID: "1131",
 	pumpoutID: 182,
 
+	Phoenix2: "=",
 	Phoenix: "= S16`15 D26`27",
 	XX: "= ",
 	Prime2: "=",
@@ -8154,6 +9052,7 @@ data = {
 	arcadeID: "1132",
 	pumpoutID: 183,
 
+	Phoenix2: "=",
 	Phoenix: "= S21`19 D19`18",
 	XX: "=",
 	Prime2: "=",
@@ -8173,6 +9072,7 @@ data = {
 	arcadeID: "1135",
 	pumpoutID: 184,
 
+	Phoenix2: "=",
 	Phoenix: "= S19`18 D16`15",
 	XX: "=",
 	Prime2: "=",
@@ -8282,6 +9182,7 @@ data = {
 	arcadeID: "1145",
 	pumpoutID: 185,
 
+	Phoenix2: "=",
 	Phoenix: "= D15`14",
 	XX: "= D14`15",
 	Prime2: "=",
@@ -8298,6 +9199,7 @@ data = {
 	arcadeID: "1146",
 	pumpoutID: 186,
 
+	Phoenix2: "= S22`21",
 	Phoenix: "=",
 	XX: "= D22`20",
 	Prime2: "=",
@@ -8314,6 +9216,7 @@ data = {
 	arcadeID: "1147",
 	pumpoutID: 187,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -8330,6 +9233,7 @@ data = {
 	arcadeID: "1148",
 	pumpoutID: 188,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -8346,6 +9250,7 @@ data = {
 	arcadeID: "1149",
 	pumpoutID: 206,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -8365,6 +9270,7 @@ data = {
 	arcadeID: "1151",
 	pumpoutID: 696,
 
+	Phoenix2: "=",
 	Phoenix: "= S20`19 D21`20",
 	XX: "@2.06 S3 S6 S9 S14 S17 D8 D15 S19.lock D20.lock",
 },
@@ -8380,6 +9286,7 @@ data = {
 	arcadeID: "1152",
 	pumpoutID: 189,
 
+	Phoenix2: "= D23`22",
 	Phoenix: "= -Sp2",
 	XX: "= D17`16",
 	Prime2: "=",
@@ -8395,6 +9302,7 @@ data = {
 	arcadeID: "1153",
 	pumpoutID: 190,
 
+	Phoenix2: "= S19`20",
 	Phoenix: "= S15`13 D17`16 D23`22",
 	XX: "=  @2.01 D22.lock",
 	Prime2: "=",
@@ -8414,6 +9322,7 @@ data = {
 	arcadeID: "1154",
 	pumpoutID: 191,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -8448,8 +9357,8 @@ data = {
 	arcadeID: "1160",
 	pumpoutID: 192,
 
+	Phoenix2: "=",
 	Phoenix: "= D13`10",
-		# TODO.Phoenix: D13`10
 	XX: "=  @1.04 S18 D19  @2.05 S4 S6",
 	Prime2: "=",
 	Prime: "= -D18",
@@ -8469,6 +9378,7 @@ data = {
 	arcadeID: "1001",
 	pumpoutID: 129,
 
+	Phoenix2: "= S15`14 D17`16",
 	Phoenix: "= S9`7 S14`12 D16`15 D20`19 -Sp2 -Dp3",
 	XX: "= S2`3 D15`14 D19`18",
 	Prime2: "=",
@@ -8485,9 +9395,8 @@ data = {
 	arcadeID: "1002",
 	pumpoutID: 130,
 
+	Phoenix2: "= S22`21",
 	Phoenix: "= D13`8 D18`17",
-		# TODO.Phoenix: D13`8
-		# XX D8 - https:#www.youtube.com/watch?v=_z3tzYjZwTs
 	XX: "= S17`15",
 	Prime2: "=",
 	Prime: "= CoOp(x2)`Dp??(x2)",
@@ -8503,6 +9412,7 @@ data = {
 	arcadeID: "1003",
 	pumpoutID: 369,
 
+	Phoenix2: "=",
 	Phoenix: "= S12`10 -Sp3 -Dp3",
 	XX: "=",
 	Prime2: "=",
@@ -8566,9 +9476,9 @@ data = {
 	arcadeID: "1008",
 	pumpoutID: 131,
 
+	Phoenix2: "=",
 	Phoenix: "= -Sp2 -Dp4",
 	XX: "= S20`18",
-		# S18->20 - https:#www.youtube.com/watch?v=JYmZxSbKafo (XX), https:#www.youtube.com/watch?v=V9sikisXVts
 	Prime2: "=",
 	Prime: "=",
 	Fiesta2: "=",
@@ -8632,6 +9542,7 @@ data = {
 	arcadeID: "1013",
 	pumpoutID: 132,
 
+	Phoenix2: "= S21`20",
 	Phoenix: "= S13`12 D15`14 -Dp5",
 	XX: "= S12`11 S17`16 S19`18 S20`19 D14`13",
 	Prime2: "=",
@@ -8687,6 +9598,7 @@ data = {
 	arcadeID: "1017",
 	pumpoutID: 133,
 
+	Phoenix2: "= D17`16 D22`21",
 	Phoenix: "= -Dp3 @2.00 S16 D16",
 	XX: "= D21`22",
 	Prime2: "=",
@@ -8742,6 +9654,7 @@ data = {
 	arcadeID: "1021",
 	pumpoutID: 372,
 
+	Phoenix2: "=",
 	Phoenix: "= D16`15 -Sp4 -Dp5",
 	XX: "=",
 	Prime2: "=",
@@ -8757,6 +9670,7 @@ data = {
 	arcadeID: "1022",
 	pumpoutID: 134,
 
+	Phoenix2: "= D14`13",
 	Phoenix: "= S11`10 D13`12 -Sp1",
 	XX: "=",
 	Prime2: "=",
@@ -8773,6 +9687,7 @@ data = {
 	arcadeID: "1023",
 	pumpoutID: 135,
 
+	Phoenix2: "=",
 	Phoenix: "= S13`11 D15`12 D22`21 -Dp2",
 	XX: "= S11`9 S19`18 D12`10 D21`20",
 	Prime2: "=",
@@ -8789,6 +9704,7 @@ data = {
 	arcadeID: "1024",
 	pumpoutID: 136,
 
+	Phoenix2: "= S4`3",
 	Phoenix: "= S17`16 S18`17 -Sp5 -Dp4",
 	XX: "=",
 	Prime2: "=",
@@ -8805,8 +9721,8 @@ data = {
 	arcadeID: "1025",
 	pumpoutID: 137,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`9 D12`9",
-		# TODO.Phoenix: D12`9
 	XX: "= D20`21",
 	Prime2: "=",
 	Prime: "=",
@@ -8823,6 +9739,7 @@ data = {
 	arcadeID: "1026",
 	pumpoutID: 138,
 
+	Phoenix2: "= S4`3",
 	Phoenix: "= D13`11 -Dp1",
 	XX: "= S10`8 D11`10",
 	Prime2: "=",
@@ -8839,6 +9756,7 @@ data = {
 	arcadeID: "1027",
 	pumpoutID: 139,
 
+	Phoenix2: "=",
 	Phoenix: "= S11`10 D12`11 -Dp3",
 	XX: "= D19`20",
 	Prime2: "=",
@@ -8855,6 +9773,7 @@ data = {
 	arcadeID: "1028",
 	pumpoutID: 140,
 
+	Phoenix2: "= S20`19 D20`19",
 	Phoenix: "= S16`15 -Dp3",
 	XX: "= S22`21 D17`15 D21`20",
 	Prime2: "=",
@@ -8871,6 +9790,7 @@ data = {
 	arcadeID: "1029",
 	pumpoutID: 381,
 
+	Phoenix2: "= D20`19",
 	Phoenix: "= D19`18 -Sp3 -Dp5",
 	XX: "= S19`18 D18`17  @1.02 D21.new",
 	Prime2: "=",
@@ -8886,8 +9806,8 @@ data = {
 	arcadeID: "1030",
 	pumpoutID: 387,
 
+	Phoenix2: "= D19`18",
 	Phoenix: "= S2`1 S6`5 S14`13 S16`15 D9`6 D18`17 -Dp5 -Sp4 -Dp6",
-		# TODO.Phoenix: D9`6
 	XX: "= S4`3",
 	Prime2: "=",
 	Fiesta2: "=",
@@ -8902,6 +9822,7 @@ data = {
 	arcadeID: "1031",
 	pumpoutID: 141,
 
+	Phoenix2: "=",
 	Phoenix: "= S14`12 D15`14",
 	XX: "= D14`13",
 	Prime2: "=",
@@ -8930,6 +9851,7 @@ data = {
 	arcadeID: "1033",
 	pumpoutID: 142,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`8",
 	XX: "=",
 	Prime2: "=",
@@ -8946,6 +9868,7 @@ data = {
 	arcadeID: "1034",
 	pumpoutID: 143,
 
+	Phoenix2: "=",
 	Phoenix: "= S13`11",
 	XX: "=",
 	Prime2: "=",
@@ -8990,6 +9913,7 @@ data = {
 	arcadeID: "1037",
 	pumpoutID: 145,
 
+	Phoenix2: "=",
 	Phoenix: "= S18`17",
 	XX: "=",
 	Prime2: "=",
@@ -9019,6 +9943,7 @@ data = {
 	arcadeID: "1039",
 	pumpoutID: 146,
 
+	Phoenix2: "=",
 	Phoenix: "= D21`20",
 	XX: "= S21`20 D20`19",
 	Prime2: "=",
@@ -9141,6 +10066,7 @@ data = {
 	arcadeID: "1048",
 	pumpoutID: 147,
 
+	Phoenix2: "=",
 	Phoenix: "= D19`18",
 	XX: "= S17`16 D18`17",
 	Prime2: "=",
@@ -9158,6 +10084,7 @@ data = {
 	arcadeID: "1049",
 	pumpoutID: 148,
 
+	Phoenix2: "=",
 	Phoenix: "= D18`16",
 	XX: "= S18`17",
 	Prime2: "=",
@@ -9175,6 +10102,7 @@ data = {
 	arcadeID: "1050",
 	pumpoutID: 149,
 
+	Phoenix2: "= S21`20",
 	Phoenix: "=",
 	XX: "= D20`19",
 	Prime2: "=",
@@ -9192,6 +10120,7 @@ data = {
 	arcadeID: "1051",
 	pumpoutID: 150,
 
+	Phoenix2: "=",
 	Phoenix: "= D18`17",
 	XX: "=",
 	Prime2: "=",
@@ -9209,6 +10138,7 @@ data = {
 	arcadeID: "1052",
 	pumpoutID: 151,
 
+	Phoenix2: "=",
 	Phoenix: "= S9`8 D23`22",
 	XX: "= D22`21",
 	Prime2: "=",
@@ -9226,6 +10156,7 @@ data = {
 	arcadeID: "1053",
 	pumpoutID: 152,
 
+	Phoenix2: "= D17`16 D24`23",
 	Phoenix: "= S16`15 D16`15 D23`22 -Sp15",
 	XX: "= S15`14 D15`14 D22`21",
 	Prime2: "=",
@@ -9243,6 +10174,7 @@ data = {
 	arcadeID: "1054",
 	pumpoutID: 153,
 
+	Phoenix2: "= S21`20",
 	Phoenix: "= D15`14",
 	XX: "= D14`13",
 	Prime2: "=",
@@ -9260,8 +10192,8 @@ data = {
 	arcadeID: "1055",
 	pumpoutID: 154,
 
+	Phoenix2: "=",
 	Phoenix: "= S11`9 D13`10",
-		# TODO.Phoenix: D13`10
 	XX: "=",
 	Prime2: "=",
 	Prime: "=",
@@ -9278,6 +10210,7 @@ data = {
 	arcadeID: "1056",
 	pumpoutID: 155,
 
+	Phoenix2: "=",
 	Phoenix: "= D18`17",
 	XX: "=",
 	Prime2: "=",
@@ -9295,6 +10228,7 @@ data = {
 	arcadeID: "1057",
 	pumpoutID: 156,
 
+	Phoenix2: "= D21`20",
 	Phoenix: "=",
 	XX: "= S15`16 S19`18",
 	Prime2: "=",
@@ -9312,6 +10246,7 @@ data = {
 	arcadeID: "1058",
 	pumpoutID: 157,
 
+	Phoenix2: "= S21`20 D18`17",
 	Phoenix: "=",
 	XX: "= D17`16",
 	Prime2: "=",
@@ -9329,6 +10264,7 @@ data = {
 	arcadeID: "1059",
 	pumpoutID: 158,
 
+	Phoenix2: "=",
 	Phoenix: "= S16`15",
 	XX: "= D18`19",
 	Prime2: "=",
@@ -9347,6 +10283,7 @@ data = {
 	arcadeID: "1060",
 	pumpoutID: 159,
 
+	Phoenix2: "=",
 	Phoenix: "= D18`17",
 	XX: "=",
 	Prime2: "=",
@@ -9365,6 +10302,7 @@ data = {
 	arcadeID: "1061",
 	pumpoutID: 160,
 
+	Phoenix2: "=",
 	Phoenix: "= S9`8",
 	XX: "=",
 	Prime2: "=",
@@ -9382,6 +10320,7 @@ data = {
 	arcadeID: "1062",
 	pumpoutID: 161,
 
+	Phoenix2: "= S23`22",
 	Phoenix: "= S15`14 S22`23",
 	XX: "= S14`13",
 	Prime2: "=",
@@ -9400,6 +10339,7 @@ data = {
 	arcadeID: "1063",
 	pumpoutID: 162,
 
+	Phoenix2: "= D23`22",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -9417,6 +10357,7 @@ data = {
 	arcadeID: "1064",
 	pumpoutID: 163,
 
+	Phoenix2: "= D21`20 D22`21",
 	Phoenix: "= S11`9 D20`19 D21`20",
 	XX: "= D19`18",
 	Prime2: "=",
@@ -9477,6 +10418,7 @@ data = {
 	arcadeID: "1094",
 	pumpoutID: 164,
 
+	Phoenix2: "=",
 	Phoenix: "= D11`9 D20`19",
 	XX: "= S17`16 D19`18",
 	Prime2: "=",
@@ -9493,6 +10435,7 @@ data = {
 	arcadeID: "1095",
 	pumpoutID: 165,
 
+	Phoenix2: "= S22`21 D23`22",
 	Phoenix: "= S15`14 D16`15",
 	XX: "= S14`13 S21`22 D15`14 D22`23",
 	Prime2: "=",
@@ -9527,6 +10470,7 @@ data = {
 	arcadeID: "F01",
 	pumpoutID: 78,
 
+	Phoenix2: "=",
 	Phoenix: "= D11`10 D18`17 D19`18",
 	XX: "=",
 	Prime2: "=",
@@ -9544,6 +10488,7 @@ data = {
 	arcadeID: "F02",
 	pumpoutID: 79,
 
+	Phoenix2: "= S4`3",
 	Phoenix: "= S13`12 D15`14",
 	XX: "= S12`10 D14`13",
 	Prime2: "=",
@@ -9561,6 +10506,7 @@ data = {
 	arcadeID: "F03",
 	pumpoutID: 80,
 
+	Phoenix2: "=",
 	Phoenix: "= -Sp1 -D3",
 	XX: "=  @2.07 S12",
 	Prime2: "=",
@@ -9816,6 +10762,7 @@ data = {
 	arcadeID: "F22",
 	pumpoutID: 81,
 
+	Phoenix2: "=",
 	Phoenix: "= S16`15 D8`7",
 	XX: "= S3`2  @2.07 CoOp(x2)",
 	Prime2: "=  @2.04 S12",
@@ -9833,6 +10780,7 @@ data = {
 	arcadeID: "F23",
 	pumpoutID: 82,
 
+	Phoenix2: "=",
 	Phoenix: "= S7`6 S10`8",
 	XX: "=  @2.00 S17 D20",
 	Prime2: "=",
@@ -9852,8 +10800,8 @@ data = {
 	arcadeID: "F24",
 	pumpoutID: 83,
 
+	Phoenix2: "=",
 	Phoenix: "= S1`2 S10`8 D14`10 D19`18",
-		# TODO.Phoenix: D14`10
 	XX: "=",
 	Prime2: "=",
 	Prime: "=",
@@ -9870,6 +10818,7 @@ data = {
 	arcadeID: "F25",
 	pumpoutID: 84,
 
+	Phoenix2: "=",
 	Phoenix: "= D19`18 -Dp5",
 	XX: "= S18`17 S19`18  @2.00 D22.lock",
 	Prime2: "=",
@@ -9887,6 +10836,7 @@ data = {
 	arcadeID: "F26",
 	pumpoutID: 85,
 
+	Phoenix2: "=",
 	Phoenix: "= S11`10 D15`14 D18`17 -Sp3 -Dp6",
 	XX: "=",
 	Prime2: "=",
@@ -9935,6 +10885,7 @@ data = {
 	arcadeID: "F29",
 	pumpoutID: 86,
 
+	Phoenix2: "= S18`17 S24`23",
 	Phoenix: "= S9`8 -Dp2",
 	XX: "=",
 	Prime2: "=",
@@ -9966,6 +10917,7 @@ data = {
 	arcadeID: "F31",
 	pumpoutID: 87,
 
+	Phoenix2: "= D7`6",
 	Phoenix: "= S8`7 D6`4",
 	XX: "= D18`17",
 	Prime2: "=",
@@ -9983,6 +10935,7 @@ data = {
 	arcadeID: "F32",
 	pumpoutID: 766,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "S17`cz D18`nm",
 	NXA_: ["", "12", "15", "", "16"],
@@ -9995,6 +10948,7 @@ data = {
 	arcadeID: "F33",
 	pumpoutID: 88,
 
+	Phoenix2: "= D23`22",
 	Phoenix: "= S12`11 S21`20",
 	XX: "= S20`19",
 	Prime2: "=",
@@ -10012,6 +10966,7 @@ data = {
 	arcadeID: "F34",
 	pumpoutID: 89,
 
+	Phoenix2: "= S19`18",
 	Phoenix: "= S12`10",
 	XX: "= S10`8",
 	Prime2: "=",
@@ -10123,8 +11078,8 @@ data = {
 	arcadeID: "F43",
 	pumpoutID: 421,
 
+	Phoenix2: "=",
 	Phoenix: "= D14`11 -S8",
-		# TODO.Phoenix: D14`11
 	XX: "=",
 	Prime2: "=",
 	Fiesta2: "=",
@@ -10178,6 +11133,7 @@ data = {
 	arcadeID: "F50",
 	pumpoutID: 90,
 
+	Phoenix2: "=",
 	Phoenix: "= S17`15 D20`19",
 	XX: "=",
 	Prime2: "=",
@@ -10401,6 +11357,7 @@ data = {
 	arcadeID: "E01",
 	pumpoutID: 92,
 
+	Phoenix2: "=",
 	Phoenix: "= -Sp4 -Dp6",
 	XX: "=",
 	Prime2: "=",
@@ -10419,6 +11376,7 @@ data = {
 	arcadeID: "E02",
 	pumpoutID: 93,
 
+	Phoenix2: "= D21`20",
 	Phoenix: "= S4`3 S11`9 -D7",
 	XX: "=",
 	Prime2: "=",
@@ -10436,6 +11394,7 @@ data = {
 	arcadeID: "E03",
 	pumpoutID: 94,
 
+	Phoenix2: "=",
 	Phoenix: "= D11`10 D19`18 D22`21",
 	XX: "=",
 	Prime2: "=  @1.10 S19",
@@ -10454,6 +11413,7 @@ data = {
 	arcadeID: "E04",
 	pumpoutID: 411,
 
+	Phoenix2: "= S15`14",
 	Phoenix: "= D17`16 -Sp4 -D10",
 	XX: "= S9`10 D10`12",
 	Prime2: "=",
@@ -10469,6 +11429,7 @@ data = {
 	arcadeID: "E05",
 	pumpoutID: 95,
 
+	Phoenix2: "=",
 	Phoenix: "= D8`7",
 	XX: "= S4`6 S8`10 D7`9",
 	Prime2: "=",
@@ -10560,6 +11521,7 @@ data = {
 	arcadeID: "E12",
 	pumpoutID: 96,
 
+	Phoenix2: "= S17`16",
 	Phoenix: "= S13`11 S21`20 D15`14",
 	XX: "= S7`6 S11`8 D21`20",
 	Prime2: "=",
@@ -10579,6 +11541,7 @@ data = {
 	arcadeID: "E13",
 	pumpoutID: 97,
 
+	Phoenix2: "= S14`13 D16`15",
 	Phoenix: "= S13`12 S20`19 -Sp10 -Dp2",
 	XX: "= S18`17 D15`13",  # S18.updated - степы в начале холдов, считать новым чартом
 	# S18-XX - https:#www.youtube.com/watch?v=jQMIZhG0sqA
@@ -10605,6 +11568,7 @@ data = {
 	arcadeID: "FE13B",
 	pumpoutID: 91,
 
+	Phoenix2: "=",
 	Phoenix: "= S17`16 S18`17 -Sp15",
 	XX: "=",
 	Prime2: "=",
@@ -10738,6 +11702,7 @@ data = {
 	arcadeID: "E23",
 	pumpoutID: 405,
 
+	Phoenix2: "=",
 	Phoenix: "= -D10 -D13",
 	XX: "= S7`9 S20`18",
 	Prime2: "=",
@@ -10753,6 +11718,7 @@ data = {
 	arcadeID: "E24",
 	pumpoutID: 98,
 
+	Phoenix2: "= S20`19 D17`16",
 	Phoenix: "= S15`14 D16`15 -Sp1",
 	XX: "=  @1.03 D20.lock  @2.05 S19`acz",
 	Prime2: "=",
@@ -10772,6 +11738,7 @@ data = {
 	arcadeID: "E25",
 	pumpoutID: 408,
 
+	Phoenix2: "= S8`7",
 	Phoenix: "= S16`15 -Sp2 -Dp6",
 	XX: "= S15`14 D15`14",
 	Prime2: "=",
@@ -10877,6 +11844,7 @@ data = {
 	arcadeID: "E50",
 	pumpoutID: 99,
 
+	Phoenix2: "= S23`22 D25`24",
 	Phoenix: "=",
 	XX: "=",
 	Prime2: "=",
@@ -10905,8 +11873,8 @@ data = {
 	arcadeID: "E52",
 	pumpoutID: 412,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`8 D14`9 D19`17",
-		# TODO.Phoenix: D14`9
 	XX: "= S17`16",
 	Prime2: "=",
 	Fiesta2: "=",
@@ -11170,6 +12138,7 @@ data = {
 	arcadeID: "E928",
 	pumpoutID: 44,
 
+	Phoenix2: "=",
 	Phoenix: "= S12`11 D15`14",
 	XX: "= S11`8 D14`13",
 	Prime2: "=",
@@ -11206,6 +12175,7 @@ data = {
 	arcadeID: "D01",
 	pumpoutID: 100,
 
+	Phoenix2: "= S6`5",
 	Phoenix: "= S17`16 S18`17 -Sp3 -Dp7",
 	XX: "= S16`15 S17`16 S19`18 D21`19",
 	# D21-XX - https:#www.youtube.com/watch?v=Wj_1xUDGHa0
@@ -11226,6 +12196,7 @@ data = {
 	arcadeID: "D02",
 	pumpoutID: 101,
 
+	Phoenix2: "=",
 	Phoenix: "= -S4 -S8 -D7 -D20",
 	XX: "= S15`14 S17`16",
 	Prime2: "=  @2.05 D20",
@@ -11244,6 +12215,7 @@ data = {
 	arcadeID: "D03",
 	pumpoutID: 102,
 
+	Phoenix2: "=",
 	Phoenix: "= S13`12 D18`16",
 	XX: "= S9`7 S12`11 S19`16 D26`25  @2.03  D22",  #??? S19.updated (something with ending?)
 	# S19-XX - https:#www.youtube.com/watch?v=ieMFtCNbSac
@@ -11380,6 +12352,7 @@ data = {
 	arcadeID: "D14",
 	pumpoutID: 392,
 
+	Phoenix2: "=",
 	Phoenix: "= D14`13 -Dp5",
 	XX: "= S9`10",
 	Prime2: "=",
@@ -11397,6 +12370,7 @@ data = {
 	arcadeID: "D15",
 	pumpoutID: 103,
 
+	Phoenix2: "= D21`20",
 	Phoenix: "= S17`15 D20`19 -Dp8",
 	XX: "= S15`14 D19`18",
 	Prime2: "=",
@@ -11414,6 +12388,7 @@ data = {
 	arcadeID: "D16",
 	pumpoutID: 104,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "= S9`11 S20`18 D9`11 D24`22",
 	Prime2: "=",
@@ -11431,6 +12406,7 @@ data = {
 	arcadeID: "D17",
 	pumpoutID: 105,
 
+	Phoenix2: "= D19`18 D22`21",
 	Phoenix: "= S11`9 S15`14 S17`16 D12`9",
 	XX: "= S9`8 D18`17  @2.03  S14",
 	Prime2: "=",
@@ -11449,6 +12425,7 @@ data = {
 	arcadeID: "D18",
 	pumpoutID: 106,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`9 D17`15",
 	XX: "= D15`11 D18`15  @2.07 S17",
 	Prime2: "=",
@@ -11582,6 +12559,7 @@ data = {
 	arcadeID: "D28",
 	pumpoutID: 107,
 
+	Phoenix2: "=",
 	Phoenix: "= S19`18",
 	XX: "= S8`7 S22`20 D12`9 D22`21 D23`22",  #??? S22.updated
 	# S22-XX - https:#www.youtube.com/watch?v=Rbcztfs6jx4
@@ -11614,6 +12592,7 @@ data = {
 	arcadeID: "D30",
 	pumpoutID: 108,
 
+	Phoenix2: "= S9`8 S22`21 S23`22",
 	Phoenix: "=",
 	XX: "= S8`7 S17`16 S18`17 D19`18",  #??? S18.updated
 	# S18-XX - https:#www.youtube.com/watch?v=Y3y2gjcy4d8
@@ -11676,6 +12655,7 @@ data = {
 	arcadeID: "D34",
 	pumpoutID: 109,
 
+	Phoenix2: "= D18`17",
 	Phoenix: "= S17`15 D17`16",
 	XX: "= D16`15 D24`23",
 	Prime2: "=",
@@ -11695,6 +12675,7 @@ data = {
 	arcadeID: "D35",
 	pumpoutID: 110,
 
+	Phoenix2: "= S18`17 D19`18",
 	Phoenix: "=",
 	XX: "= S17`16",
 	Prime2: "=",
@@ -11715,6 +12696,7 @@ data = {
 	arcadeID: "D36",
 	pumpoutID: 767,
 
+	Phoenix2: "= S22`21 D23`22",
 	Phoenix: "=",
 	XX: "S15`hd S21`cz  D16`fs D22`nm",
 	NX2_: ["", "14", "19", "15", "20"],
@@ -11771,6 +12753,7 @@ data = {
 	arcadeID: "D41",
 	pumpoutID: 111,
 
+	Phoenix2: "= D22`21",
 	Phoenix: "= S20`19",
 	XX: "=",
 	Prime2: "=",
@@ -11790,6 +12773,7 @@ data = {
 	arcadeID: "D42",
 	pumpoutID: 112,
 
+	Phoenix2: "= D22`21",
 	Phoenix: "= S21`20",
 	XX: "= S20`19 D21`20",
 	Prime2: "=",
@@ -11831,6 +12815,7 @@ data = {
 	arcadeID: "C01",
 	pumpoutID: 47,
 
+	Phoenix2: "= D21`20",
 	Phoenix: "= S7`6 S11`10 S17`16 D15`14",
 	XX: "= S21.new D14`12 D20`19",
 	Prime2: "=",
@@ -11851,6 +12836,7 @@ data = {
 	arcadeID: "C02",
 	pumpoutID: 48,
 
+	Phoenix2: "= S20`19 D22`21 D25`24",
 	Phoenix: "= S11`10 D12`11 @2.06 D24",
 	XX: "= S8`7",
 	Prime2: "=",
@@ -11871,6 +12857,7 @@ data = {
 	arcadeID: "C03",
 	pumpoutID: 49,
 
+	Phoenix2: "= S12`11",
 	Phoenix: "= S11`10",
 	XX: "= S17`16 D22`23 D23`22",
 	Prime2: "=",
@@ -11892,6 +12879,7 @@ data = {
 	arcadeID: "C04",
 	pumpoutID: 50,
 
+	Phoenix2: "= S16`15",
 	Phoenix: "= S11`9 D18`17 D24`23",
 	XX: "= S22`21",
 	Prime2: "=",
@@ -11912,6 +12900,7 @@ data = {
 	arcadeID: "C05",
 	pumpoutID: 51,
 
+	Phoenix2: "= D20`19",
 	Phoenix: "= S13`12 D15`13 D21`20 -Dp7",
 	XX: "= S18`17 S19`18 D13`12 D19`20 D20`19",  #??? D19.updated
 	# D19-XX - https:#www.youtube.com/watch?v=zJDLZy7r-lE
@@ -11934,6 +12923,7 @@ data = {
 	arcadeID: "C06",
 	pumpoutID: 52,
 
+	Phoenix2: "=",
 	Phoenix: "= D19`18 D24`23 -D7",
 	XX: "= S16`14  @2.07 S22.lock D23.lock",
 	Prime2: "=",
@@ -11952,6 +12942,7 @@ data = {
 	arcadeID: "C07",
 	pumpoutID: 764,
 
+	Phoenix2: "=",
 	Phoenix: "= S12`13",
 	XX: "S4`nl S7`hd S13`cz  @1.01 D18.lock  @2.00 S16.lock",
 	Zero: ["3", "7", "9", "", ""],
@@ -12161,6 +13152,7 @@ data = {
 	arcadeID: "C41",
 	pumpoutID: 53,
 
+	Phoenix2: "=",
 	Phoenix: "= S16`15 D17`16",
 	XX: "= S15`12 S21`20 D16`14",
 	Prime2: "=",
@@ -12222,6 +13214,7 @@ data = {
 	sortingID: "C41__1",  # after LIADZ Try To BPM (C41)
 	pumpoutID: 54,
 
+	Phoenix2: "=",
 	Phoenix: "= S17`16 S18`17",
 	XX: "=",
 	Prime2: "=",
@@ -12456,6 +13449,7 @@ data = {
 	arcadeID: "B16",
 	pumpoutID: 55,
 
+	Phoenix2: "= D18`17",
 	Phoenix: "= -Dp5",
 	XX: "= S15`13",
 	Prime2: "=",
@@ -12476,8 +13470,8 @@ data = {
 	arcadeID: "B17",
 	pumpoutID: 56,
 
+	Phoenix2: "= D21`20 D22`21",
 	Phoenix: "= D11`8 D21`19 -S3",
-		# TODO.Phoenix: D11`8
 	XX: "= S16`15 S19`18 D19`18",
 		#??? D20.updated - simplified 10-buttons hold (to 6-buttons)
 		# D20-XX - https:#www.youtube.com/watch?v=nR61F0n4dio
@@ -12500,6 +13494,7 @@ data = {
 	arcadeID: "B18",
 	pumpoutID: 57,
 
+	Phoenix2: "=",
 	Phoenix: "= S18`17 D20`19 -Sp3 -Dp6",
 	XX: "= S8`6 S9`8 D19`18",
 	Prime2: "=  @2.00 D21",
@@ -12522,6 +13517,7 @@ data = {
 	arcadeID: "B19",
 	pumpoutID: 58,
 
+	Phoenix2: "=",
 	Phoenix: "= S11`10",
 	XX: "= S10`9 D12`10 D23`22",
 	Prime2: "= -S18 -D18",
@@ -12583,6 +13579,7 @@ data = {
 	arcadeID: "B28",  #? B58
 	pumpoutID: 59,
 
+	Phoenix2: "=",
 	Phoenix: "= S14`13 D17`15",
 	XX: "= S13`11 D15`13",
 	Prime2: "=",
@@ -12604,6 +13601,7 @@ data = {
 	arcadeID: "B29",
 	pumpoutID: 60,
 
+	Phoenix2: "= D22`21",
 	Phoenix: "= D15`14 D21`20",
 	XX: "= S13`7 D14`11",
 	Prime2: "=",
@@ -12665,6 +13663,7 @@ data = {
 	arcadeID: "B51",
 	pumpoutID: 75,
 
+	Phoenix2: "= D23`22",
 	Phoenix: "=",
 	XX: "@1.04 = S15`13 D18`16",
 	Prime: "=",
@@ -12734,6 +13733,7 @@ data = {
 	arcadeID: "B56",
 	pumpoutID: 61,
 
+	Phoenix2: "=",
 	Phoenix: "= S8`7 D21`20 -Dp6",
 	XX: "=",
 	Prime2: "=  @2.04 D20",
@@ -12756,6 +13756,7 @@ data = {
 	arcadeID: "B57",
 	pumpoutID: 62,
 
+	Phoenix2: "=",
 	Phoenix: "= S15`14",
 	XX: "= S14`S11 S17`16",
 	Prime2: "=",
@@ -12782,6 +13783,7 @@ data = {
 	arcadeID: "A01",
 	pumpoutID: 63,
 
+	Phoenix2: "=",
 	Phoenix: "= D18`17 -Sp3 -Dp5",
 	XX: "= S8`6 S16`14",
 	Prime2: "=",
@@ -12804,6 +13806,7 @@ data = {
 	arcadeID: "A02",
 	pumpoutID: 64,
 
+	Phoenix2: "=",
 	Phoenix: "= S15`13 D16`15 -Sp3 -Dp5",
 	XX: "= S9`6 D20`19",
 	Prime2: "=",
@@ -12826,6 +13829,7 @@ data = {
 	arcadeID: "A03",
 	pumpoutID: 65,
 
+	Phoenix2: "= S12`10",
 	Phoenix: "= S6`5 S10`9 -Sp5",
 	XX: "= S4`3 S9`8",
 	Prime2: "=",
@@ -12848,6 +13852,7 @@ data = {
 	arcadeID: "A04",
 	pumpoutID: 66,
 
+	Phoenix2: "=",
 	Phoenix: "= S7`6 S20`19 D21`20",
 	XX: "= S4`3 S17`15 D20`19",
 	Prime2: "=  @2.04 S19",
@@ -12868,6 +13873,7 @@ data = {
 	arcadeID: "A05",
 	pumpoutID: 67,
 
+	Phoenix2: "= D22`21",
 	Phoenix: "= S13`11 D15`12 D24`23 @2.01 S16",
 	XX: "= S6`5 S11`9 S18`17 D12`10 D19`18 D21`19  @2.08 D23",
 	Prime2: "=",
@@ -12889,6 +13895,7 @@ data = {
 	arcadeID: "A06",
 	pumpoutID: 68,
 
+	Phoenix2: "= D21`20",
 	Phoenix: "= S5`4 S8`7 S12`10 D15`13",
 	XX: "= S10`9 S15`14 D20`19",
 	Prime2: "=",
@@ -12911,8 +13918,8 @@ data = {
 	arcadeID: "A07",
 	pumpoutID: 69,
 
+	Phoenix2: "=",
 	Phoenix: "= S5`4 S10`8 D15`12 D19`18",
-		# TODO.Phoenix: D15`12
 	XX: "= S15`13 D12`9 -D17  @2.07 S21.lock D23.lock",
 		# XX D18 - https:#www.youtube.com/watch?v=6N-vQLe_JrI
 		# Prime2 D17 (removed) - https:#www.youtube.com/watch?v=MukHbjtZNZs
@@ -12934,6 +13941,7 @@ data = {
 	arcadeID: "A08",
 	pumpoutID: 76,
 
+	Phoenix2: "= D25`24",
 	Phoenix: "= S4`3 S6`5 S15`14 S21`20 D20`19",
 	XX: "@1.04 = S14`12 S17`16 D17`13 D19`18 D24`23 D26.lock",
 	Prime: "=",
@@ -13271,6 +14279,7 @@ data = {
 	arcadeID: "911",
 	pumpoutID: 42,
 
+	Phoenix2: "= S22`21",
 	Phoenix: "= D18`17 -D13",
 	XX: "= S11`10 S20`19 D13`11 D22`23",
 	Prime2: "= -S22",
@@ -13293,6 +14302,7 @@ data = {
 	arcadeID: "913",
 	pumpoutID: 763,
 
+	Phoenix2: "= S17`16",
 	Phoenix: "= S7`8 S12`13 D18`17",
 	XX: "= S16`cz D17`nm S20.lock D22.lock  @2.05 S8 S13",
 	Exceed2: ["", "", "12", "", "14"],
@@ -13364,6 +14374,7 @@ data = {
 	arcadeID: "922",
 	pumpoutID: 43,
 
+	Phoenix2: "= S10`9",
 	Phoenix: "= S9`7 S17`16 S21`20 D15`13",
 	XX: "= S16`15 S20`19 D13`11 D22`21",
 	Prime2: "=",
@@ -13409,8 +14420,8 @@ data = {
 	arcadeID: "802",
 	pumpoutID: 25,
 
+	Phoenix2: "=",
 	Phoenix: "= S17`16 D15`12 D23`22 -S4",
-		# TODO.Phoenix: D15`12
 	XX: "= S12`11 S16`15 D12`11 D20`19 D22`21 D24`23",
 	Prime2: "=",
 	Prime: "=",
@@ -13478,6 +14489,7 @@ data = {
 	arcadeID: "807",
 	pumpoutID: 431,
 
+	Phoenix2: "= S13`11",
 	Phoenix: "= S5`4 D9`7 D18`17",
 	XX: "= S11`9",
 	Prime2: "=  @2.00 D17",
@@ -13529,8 +14541,8 @@ data = {
 	arcadeID: "811",
 	pumpoutID: 434,
 
+	Phoenix2: "= D19`18",
 	Phoenix: "= S11`7 S17`16 -D9",
-		# TODO.Phoenix: S11`7
 	XX: "= D18`16",
 	Prime2: "=",
 	Fiesta2: "=",
@@ -13637,6 +14649,7 @@ data = {
 	arcadeID: "820",
 	pumpoutID: 26,
 
+	Phoenix2: "=",
 	Phoenix: "= S6`5 D20`19 D24`23 -S11 -D13",
 	XX: "= S11`10 S16`15 D13`12",
 	Prime2: "=  @2.05 S18 S21 D23",
@@ -13689,6 +14702,7 @@ data = {
 	arcadeID: "826",
 	pumpoutID: 27,
 
+	Phoenix2: "= S18`17",
 	Phoenix: "= D15`13 -Sp3 -Dp6",
 	XX: "= S13`12 S17`15",
 	Prime2: "=",
@@ -13720,10 +14734,9 @@ data = {
 	arcadeID: "701",
 	pumpoutID: 28,
 
+	Phoenix2: "= D19`18",
 	Phoenix: "= S10`8 S14`12 D14`11 @2.00 D20",
-		# TODO.Phoenix: D14`11
 	XX: "= S6 S8`7 D18`16",
-		# TODO: S6.???
 	Prime2: "=",
 	Prime: "=",
 	Fiesta2: "=",
@@ -13744,6 +14757,7 @@ data = {
 	arcadeID: "702",
 	pumpoutID: 29,
 
+	Phoenix2: "= S3`2 S9`8",
 	Phoenix: "= -Sp3 -S5 -Dp3",
 	XX: "= S12`11  @2.06 CoOp(x2)",
 	Prime2: "=",
@@ -13760,6 +14774,7 @@ data = {
 	arcadeID: "703",
 	pumpoutID: 433,
 
+	Phoenix2: "=",
 	Phoenix: "= S7`6 D10`9",
 	XX: "= S12`13 D22`21",
 	Prime2: "=  @1.10 D21",
@@ -13776,8 +14791,8 @@ data = {
 	arcadeID: "704",
 	pumpoutID: 30,
 
+	Phoenix2: "= S9`8 S20`19",
 	Phoenix: "= S4`3 S8`7 S11`10 D11`6",
-		# TODO.Phoenix: D11`6
 	XX: "= S17`15 D17`15 D21`20",
 	Prime2: "=",
 	Prime: "= CoOp(x2)`Dp??(x2)",
@@ -13799,6 +14814,7 @@ data = {
 	arcadeID: "705",
 	pumpoutID: 31,
 
+	Phoenix2: "= D22`21",
 	Phoenix: "= S7`6 S12`11 S16`15 D16`15 D21`20",
 	XX: "= D20`19",
 	Prime2: "=  @1.09 D19",
@@ -13817,6 +14833,7 @@ data = {
 	arcadeID: "706",
 	pumpoutID: 436,
 
+	Phoenix2: "= S20`19",
 	Phoenix: "= -S13 -D8",
 	XX: "=",
 	Prime2: "=",
@@ -13831,6 +14848,7 @@ data = {
 	arcadeID: "707",
 	pumpoutID: 32,
 
+	Phoenix2: "= S16`15",
 	Phoenix: "= S4`3 S6`5 S15`14 D16`15 -Sp2 -Dp4 -Dp6",
 	XX: "= S14`12",
 	Prime2: "=  @1.09 D18",
@@ -13849,6 +14867,7 @@ data = {
 	arcadeID: "708",
 	pumpoutID: 33,
 
+	Phoenix2: "= S14`13 D15`14",
 	Phoenix: "= S8`9 D7`9 -Sp3 -Dp6 @2.00 D23",
 	XX: "=  @2.02 S3 S9 S13 D9",
 	Prime2: "=",
@@ -13870,8 +14889,8 @@ data = {
 	arcadeID: "709",
 	pumpoutID: 437,
 
+	Phoenix2: "=",
 	Phoenix: "= S8`7 S16`15 D16`13 D19`18 -Sp4 -Dp6",
-		# TODO.Phoenix: D16`13
 	XX: "=  @1.02 D18.new  @2.07 S11",
 	Prime2: "=",
 	Fiesta2: "=",
@@ -13889,6 +14908,7 @@ data = {
 	arcadeID: "710",
 	pumpoutID: 438,
 
+	Phoenix2: "=",
 	Phoenix: "= S13`12 D9`7 D21`20",
 	XX: "=  @2.06 S20.lock D20.ampass",
 	Prime2: "= -D12",
@@ -13903,6 +14923,7 @@ data = {
 	arcadeID: "711",
 	pumpoutID: 34,
 
+	Phoenix2: "= D18`17",
 	Phoenix: "= S12`10 S20`19 D14`12 D21`20 @2.07 CoOp(x2)",
 	XX: "= S7`6 S10`8 S16`15 D12`11 D20`19",
 	Prime2: "=  @1.07 S19",
@@ -13926,6 +14947,7 @@ data = {
 	arcadeID: "712",
 	pumpoutID: 35,
 
+	Phoenix2: "= S6`5 D17`16 D21`20 D22`21",
 	Phoenix: "= S13`11 S16`14 D16`14 D14`13",
 	XX: "= S2`3 S11`10 S14`13 D13`10 D14`13 D20`19  @2.01 D25.lock",
 	Prime2: "=",
@@ -13948,6 +14970,7 @@ data = {
 	arcadeID: "713",
 	pumpoutID: 36,
 
+	Phoenix2: "= D14`13 D17`16",
 	Phoenix: "= S3`2 S11`9 D10`8 -Dp3",
 	XX: "=",
 	Prime2: "=",
@@ -13964,6 +14987,7 @@ data = {
 	arcadeID: "714",
 	pumpoutID: 37,
 
+	Phoenix2: "=",
 	Phoenix: "= S9`8 S8`6 S14`13 -Sp2 -Dp3",
 	XX: "=",
 	Prime2: "=",
@@ -13982,9 +15006,9 @@ data = {
 	arcadeID: "715",
 	pumpoutID: 439,
 
+	Phoenix2: "=",
 	Phoenix: "= S9`8 D11`8 -S14",
-		# TODO.Phoenix: D11`8
-	XX: "= S4`3 S13`14 S14`13",  #TODO: proof S13`14 S14`13
+	XX: "= S4`3 S13`14 S14`13",
 	Prime2: "=",
 	Fiesta2: "=",
 	FiestaEX: "S3 S8 S13 D8  @1.30 S14",
@@ -13998,6 +15022,7 @@ data = {
 	arcadeID: "716",
 	pumpoutID: 435,
 
+	Phoenix2: "=",
 	Phoenix: "= S7`5 -Sp3 -Dp5",
 	XX: "= S19`18",
 	Prime2: "=",
@@ -14014,6 +15039,7 @@ data = {
 	arcadeID: "717",
 	pumpoutID: 38,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`9 S14`13 D17`16 -Sp4 -Dp4 -Dp7",
 	XX: "=  @2.01 D16",
 	Prime2: "=",
@@ -14030,6 +15056,7 @@ data = {
 	arcadeID: "718",
 	pumpoutID: 39,
 
+	Phoenix2: "=",
 	Phoenix: "= S15`14 -Sp4 -S12 -Dp4 -Dp6 @2.07 CoOp(x2)",
 	XX: "=  @2.06 D18",
 	Prime2: "=",
@@ -14099,6 +15126,7 @@ data = {
 	arcadeID: "735",
 	pumpoutID: 40,
 
+	Phoenix2: "= S21`20 D21`20 D22`21",
 	Phoenix: "= S3`4 S10`9 S16`15 S18`17 D15`13 D21`19",
 	XX: "= D13`12 -D17 D19`18 D20`19",  #??? proof
 	Prime2: "=",
@@ -14121,8 +15149,8 @@ data = {
 	arcadeID: "736",
 	pumpoutID: 41,
 
+	Phoenix2: "= S9`8",
 	Phoenix: "= S12`11 S15`13 D12`8",
-		# TODO.Phoenix: D12`8
 	XX: "= S4`3 S7 S8`7 S11`10 D22`21  @2.02 CoOp(x2)",  # S7.???
 	Prime2: "=",
 	Prime: "=  @1.12 D21.ucs",
@@ -14167,6 +15195,7 @@ data = {
 	arcadeID: "501",
 	pumpoutID: 499,
 
+	Phoenix2: "=",
 	Phoenix: "= S5`4 D18`17 -Sp2 -Dp4",
 	XX: "=",
 	Prime2: "=",
@@ -14183,6 +15212,7 @@ data = {
 	arcadeID: "502",
 	pumpoutID: 446,
 
+	Phoenix2: "=",
 	Phoenix: "= -Sp2 -Dp5",
 	XX: "=",
 	Prime2: "=",
@@ -14202,6 +15232,7 @@ data = {
 	arcadeID: "503",
 	pumpoutID: 2,
 
+	Phoenix2: "= S13`12 D17`16",
 	Phoenix: "= @2.00 S20",
 	XX: "= S12`13 D16`17  @2.05 D22.lock  @2.06 S17",
 	Prime2: "=",
@@ -14222,6 +15253,7 @@ data = {
 	arcadeID: "504",
 	pumpoutID: 1,
 
+	Phoenix2: "=",
 	Phoenix: "= S5`6 D8`7 @2.12 S15 S17 D16 D18",
 	XX: "= S9`11",
 	Prime2: "=",
@@ -14239,6 +15271,7 @@ data = {
 	arcadeID: "505",
 	pumpoutID: 4,
 
+	Phoenix2: "= D22`21",
 	Phoenix: "= S12`11 D13`11 D24`23 -Dp3",
 	XX: "= S6`8 S11`13 D11`8 D21`20  @2.01 CoOp(x2)  @2.08 S21 D23",  #TODO proof S6.updated S7
 	Prime2: "=",
@@ -14298,6 +15331,7 @@ data = {
 	arcadeID: "516",
 	pumpoutID: 17,
 
+	Phoenix2: "= D10`9",
 	Phoenix: "= S5`3 S7`6 S20`19 D9`6 D22`21 D24`23 @2.07 CoOp(x2)",
 	XX: "= S18`17 S19`18 D21`20",
 	Prime2: "=  @1.04 D23",
@@ -14335,8 +15369,8 @@ data = {
 	arcadeID: "401",
 	pumpoutID: 498,
 
+	Phoenix2: "= S10`9",
 	Phoenix: "= S9`8 S14`13 D11`7",
-		# TODO.Phoenix: D11`7
 	XX: "= S8`7",
 	Prime2: "=  @1.04 CoOp(x2)",
 	Fiesta2: "=",
@@ -14353,6 +15387,7 @@ data = {
 	arcadeID: "402",
 	pumpoutID: 443,
 
+	Phoenix2: "=",
 	Phoenix: "= S6`4 S12`10 D15`14 -Sp1 -Dp4",
 	XX: "= S10`9",
 	Prime2: "=",
@@ -14370,6 +15405,7 @@ data = {
 	arcadeID: "403",
 	pumpoutID: 441,
 
+	Phoenix2: "= D14`13",
 	Phoenix: "= S9`8 -Sp2 -D11",
 	XX: "= D11`8",
 	Prime2: "=",
@@ -14387,9 +15423,9 @@ data = {
 	arcadeID: "404",
 	pumpoutID: 5,
 
+	Phoenix2: "= D12`10",
 	Phoenix: "= S11`9 D17`16 -Sp3 -Dp5",
 	XX: "= S17`16 S18`17 D10`7",
-		#??? proof S17 S18
 	Prime2: "=",
 	Prime: "=",
 	Fiesta2: "=",
@@ -14410,6 +15446,7 @@ data = {
 	arcadeID: "405",
 	pumpoutID: 7,
 
+	Phoenix2: "= D17`16 D19`18 D24`23",
 	Phoenix: "= S13`12 S15`14 D18`17",
 	XX: "= S12`11 D16`14  @2.07 D22",
 	Prime2: "=",
@@ -14489,6 +15526,7 @@ data = {
 	arcadeID: "301",
 	pumpoutID: 8,
 
+	Phoenix2: "=",
 	Phoenix: "= S12`10 S10`9 S18`17 D12`11 -Dp3",
 	XX: "= S9`8 S17`16 D11`8 D18`17 D20`19",
 	Prime2: "=",
@@ -14511,8 +15549,8 @@ data = {
 	arcadeID: "302",
 	pumpoutID: 9,
 
+	Phoenix2: "= S21`20",
 	Phoenix: "= S5`4 S12`10 D12`7 D16`15 -S7 -S16",
-		# TODO.Phoenix: D12`7
 	XX: "=",
 	Prime2: "=  @2.02 S16",
 	Prime: "=",
@@ -14534,8 +15572,8 @@ data = {
 	arcadeID: "303",
 	pumpoutID: 10,
 
+	Phoenix2: "=",
 	Phoenix: "= S17`16 S19`18 D13`9 D18`17 D21`20",
-		# TODO.Phoenix: D13`9
 	XX: "= S16`15 D20`19",
 	Prime2: "=",
 	Prime: "=  @1.12 S18.ucs D17.ucs CoOp(x2).ucs",
@@ -14557,6 +15595,7 @@ data = {
 	arcadeID: "304",
 	pumpoutID: 762,
 
+	Phoenix2: "=",
 	Phoenix: "= D18`19",
 	XX: "= S5`nl S12`cz D14`nm  @1.02 D19.new",
 		#??? S12.updated
@@ -14572,6 +15611,7 @@ data = {
 	arcadeID: "305",
 	pumpoutID: 761,
 
+	Phoenix2: "=",
 	Phoenix: "=",
 	XX: "S6 S13",
 		#??? S13.updated
@@ -14586,6 +15626,7 @@ data = {
 	arcadeID: "306",
 	pumpoutID: 440,
 
+	Phoenix2: "= D15`14",
 	Phoenix: "= S3`2 S6`4 D14`13 -Dp5",
 	XX: "= S2`1",
 	Prime2: "=",
@@ -14604,6 +15645,7 @@ data = {
 	arcadeID: "307",
 	pumpoutID: 442,
 
+	Phoenix2: "=",
 	Phoenix: "= S6`4 -Sp2 -Dp3",
 	XX: "=",
 	Prime2: "=",
@@ -14619,6 +15661,7 @@ data = {
 	arcadeID: "308",
 	pumpoutID: 444,
 
+	Phoenix2: "= D16`15",
 	Phoenix: "= -Sp1 -Dp3",
 	XX: "=  @2.07 S5 S9",
 	Prime2: "=",
@@ -14635,6 +15678,7 @@ data = {
 	arcadeID: "309",
 	pumpoutID: 11,
 
+	Phoenix2: "=",
 	Phoenix: "= S12`11 D13`12 -Sp4 -Dp5",
 	XX: "= S11`12 D12`13",
 	Prime2: "=",
@@ -14651,6 +15695,7 @@ data = {
 	arcadeID: "310",
 	pumpoutID: 448,
 
+	Phoenix2: "= D24`23",
 	Phoenix: "= S10`8 D11`9 D18`16",
 	XX: "=",
 	Prime2: "=  @1.05 S21 D23",
@@ -14672,6 +15717,7 @@ data = {
 	arcadeID: "311",
 	pumpoutID: 500,
 
+	Phoenix2: "=",
 	Phoenix: "= S5`4 S10`9 S13`12",
 	XX: "=  @2.07 S9",
 	Prime2: "=  @1.06 D15",
@@ -14800,6 +15846,7 @@ data = {
 	arcadeID: "204",
 	pumpoutID: 12,
 
+	Phoenix2: "=",
 	Phoenix: "= S10`9 S18`17 S19`18 D17`15 D19`18 -S6 -Dp3",
 	XX: "= S18`15 D18`17",
 	Prime2: "=",
@@ -14822,6 +15869,7 @@ data = {
 	arcadeID: "205",
 	pumpoutID: 13,
 
+	Phoenix2: "= D22`21",
 	Phoenix: "= S11`10 S13`12 S19`17 S22`21 D15`13 D21`20",
 	XX: "= S8`7 S10`9 S12`11 S17`16 D13`12 D18`17 D20`19",
 	Prime2: "=",
@@ -14914,6 +15962,7 @@ data = {
 	arcadeID: "224",
 	pumpoutID: 14,
 
+	Phoenix2: "=",
 	Phoenix: "= -S7 -D8",
 	XX: "= S18`19  @2.07 D22",
 	Prime2: "=",
@@ -15041,6 +16090,7 @@ data = {
 	arcadeID: "112",
 	pumpoutID: 24,
 
+	Phoenix2: "= D10`9",
 	Phoenix: "= S4`3 S6`5 D9`7 D18`17 D19`18",
 	XX: "= S16`15 D7`6 D17`16 D18`17 D21`22  @2.07 CoOp(x2)",
 	Prime2: "=",
