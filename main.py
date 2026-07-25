@@ -90,7 +90,8 @@ INITIAL_PATCH = PATCHES[0] == PATCH
 IGNORED_MIXES = (2, 8)  # Infinity and Prime JE
 
 DEBUG = False
-NOSQL = False
+NOSQL = True
+ALT_DIFF = True
 
 if not NOSQL:
     print = get_writable_print(f'sql/{MIX} {PATCH}.sql')
@@ -107,12 +108,28 @@ cut = {
 
 def get_song_title_and_cut(song):
     curr_title = song[title]
-    for marker in (SHORT_MARKER, FULL_MARKER):
+    curr_duration = song.get(duration)
+    for marker, marker_duration in ((SHORT_MARKER, SHORT), (FULL_MARKER, FULL)):
         if curr_title.endswith(marker):
             curr_title = curr_title.removesuffix(marker).strip()
+            if curr_duration is None:
+                curr_duration = marker_duration
+            break
 
-    curr_duration = song.get(duration, ARCADE)
+    if curr_duration is None:
+        curr_duration = ARCADE
+
     return curr_title, cut.get(curr_duration, curr_duration)
+
+
+def format_nosql_song_title(curr_title, curr_cut):
+    cut_label = {
+        SHORT: SHORT,
+        cut[SHORT]: SHORT,
+        FULL: FULL,
+        cut[FULL]: FULL,
+    }.get(curr_cut)
+    return f"{curr_title} {cut_label}" if cut_label else curr_title
 
 
 category = {
@@ -234,7 +251,7 @@ for song in changed_charts:
             rerated_charts += [(pumpout, curr_title, curr_cut, before, after)]
             # print(song_title, before, '->', after)
         elif change[0] == '-':
-            elem = [(pumpout, curr_title, change.upper()[1:])]
+            elem = [(pumpout, curr_title, curr_cut, change.upper()[1:])]
             if song not in revived_songs:
                 deleted_charts += elem
             else:
@@ -242,7 +259,7 @@ for song in changed_charts:
             # print(song_title, change.upper())
 
         elif change[0] == '^':
-            revived_charts += [(pumpout, curr_title, change.upper()[1:])]
+            revived_charts += [(pumpout, curr_title, curr_cut, change.upper()[1:])]
             # print(song_title, change.upper())
 
         elif change[0] == '+':
@@ -489,26 +506,16 @@ if new_songs:
 mix_id_counter = 1
 
 for song_index, song in enumerate(new_songs):
-    if duration not in song:
-        song[duration] = ARCADE
-    song[duration] = cut[song[duration]]
-
     original_title = song[title]
+    curr_title, curr_cut = get_song_title_and_cut(song)
     song_card_append = ''
-    if song[title].endswith(SHORT_MARKER):
-        song[title] = song[title].replace(SHORT_MARKER, "").strip()
+    if original_title.endswith(SHORT_MARKER):
         song_card_append = '_Short'
 
-    if song[title].endswith(FULL_MARKER):
-        song[title] = song[title].replace(FULL_MARKER, "").strip()
+    if original_title.endswith(FULL_MARKER):
         song_card_append = '_Full'
 
-    curr_title = song[title]
-    curr_cut = song[duration]
     curr_category = category[song[channel]]
-
-    if NOSQL:
-        p(f"{curr_title}")
 
     print(f"""
 -- Add {original_title}
@@ -694,11 +701,11 @@ SELECT
     charts = charts.split('@')[0]
     charts = charts.split()
 
+    if NOSQL:
+        p(f"{format_nosql_song_title(curr_title, curr_cut)} {' '.join(charts)}")
+
     for chart_index, curr_chart in enumerate(charts):
         chart_mode, chart_difficulty = get_difficulty(curr_chart)
-
-        if NOSQL:
-            p(f"{curr_title} {curr_chart}")
 
         print(f"""
 -- Add {original_title} {curr_chart}
@@ -789,22 +796,14 @@ if new_charts:
 
 
 for song_index, song in enumerate(new_charts):
-    if duration not in song:
-        song[duration] = ARCADE
-    song[duration] = cut[song[duration]]
-
     original_title = song[title]
+    curr_title, curr_cut = get_song_title_and_cut(song)
     song_card_append = ''
-    if song[title].endswith(SHORT_MARKER):
-        song[title] = song[title].replace(SHORT_MARKER, "").strip()
+    if original_title.endswith(SHORT_MARKER):
         song_card_append = '_Short'
 
-    if song[title].endswith(FULL_MARKER):
-        song[title] = song[title].replace(FULL_MARKER, "").strip()
+    if original_title.endswith(FULL_MARKER):
         song_card_append = '_Full'
-
-    curr_title = song[title]
-    curr_cut = song[duration]
 
     charts = get_info_for_patch(PATCH, song[MIX], INITIAL_PATCH)
 
@@ -815,7 +814,7 @@ for song_index, song in enumerate(new_charts):
         chart_mode, chart_difficulty = get_difficulty(curr_chart)
 
         if NOSQL:
-            p(f"{curr_title} {curr_chart}")
+            p(f"{format_nosql_song_title(curr_title, curr_cut)} {curr_chart}")
 
         print(f"""
 -- Add {original_title} {curr_chart}
@@ -927,7 +926,7 @@ for index, song in enumerate(deleted_songs):
     pumpout_id = song[pumpoutID]
 
     if NOSQL:
-        p(f"{curr_title}")
+        p(format_nosql_song_title(curr_title, curr_cut))
 
     print(f"""
 -- Remove {curr_title}
@@ -1006,11 +1005,11 @@ def difficulty_key(diff_key):
 
 
 for index, chart in enumerate(sorted(deleted_charts, key=lambda x: difficulty_key(x[-1]))):
-    pumpout_id, curr_title, difficulty = chart
+    pumpout_id, curr_title, curr_cut, difficulty = chart
     mode, diff = get_difficulty(difficulty)
 
     if NOSQL:
-        p(f"{curr_title} {difficulty}")
+        p(f"{format_nosql_song_title(curr_title, curr_cut)} {difficulty}")
 
     print(f"""
 --  Remove {curr_title} {difficulty}
@@ -1066,6 +1065,7 @@ if revived_songs:
 
 
 for index, song in enumerate(revived_songs):
+    nosql_title, nosql_cut = get_song_title_and_cut(song)
 
     if arcadeName in song:
         curr_title = song[arcadeName]
@@ -1075,9 +1075,9 @@ for index, song in enumerate(revived_songs):
     pumpout_id = song[pumpoutID]
 
     if NOSQL:
-        p(f"{curr_title}")
+        p(format_nosql_song_title(nosql_title, nosql_cut))
 
-    not_revived = [i[2] for i in not_revived_charts if i[0] == pumpout_id]
+    not_revived = [i[3] for i in not_revived_charts if i[0] == pumpout_id]
 
     print(f"""
 -- Revive {curr_title}
@@ -1159,11 +1159,11 @@ if revived_charts:
 
 for index, chart in enumerate(revived_charts):
 
-    pumpout_id, curr_title, diff_str = chart
+    pumpout_id, curr_title, curr_cut, diff_str = chart
     mode, diff = get_difficulty(diff_str)
 
     if NOSQL:
-        p(f"Revive {curr_title} {diff_str}")
+        p(f"Revive {format_nosql_song_title(curr_title, curr_cut)} {diff_str}")
 
     print(f"""
 -- Revive {curr_title} {diff_str}
@@ -1217,12 +1217,25 @@ if rerated_charts:
         p(f"\nRerate charts")
 
 
+if NOSQL:
+    rerates_by_song = {}
+    for pumpout_id, curr_title, curr_cut, before, after in rerated_charts:
+        song_key = pumpout_id, curr_title, curr_cut
+        rerates_by_song.setdefault(song_key, []).append((before, after))
+
+    for (_, curr_title, curr_cut), rerates in rerates_by_song.items():
+        rerates.sort(key=lambda rerate: difficulty_key(rerate[0]))
+        if ALT_DIFF:
+            changes = ' '.join(f"{after}`{before[1:]}" for before, after in rerates)
+        else:
+            changes = ', '.join(f"{before} -> {after}" for before, after in rerates)
+        p(f"{format_nosql_song_title(curr_title, curr_cut)} {changes}")
+
+
 for index, rerate in enumerate(rerated_charts):
     pumpout_id, curr_title, curr_cut, before, after = rerate
     before_mode, before_diff = get_difficulty(before)
     after_mode, after_diff = get_difficulty(after)
-    if NOSQL:
-        p(f"{curr_title} {before} -> {after}")
 
     print(f"""
 --  Rerate {curr_title} {before} -> {after}
