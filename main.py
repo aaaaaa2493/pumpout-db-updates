@@ -1,11 +1,12 @@
 from data import Phoenix2, data, Phoenix, XX, ARCADE, SHORT, FULL, REMIX, duration, title, pumpoutID, artist, \
     arcadeName, bpm
-from data import STEPMAKERS, KPOP, ORIGINAL, WORLD, JMUSIC, XROSS, channel, arcadeID, artists as artists_key
+from data import STEPMAKERS, KPOP, ORIGINAL, WORLD, JMUSIC, XROSS, RISE, channel, arcadeID, artists as artists_key
 from data import KOREAN_TITLES, SHORT_MARKER, FULL_MARKER, premiumModeExclusive, steamLinkExclusive
 from util.splitter import split_string
 from util.get_bpm import bpm_min_max
 from util.versions import trim_version, get_info_for_patch
 from util.difficulty import get_difficulty
+from util.exclusivity import is_chart_steam_link_exclusive
 from util.printing import get_writable_print, escape as e
 from builtins import print as p
 
@@ -90,8 +91,8 @@ INITIAL_PATCH = PATCHES[0] == PATCH
 IGNORED_MIXES = (2, 8)  # Infinity and Prime JE
 
 DEBUG = False
-NOSQL = True
-ALT_DIFF = True
+NOSQL = False
+ALT_DIFF = False
 
 if not NOSQL:
     print = get_writable_print(f'sql/{MIX} {PATCH}.sql')
@@ -138,6 +139,7 @@ category = {
     WORLD: "WORLD MUSIC",
     JMUSIC: "J-MUSIC",
     XROSS: "XROSS",
+    RISE: "RISE",
 }
 
 exclusive_labels = {
@@ -146,13 +148,16 @@ exclusive_labels = {
 }
 
 
-def add_exclusive_labels(song, entity):
+def add_exclusive_labels(song, entity, chart=None):
     entity_id = f'{entity}Id'
     label_table = f'{entity}Label'
     label_id = f'{label_table}Id'
 
     for flag, label in exclusive_labels.items():
-        if not song.get(flag):
+        exclusive = song.get(flag)
+        if entity == 'song' and exclusive is not True:
+            continue
+        if entity == 'chart' and not is_chart_steam_link_exclusive(exclusive, chart):
             continue
 
         print(f"""
@@ -228,9 +233,6 @@ revived_songs = [
     i for i in data.values()
     if is_revived(i)
 ]
-
-if INITIAL_PATCH:
-    new_charts = []
 
 added_charts = []
 deleted_charts = []
@@ -750,17 +752,19 @@ SELECT
     NULL;
 """, end='')
 
-        add_exclusive_labels(song, 'chart')
+        add_exclusive_labels(song, 'chart', curr_chart)
 
-        curr_stepmakers = STEPMAKERS[original_title]
-        if type(curr_stepmakers) == str:
+        curr_stepmakers = STEPMAKERS.get(original_title)
+        if curr_stepmakers is None:
+            found_stepmakers = []
+        elif type(curr_stepmakers) == str:
             found_stepmakers = [curr_stepmakers]
         else:
-            found_stepmakers = [i[0] for i in curr_stepmakers if curr_chart in i[1]]
+            found_stepmakers = [i[0] for i in curr_stepmakers if curr_chart in (i[1].split() if type(i[1]) == str else i[1])]
             if len(found_stepmakers) == 0:
                 found_stepmakers = [i[0] for i in curr_stepmakers if i[1] == '*']
 
-        if len(found_stepmakers) != 1:
+        if len(found_stepmakers) > 1 or (len(found_stepmakers) == 0 and chart_mode != 'HDB'):
             raise Exception()
 
         for index, stepmaker in enumerate(found_stepmakers):
@@ -798,6 +802,7 @@ if new_charts:
 for song_index, song in enumerate(new_charts):
     original_title = song[title]
     curr_title, curr_cut = get_song_title_and_cut(song)
+    pumpout_id = song[pumpoutID]
     song_card_append = ''
     if original_title.endswith(SHORT_MARKER):
         song_card_append = '_Short'
@@ -808,8 +813,11 @@ for song_index, song in enumerate(new_charts):
     charts = get_info_for_patch(PATCH, song[MIX], INITIAL_PATCH)
 
     for chart_index, curr_chart in enumerate(charts):
-        if '`' in curr_chart or '-' in curr_chart or '^' in curr_chart or '=' == curr_chart:
+        if '`' in curr_chart or curr_chart.startswith(('-', '^')) or curr_chart == '=':
             continue
+
+        if curr_chart.startswith('+'):
+            curr_chart = curr_chart[1:]
 
         chart_mode, chart_difficulty = get_difficulty(curr_chart)
 
@@ -822,28 +830,7 @@ for song_index, song in enumerate(new_charts):
 INSERT INTO chart (chartId, songId)
 SELECT 
     (SELECT MAX(chartId) + 1 FROM chart),
-    (
-        SELECT songId FROM (
-            SELECT
-               s.songId,
-               ROW_NUMBER() OVER (PARTITION BY s.songId ORDER BY v.sortOrder DESC) AS rn,
-               COUNT(*) OVER () AS total_count
-            FROM song s
-            JOIN songVersion sV on s.songId = sV.songId
-            JOIN version v on sV.versionId = v.versionId
-            JOIN operation o on sV.operationId = o.operationId
-            WHERE s.cutId = (SELECT cut.cutId FROM cut WHERE cut.internalTitle = '{e(curr_cut)}')
-            AND LOWER(s.internalTitle) = LOWER('{e(original_title)}')
-            AND v.sortOrder = (
-                SELECT MAX(v2.sortOrder)
-                FROM songVersion sV2
-                JOIN version v2 ON sV2.versionId = v2.versionId
-                WHERE sV2.songId = s.songId
-            )
-            AND o.internalTitle != '{e(Operations.DELETE)}'
-        )
-        WHERE rn = 1 AND total_count = 1
-    );
+    ({find_active_song_id(curr_title, curr_cut, pumpout_id)});
 """, end='')
 
         print(f"""
@@ -876,17 +863,19 @@ SELECT
     NULL;
 """, end='')
 
-        add_exclusive_labels(song, 'chart')
+        add_exclusive_labels(song, 'chart', curr_chart)
 
-        curr_stepmakers = STEPMAKERS[original_title]
-        if type(curr_stepmakers) == str:
+        curr_stepmakers = STEPMAKERS.get(original_title)
+        if curr_stepmakers is None:
+            found_stepmakers = []
+        elif type(curr_stepmakers) == str:
             found_stepmakers = [curr_stepmakers]
         else:
             found_stepmakers = [i[0] for i in curr_stepmakers if curr_chart in (i[1].split() if type(i[1]) == str else i[1])]
             if len(found_stepmakers) == 0:
                 found_stepmakers = [i[0] for i in curr_stepmakers if i[1] == '*']
 
-        if len(found_stepmakers) != 1:
+        if len(found_stepmakers) > 1 or (len(found_stepmakers) == 0 and chart_mode != 'HDB'):
             raise Exception(f"${song} {curr_chart}")
 
         for index, stepmaker in enumerate(found_stepmakers):
