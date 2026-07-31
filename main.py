@@ -7,6 +7,7 @@ from util.get_bpm import bpm_min_max
 from util.versions import trim_version, get_info_for_patch
 from util.difficulty import get_difficulty
 from util.exclusivity import is_chart_steam_link_exclusive
+from util.stepmakers import get_chart_stepmakers
 from util.printing import get_writable_print, escape as e
 from builtins import print as p
 
@@ -755,14 +756,7 @@ SELECT
         add_exclusive_labels(song, 'chart', curr_chart)
 
         curr_stepmakers = STEPMAKERS.get(original_title)
-        if curr_stepmakers is None:
-            found_stepmakers = []
-        elif type(curr_stepmakers) == str:
-            found_stepmakers = [curr_stepmakers]
-        else:
-            found_stepmakers = [i[0] for i in curr_stepmakers if curr_chart in (i[1].split() if type(i[1]) == str else i[1])]
-            if len(found_stepmakers) == 0:
-                found_stepmakers = [i[0] for i in curr_stepmakers if i[1] == '*']
+        found_stepmakers = get_chart_stepmakers(curr_stepmakers, curr_chart, chart_mode)
 
         if len(found_stepmakers) > 1 or (len(found_stepmakers) == 0 and chart_mode != 'HDB'):
             raise Exception()
@@ -866,14 +860,7 @@ SELECT
         add_exclusive_labels(song, 'chart', curr_chart)
 
         curr_stepmakers = STEPMAKERS.get(original_title)
-        if curr_stepmakers is None:
-            found_stepmakers = []
-        elif type(curr_stepmakers) == str:
-            found_stepmakers = [curr_stepmakers]
-        else:
-            found_stepmakers = [i[0] for i in curr_stepmakers if curr_chart in (i[1].split() if type(i[1]) == str else i[1])]
-            if len(found_stepmakers) == 0:
-                found_stepmakers = [i[0] for i in curr_stepmakers if i[1] == '*']
+        found_stepmakers = get_chart_stepmakers(curr_stepmakers, curr_chart, chart_mode)
 
         if len(found_stepmakers) > 1 or (len(found_stepmakers) == 0 and chart_mode != 'HDB'):
             raise Exception(f"${song} {curr_chart}")

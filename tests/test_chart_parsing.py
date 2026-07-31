@@ -3,6 +3,7 @@ import unittest
 from data import Phoenix2, data, steamLinkExclusive, title
 from util.difficulty import get_difficulty
 from util.exclusivity import is_chart_steam_link_exclusive
+from util.stepmakers import get_chart_stepmakers
 
 
 class DifficultyTest(unittest.TestCase):
@@ -33,6 +34,25 @@ class SteamExclusivityTest(unittest.TestCase):
                 if chart.upper().startswith('H') and chart[1:].isdigit():
                     with self.subTest(song=song.get(title), chart=chart):
                         self.assertTrue(is_chart_steam_link_exclusive(song.get(steamLinkExclusive), chart))
+
+
+class StepmakerTest(unittest.TestCase):
+    def test_half_double_ignores_song_and_wildcard_stepmakers(self):
+        self.assertEqual([], get_chart_stepmakers('SUNNY', 'H10', 'HDB'))
+        self.assertEqual([], get_chart_stepmakers([('SUNNY', '*')], 'H10', 'HDB'))
+
+    def test_half_double_uses_only_exact_chart_selectors(self):
+        stepmakers = [('SUNNY', 'H2 H12')]
+
+        self.assertEqual(['SUNNY'], get_chart_stepmakers(stepmakers, 'H2', 'HDB'))
+        self.assertEqual([], get_chart_stepmakers(stepmakers, 'H20', 'HDB'))
+
+    def test_other_modes_keep_song_and_wildcard_stepmakers(self):
+        self.assertEqual(['SUNNY'], get_chart_stepmakers('SUNNY', 'S20', 'S'))
+        self.assertEqual(
+            ['SUNNY'],
+            get_chart_stepmakers([('SUNNY', '*')], 'D20', 'D'),
+        )
 
 
 if __name__ == '__main__':
