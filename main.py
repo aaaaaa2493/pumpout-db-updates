@@ -805,18 +805,17 @@ for song_index, song in enumerate(new_charts):
         song_card_append = '_Full'
 
     charts = get_info_for_patch(PATCH, song[MIX], INITIAL_PATCH)
+    charts = [
+        curr_chart.removeprefix('+')
+        for curr_chart in charts
+        if '`' not in curr_chart and not curr_chart.startswith(('-', '^')) and curr_chart != '='
+    ]
+
+    if NOSQL and charts:
+        p(f"{format_nosql_song_title(curr_title, curr_cut)} {' '.join(charts)}")
 
     for chart_index, curr_chart in enumerate(charts):
-        if '`' in curr_chart or curr_chart.startswith(('-', '^')) or curr_chart == '=':
-            continue
-
-        if curr_chart.startswith('+'):
-            curr_chart = curr_chart[1:]
-
         chart_mode, chart_difficulty = get_difficulty(curr_chart)
-
-        if NOSQL:
-            p(f"{format_nosql_song_title(curr_title, curr_cut)} {curr_chart}")
 
         print(f"""
 -- Add {original_title} {curr_chart}
