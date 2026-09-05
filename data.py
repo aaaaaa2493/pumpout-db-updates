@@ -295,6 +295,13 @@ STEPMAKERS = {
 	"Antique Serenade": "GGWANG",
 	"We Love Your Step": "refos",
 	"Lucky Star": "CONRAD",
+
+	"CALL ME BACK": "SUNNY",
+	"DIE ANOTHER DAY": "NIMGO",
+	"The Stranger": "CONRAD",
+	"Ghost Bloody Train": "CONRAD",
+	"L (PIU Edit)": "EXC",
+	"Can I friend you on Bassbook? lol": "DulKi",
 }
 
 KOREAN_TITLES = {
@@ -517,11 +524,103 @@ KOREAN_TITLES = {
 	"The Deconstruction": "더 디컨스트럭션",
 	"Reincarnate in \"A\"": "리인카네이트 인 \"A\"",
 	"Burning SuperNova": "버닝 슈퍼노바 feat. neur6sia",
+
+	"CALL ME BACK": "콜 미 백",
+	"DIE ANOTHER DAY": "다이 어나더 데이",
+	"The Stranger": "더 스트레인저",
+	"Ghost Bloody Train": "유령혈차",
+	"L (PIU Edit)": "L (PIU Edit)",
+	"Can I friend you on Bassbook? lol": "베이스라인 하고있니? ㅎ",
 }
 
 
 data = {
 # \18 - Phoenix 2
+
+
+"18__CALL_ME_BACK":
+{
+	title: "CALL ME BACK", artist: "TNX", channel: KPOP, bpm: "128",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.01 S1 S3 S5 S8 S14 S16 S20 D6 D15 D18 D22",
+},
+
+"18__DIE_ANOTHER_DAY":
+{
+	title: "DIE ANOTHER DAY", artist: "TNX", channel: KPOP, bpm: "98",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.01 S3 S5 S9 S15 S17 S20 D11 D16 D19 D23",
+},
+
+"18__The_Stranger":
+{
+	title: "The Stranger", artist: "ONF", channel: KPOP, bpm: "116",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.01 S2 S4 S6 S9 S15 S18 S20 S22 D10 D16 D19 D22 D25",
+},
+
+"18__Ghost_Bloody_Train":
+{
+	title: "Ghost Bloody Train", artist: "Fiverwater", channel: ORIGINAL, bpm: "192",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.01 S11 S15 S18 S21 S23 D17 D20 D23 D25",
+},
+
+"18__L_PIU_Edit":
+{
+	title: "L (PIU Edit)", artist: "Ice", channel: WORLD, bpm: "155",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	premiumModeExclusive: True,
+
+	Phoenix2: "@1.01 S12 S18 S22 S24 D19 D24 D27",
+},
+
+"18__Can_I_friend_you_on_Bassbook_lol":
+{
+	title: "Can I friend you on Bassbook? lol", artist: "Camellia & Nanahira", channel: WORLD, bpm: "128",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.01 S4 S7 S11 S17 S19 S22 D11 D20 D25",
+},
 
 
 "18__TBH":

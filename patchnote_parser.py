@@ -1,6 +1,6 @@
 import re
 
-from data import FULL, FULL_MARKER, REMIX, XROSS, title, duration, artist, bpm, channel
+from data import FULL, FULL_MARKER, Phoenix2, REMIX, XROSS, title, duration, artist, bpm, channel
 from data import SHORT, SHORT_MARKER, KPOP, ORIGINAL, WORLD, Phoenix
 from data import premiumModeExclusive, steamLinkExclusive
 
@@ -8,14 +8,14 @@ SHORT_CUT_PATCHNOTE_MARK = ' - SHORT CUT -'
 FULL_SONG_PATCHNOTE_MARK = ' - FULL SONG -'
 STEP_CHARTS = 'stepcharts'
 PREMIUM_MODE_EXCLUSIVE_MARK = re.compile(
-    r'\s+\(\*?(?:Exclusive song for premium mode|Premium mode Only)\)\*?$',
+    r'\s+(?:-\s+)?\(\*?(?:Exclusive song for premium mode|Premium mode Only|Premium Mode Exclusive)\)\*?$',
     re.IGNORECASE,
 )
 STEAM_LINK_EXCLUSIVE_MARK = 'steam link exclusive track'
 
-MIX_ID = 17
-MIX_NAME = Phoenix
-PATCH_VERSION = '2.12'
+MIX_ID = 18
+MIX_NAME = Phoenix2
+PATCH_VERSION = '1.01'
 
 
 def convert_coop_format(text):

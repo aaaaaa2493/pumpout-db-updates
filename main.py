@@ -26,6 +26,7 @@ mix_names = {
 patches = {
     Phoenix2: [
         'v1.00.0',
+        'v1.01.0',
     ],
     Phoenix: [
         'v1.00.1',
