@@ -15,20 +15,20 @@ STEAM_LINK_EXCLUSIVE_MARK = 'steam link exclusive track'
 
 MIX_ID = 18
 MIX_NAME = Phoenix2
-PATCH_VERSION = '1.01'
+PATCH_VERSION = '1.02'
 
 
 def convert_coop_format(text):
-    # Regular expression pattern to find CO-OP(#) and capture the number
-    pattern = r'CO-OP\([xX]?(\d+)\)'
+    # Accept CO-OP(2), CO-OP(x2), and CO-OPx2.
+    pattern = r'\bCO-OP(?:\(x?(\d+)\)|x(\d+))'
 
     # Replacement function
     def replacement(match):
-        num = match.group(1)
+        num = match.group(1) or match.group(2)
         return f'CoOp(x{num})'
 
     # Replace all occurrences in the text
-    return re.sub(pattern, replacement, text)
+    return re.sub(pattern, replacement, text, flags=re.IGNORECASE)
 
 
 def convert_string_to_key(input_string):

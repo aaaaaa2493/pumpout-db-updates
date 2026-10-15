@@ -302,6 +302,28 @@ STEPMAKERS = {
 	"Ghost Bloody Train": "CONRAD",
 	"L (PIU Edit)": "EXC",
 	"Can I friend you on Bassbook? lol": "DulKi",
+
+	"NEMONEMO": "SPHAM",
+	"Mephitz": "CONRAD",
+	"Falling Stars": "JUNARE",
+	"Until Defined": "refos",
+	"PHYSALIS": "CONRAD",
+	"Assault TAXI": "FEFEMZ",
+	"Chess and Chase": "CONRAD",
+	"Under the Christmas Stars": "SUNNY",
+	"The Last Stand": "SUNNY",
+	"Morrighan": "GGWANG",
+	"Skybound": "DIESEL",
+	"Galactic Terminus": "SUNNY",
+	"The Deconstruction": "JUNARE",
+	"Love Witch": "CONRAD",
+	"Burning SuperNova": "DulKi",
+	"Transmission": "DulKi",
+	"Pastry mix": "FEFEMZ",
+	"Sylaphz": "SPHAM",
+	"Galactic Metronome": "DulKi",
+	"DROP FRONT!ER": "NIMGO",
+	"Reincarnate in \"A\"": "FEFEMZ",
 }
 
 KOREAN_TITLES = {
@@ -531,11 +553,102 @@ KOREAN_TITLES = {
 	"Ghost Bloody Train": "유령혈차",
 	"L (PIU Edit)": "L (PIU Edit)",
 	"Can I friend you on Bassbook? lol": "베이스라인 하고있니? ㅎ",
+
+	"NEMONEMO": "네모네모",
+	"Mephitz": "메피츠",
+	"Falling Stars": "꼬리별",
+	"Until Defined": "언틸 디파인드",
+	"PHYSALIS": "피살리스",
+	"Assault TAXI": "어썰트 택시",
 }
 
 
 data = {
 # \18 - Phoenix 2
+
+"18__NEMONEMO":
+{
+	title: "NEMONEMO", artist: "YENA", channel: KPOP, bpm: "138",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.02 S2 S4 S6 S10 S15 S18 S21 D11 D16 D19 D22 CoOp(x2)",
+},
+
+"18__Mephitz":
+{
+	title: "Mephitz", artist: "litmus* as Ester", channel: ORIGINAL, bpm: "195",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.02 S12 S16 S18 S20 S22 D15 D18 D21 D24",
+},
+
+"18__Falling_Stars":
+{
+	title: "Falling Stars", artist: "WyvernP", channel: ORIGINAL, bpm: "200",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.02 S9 S13 S17 S20 S22 D16 D20 D24",
+},
+
+"18__Until_Defined":
+{
+	title: "Until Defined", artist: "Palami feat. Dyon Joo & neur6sia", channel: ORIGINAL, bpm: "180",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.02 S12 S15 S19 S21 D16 D21 D23 CoOp(x2)",
+},
+
+"18__PHYSALIS":
+{
+	title: "PHYSALIS", artist: "TAG", channel: WORLD, bpm: "200",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	premiumModeExclusive: True,
+
+	Phoenix2: "@1.02 S15 S19 S22 S24 D17 D20 D24 D26",
+},
+
+"18__Assault_TAXI":
+{
+	title: "Assault TAXI", artist: "ASA", channel: WORLD, bpm: "154",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.02 S13 S15 S18 S21 D14 D20 D23",
+},
 
 
 "18__CALL_ME_BACK":
@@ -1004,7 +1117,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H15 H21 H24"
+	Phoenix2: "H15 H21 H24 @1.02 S9 S15 S21 S23 D17 D22 D25"
 },
 
 "18__Chess_and_Chase":
@@ -1018,7 +1131,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H10 H15 H17 H21"
+	Phoenix2: "H10 H15 H17 H21 @1.02 S7 S10 S14 S17 S20 D12 D16 D18 D22"
 },
 
 "18__Sylaphz":
@@ -1032,7 +1145,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H13 H18 H22 H24"
+	Phoenix2: "H13 H18 H22 H24 @1.02 S14 S18 S21 S24 D16 D20 D23 D26"
 },
 
 "18__Pastry_mix":
@@ -1046,7 +1159,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H17 H21 H25"
+	Phoenix2: "H17 H21 H25 @1.02 S14 S17 S20 S23 D19 D22 D25"
 },
 
 "18__Love_Witch":
@@ -1060,7 +1173,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H14 H17 H18 H20"
+	Phoenix2: "H14 H17 H18 H20 @1.02 S13 S16 S18 S21 D16 D18 D20 D23"
 },
 
 "18__Galactic_Metronome":
@@ -1074,7 +1187,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H16 H20 H24 H25"
+	Phoenix2: "H16 H20 H24 H25 @1.02 S10 S15 S19 S22 S24 D17 D21 D24 D26"
 },
 
 "18__Under_the_Christmas_Stars":
@@ -1088,7 +1201,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H7 H12 H16 H18"
+	Phoenix2: "H7 H12 H16 H18 @1.02 S2 S4 S7 S11 S15 S18 D5 D13 D16 D19 CoOp(x2)"
 },
 
 "18__Skybound":
@@ -1102,7 +1215,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H20 H21"
+	Phoenix2: "H20 H21 @1.02 S16 S18 S20 S22 D20 D22 D24"
 },
 
 "18__DROP_FRONTER":
@@ -1116,7 +1229,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H16 H24 H26"
+	Phoenix2: "H16 H24 H26 @1.02 S16 S19 S22 S25 D18 D24 D27"
 },
 
 "18__Morrighan":
@@ -1130,7 +1243,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H20 H21 H23"
+	Phoenix2: "H20 H21 H23 @1.02 S16 S18 S20 S22 D20 D22 D24"
 },
 
 "18__Galactic_Terminus":
@@ -1144,7 +1257,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H12 H18 H20"
+	Phoenix2: "H12 H18 H20 @1.02 S3 S7 S11 S16 S18 S20 D13 D19 D22"
 },
 
 "18__The_Last_Stand":
@@ -1158,7 +1271,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H13 H19 H22"
+	Phoenix2: "H13 H19 H22 @1.02 S4 S7 S11 S16 S19 S21 D14 D20 D24"
 },
 
 "18__The_Deconstruction":
@@ -1172,7 +1285,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H16 H19 H22"
+	Phoenix2: "H16 H19 H22 @1.02 S13 S17 S19 S22 D17 D20 D24"
 },
 
 "18__Reincarnate_in_A_":
@@ -1186,7 +1299,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H20 H23 H26"
+	Phoenix2: "H20 H23 H26 @1.02 S16 S19 S22 S25 D21 D24 D27"
 },
 
 "18__Burning_SuperNova":
@@ -1200,7 +1313,7 @@ data = {
 
 	steamLinkExclusive: True,
 
-	Phoenix2: "H15 H22 H25"
+	Phoenix2: "H15 H22 H25 @1.02 S13 S16 S19 S21 S23 D17 D22 D25"
 },
 
 

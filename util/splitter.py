@@ -15,7 +15,8 @@ def split_string(input_string, additional_splitters_on_first_split=False):
         "Produced by ",
         "Prod.",
         "Ft.",
-        "Feat."
+        "Feat.",
+        " as ",
     ]
 
     additional_splitters = [
