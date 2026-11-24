@@ -324,6 +324,18 @@ STEPMAKERS = {
 	"Galactic Metronome": "DulKi",
 	"DROP FRONT!ER": "NIMGO",
 	"Reincarnate in \"A\"": "FEFEMZ",
+
+	"I DONT CARE": "SUNNY",
+	"Storm Chaser": "CONRAD",
+	"::POINT_NEMO::": "refos",
+	"Passacaglia II": "JUNARE",
+	"ELEVATE": "SUNNY",
+	"ULTRA SYNERGY MATRIX": "SUNNY",
+	"Bamboo": "FEFEMZ",
+	"untitled": "GGWANG",
+	"Time wanderer": "CONRAD",
+	"Whitemare": "SUNNY",
+	"Eagle Strike": "GGWANG",
 }
 
 KOREAN_TITLES = {
@@ -560,11 +572,178 @@ KOREAN_TITLES = {
 	"Until Defined": "언틸 디파인드",
 	"PHYSALIS": "피살리스",
 	"Assault TAXI": "어썰트 택시",
+
+	"I DONT CARE": "아이 돈 케어",
+	"Storm Chaser": "스톰 체이서",
+	"::POINT_NEMO::": "::포인트_니모::",
+	"Passacaglia II": "파사칼리아 2",
+	"ELEVATE": "엘러베이트",
+	"ULTRA SYNERGY MATRIX": "울트라 시너지 매트릭스",
+	"Bamboo": "뱀부",
+	"untitled": "무제",
+	"Time wanderer": "타임 원더러",
+	"Whitemare": "화이트메어",
+	"Eagle Strike": "이글 스트라이크",
 }
 
 
 data = {
 # \18 - Phoenix 2
+
+"18__I_DONT_CARE":
+{
+	title: "I DONT CARE", artist: "Baby DONT Cry", channel: KPOP, bpm: "165",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.03 S2 S4 S7 S10 S16 S18 S21 D6 D14 D19 D23 CoOp(x2)",
+},
+
+"18__Storm_Chaser":
+{
+	title: "Storm Chaser", artist: "r300k", channel: ORIGINAL, bpm: "123.45",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.03 S7 S10 S15 S18 S22 D11 D16 D20 D24",
+},
+
+"18__POINT_NEMO":
+{
+	title: "::POINT_NEMO::", artist: "xi", channel: ORIGINAL, bpm: "100~440",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	premiumModeExclusive: True,
+
+	Phoenix2: "@1.03 S15 S17 S21 S23 D19 D23 D26",
+},
+
+"18__Passacaglia_II":
+{
+	title: "Passacaglia II", artist: "SYNTHWULF", channel: ORIGINAL, bpm: "170~400",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.03 S13 S16 S19 S22 D16 D20 D24",
+},
+
+"18__ELEVATE":
+{
+	title: "ELEVATE", artist: "Jorts", channel: ORIGINAL, bpm: "174",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+
+
+	Phoenix2: "@1.03 S4 S7 S11 S16 S18 S21 D13 D18 D20 D23",
+},
+
+"18__ULTRA_SYNERGY_MATRIX":
+{
+	title: "ULTRA SYNERGY MATRIX", artist: "Tanchiky", channel: WORLD, bpm: "160",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: 'H',
+
+	Phoenix2: "@1.03 S4 S7 S10 S16 S18 S21 D15 D20 D23 H12 H20 H23",
+},
+
+"18__Bamboo":
+{
+	title: "Bamboo", artist: "RISH feat.Choko", channel: WORLD, bpm: "5~315",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: 'H',
+
+	Phoenix2: "@1.03 S17 S19 S21 S23 D18 D22 D25 H18 H22 H24",
+},
+
+"18__untitled":
+{
+	title: "untitled", artist: "Apo11o program & NOMA ft. Hana Kagenui & K", channel: RISE, bpm: "200",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "@1.03 S13 S16 S18 S21 D17 D21 D24 H17 H21 H24",
+},
+
+"18__Time_wanderer":
+{
+	title: "Time wanderer", artist: "uma", channel: RISE, bpm: "183",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "@1.03 S13 S16 S19 S21 D15 D18 D21 D24 H14 H18 H21 H23",
+},
+
+"18__Whitemare":
+{
+	title: "Whitemare", artist: "Apo11o program ft. ChumuNote", channel: RISE, bpm: "153",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "@1.03 S4 S7 S11 S16 S18 S21 D14 D20 D23 H14 H19 H22",
+},
+
+"18__Eagle_Strike":
+{
+	title: "Eagle Strike", artist: "kanone", channel: RISE, bpm: "169",
+
+	#sortingID: "",  # between  () and  ()
+	# arcadeID: "",
+	pumpoutID: "",
+	# arcadeName: "",
+
+	steamLinkExclusive: True,
+
+	Phoenix2: "@1.03 S15 S17 S19 S21 D17 D19 D21 D24 H17 H18 H21 H24",
+},
+
 
 "18__NEMONEMO":
 {
@@ -632,8 +811,9 @@ data = {
 	# arcadeName: "",
 
 	premiumModeExclusive: True,
+	steamLinkExclusive: 'H',
 
-	Phoenix2: "@1.02 S15 S19 S22 S24 D17 D20 D24 D26",
+	Phoenix2: "@1.02 S15 S19 S22 S24 D17 D20 D24 D26 @1.03 H17 H20 H24 H26",
 },
 
 "18__Assault_TAXI":
@@ -645,9 +825,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	steamLinkExclusive: 'H',
 
-
-	Phoenix2: "@1.02 S13 S15 S18 S21 D14 D20 D23",
+	Phoenix2: "@1.02 S13 S15 S18 S21 D14 D20 D23 @1.03 H14 H20 H23",
 },
 
 
@@ -717,8 +897,9 @@ data = {
 	# arcadeName: "",
 
 	premiumModeExclusive: True,
+	steamLinkExclusive: 'H',
 
-	Phoenix2: "@1.01 S12 S18 S22 S24 D19 D24 D27",
+	Phoenix2: "@1.01 S12 S18 S22 S24 D19 D24 D27 @1.03 H19 H23 H26",
 },
 
 "18__Can_I_friend_you_on_Bassbook_lol":
@@ -730,9 +911,9 @@ data = {
 	pumpoutID: "",
 	# arcadeName: "",
 
+	steamLinkExclusive: 'H',
 
-
-	Phoenix2: "@1.01 S4 S7 S11 S17 S19 S22 D11 D20 D25",
+	Phoenix2: "@1.01 S4 S7 S11 S17 S19 S22 D11 D20 D25 @1.03 H11 H20 H24",
 },
 
 

@@ -15,12 +15,12 @@ STEAM_LINK_EXCLUSIVE_MARK = 'steam link exclusive track'
 
 MIX_ID = 18
 MIX_NAME = Phoenix2
-PATCH_VERSION = '1.02'
+PATCH_VERSION = '1.03'
 
 
 def convert_coop_format(text):
-    # Accept CO-OP(2), CO-OP(x2), and CO-OPx2.
-    pattern = r'\bCO-OP(?:\(x?(\d+)\)|x(\d+))'
+    # Accept CO-OP(2), CO-OP (X2), and CO-OPx2.
+    pattern = r'\bCO-OP\s*(?:\(x?(\d+)\)|x(\d+))'
 
     # Replacement function
     def replacement(match):
